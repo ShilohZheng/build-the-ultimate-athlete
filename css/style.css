@@ -284,3 +284,110 @@ footer p {
     }
 
 }
+
+/* =========================
+   ENHANCED HERO
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.badge {
+    display: inline-block;
+
+    background: rgba(255,255,255,0.2);
+
+    padding: 8px 18px;
+
+    border-radius: 999px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.9rem;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    border: 2px solid white;
+
+    color: white;
+
+    padding: 14px 32px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #2563eb;
+}
+
+/* =========================
+   FLOATING ICONS
+========================= */
+
+.floating-icon {
+    position: absolute;
+
+    font-size: 3rem;
+
+    opacity: 0.15;
+
+    animation: float 5s ease-in-out infinite;
+}
+
+.dumbbell {
+    top: 15%;
+    left: 10%;
+}
+
+.runner {
+    top: 25%;
+    right: 12%;
+}
+
+.basketball {
+    bottom: 18%;
+    left: 15%;
+}
+
+.muscle {
+    bottom: 20%;
+    right: 15%;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
