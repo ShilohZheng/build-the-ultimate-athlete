@@ -391,3 +391,19 @@ footer p {
     }
 
 }
+
+.muscle-card ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.muscle-card li {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.muscle-card p {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #555;
+}
