@@ -407,3 +407,27 @@ footer p {
     font-size: 0.95rem;
     color: #555;
 }
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.card,
+.muscle-card,
+.explore-card {
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.card.active,
+.muscle-card.active,
+.explore-card.active {
+
+    opacity: 1;
+    transform: translateY(0);
+}
