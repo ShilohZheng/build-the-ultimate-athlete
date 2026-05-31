@@ -96,31 +96,60 @@ function checkMatching() {
 
     matchingScore = 0;
 
-    const match1 =
-        document.getElementById("match1").value;
-
-    const match2 =
-        document.getElementById("match2").value;
-
-    const match3 =
-        document.getElementById("match3").value;
-
-    if (match1 === "front-thigh") {
-
+    if (
+        document.getElementById("match1").value
+        === "front-thigh"
+    ) {
         matchingScore++;
-
     }
 
-    if (match2 === "back-thigh") {
-
+    if (
+        document.getElementById("match2").value
+        === "back-thigh"
+    ) {
         matchingScore++;
-
     }
 
-    if (match3 === "shoulder") {
-
+    if (
+        document.getElementById("match3").value
+        === "shoulder"
+    ) {
         matchingScore++;
+    }
 
+    if (
+        document.getElementById("match4").value
+        === "chest"
+    ) {
+        matchingScore++;
+    }
+
+    if (
+        document.getElementById("match5").value
+        === "upper-back"
+    ) {
+        matchingScore++;
+    }
+
+    if (
+        document.getElementById("match6").value
+        === "calf"
+    ) {
+        matchingScore++;
+    }
+
+    if (
+        document.getElementById("match7").value
+        === "upper-arm"
+    ) {
+        matchingScore++;
+    }
+
+    if (
+        document.getElementById("match8").value
+        === "abdomen"
+    ) {
+        matchingScore++;
     }
 
     document.getElementById(
@@ -128,7 +157,7 @@ function checkMatching() {
     ).innerHTML =
         "✅ You matched " +
         matchingScore +
-        " out of 3 correctly.";
+        " out of 8 correctly.";
 
 }
 
@@ -144,21 +173,21 @@ function showFinalScore() {
     let rank = "";
     let emoji = "";
 
-    if (totalScore <= 2) {
+    if (totalScore <= 4) {
 
         rank = "Beginner Athlete";
         emoji = "🏃";
 
     }
 
-    else if (totalScore <= 4) {
+    else if (totalScore <= 8) {
 
         rank = "School Athlete";
         emoji = "⚽";
 
     }
 
-    else if (totalScore <= 6) {
+    else if (totalScore <= 12) {
 
         rank = "Elite Athlete";
         emoji = "🏅";
@@ -178,7 +207,7 @@ function showFinalScore() {
 
         `<div class="rank">
             <h3>${emoji} ${rank}</h3>
-            <p>Your Score: ${totalScore}/8</p>
+            <p>Your Score: ${totalScore}/16</p>
         </div>`;
 
     const certificate =
@@ -186,7 +215,7 @@ function showFinalScore() {
             "certificate"
         );
 
-    if (totalScore >= 7) {
+    if (totalScore >= 14) {
 
         certificate.innerHTML =
 
