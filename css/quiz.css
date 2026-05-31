@@ -5,23 +5,16 @@
 /* Hero */
 
 .hero {
-
     min-height: 70vh;
-
 }
 
 .hero h1 {
-
     font-size: 3.5rem;
-
 }
 
 .hero p {
-
     max-width: 800px;
-
     margin: 20px auto;
-
 }
 
 /* ===================================
@@ -29,37 +22,24 @@
 =================================== */
 
 section {
-
     padding: 80px 10%;
-
 }
 
 section h2 {
-
     text-align: center;
-
     margin-bottom: 20px;
-
 }
 
 section > p {
-
     text-align: center;
-
     max-width: 800px;
-
     margin: 0 auto 40px auto;
-
     color: #555;
-
     line-height: 1.8;
-
 }
 
 section:nth-of-type(even) {
-
     background: #f8fafc;
-
 }
 
 /* ===================================
@@ -67,94 +47,56 @@ section:nth-of-type(even) {
 =================================== */
 
 .flashcard-grid {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
     gap: 25px;
-
 }
 
 .flashcard {
-
     perspective: 1000px;
-
     height: 220px;
-
     cursor: pointer;
-
 }
 
 .flashcard-inner {
-
     position: relative;
-
     width: 100%;
-
     height: 100%;
-
     transition: transform 0.8s;
-
     transform-style: preserve-3d;
-
 }
 
 .flashcard.flipped .flashcard-inner {
-
     transform: rotateY(180deg);
-
 }
 
 .flashcard-front,
 .flashcard-back {
-
     position: absolute;
-
     width: 100%;
-
     height: 100%;
-
     border-radius: 15px;
-
     backface-visibility: hidden;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
     padding: 20px;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-
 }
 
 .flashcard-front {
-
     background: #2563eb;
-
     color: white;
-
     font-size: 1.2rem;
-
     font-weight: 600;
-
 }
 
 .flashcard-back {
-
     background: white;
-
     color: #333;
-
     transform: rotateY(180deg);
-
     line-height: 1.6;
-
 }
 
 /* ===================================
@@ -162,128 +104,115 @@ section:nth-of-type(even) {
 =================================== */
 
 .question {
-
     background: white;
-
     padding: 30px;
-
     border-radius: 15px;
-
     margin-bottom: 30px;
-
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
 }
 
 .question h3 {
-
     margin-bottom: 20px;
-
 }
 
 .question button {
-
     display: block;
-
     width: 100%;
-
     padding: 14px;
-
     margin-bottom: 12px;
-
     border: none;
-
     border-radius: 10px;
-
     background: #eef2ff;
-
     cursor: pointer;
-
     font-size: 1rem;
-
     transition: 0.3s;
-
 }
 
 .question button:hover {
-
     background: #dbeafe;
-
 }
 
 .feedback {
-
     margin-top: 15px;
-
     padding: 15px;
-
     border-radius: 10px;
-
     display: none;
-
     line-height: 1.6;
-
 }
 
 .feedback.correct {
-
     display: block;
-
     background: #dcfce7;
-
     color: #166534;
-
 }
 
 .feedback.incorrect {
-
     display: block;
-
     background: #fee2e2;
-
     color: #991b1b;
-
 }
 
 /* ===================================
-/* ===================================
-   MATCHING SECTION
+   MATCHING SECTION (已完美修复换行与按钮)
 =================================== */
 
 .matching-section {
     text-align: center;
-    display: flex;             /* 新增：让匹配区域变成列布局 */
-    flex-direction: column;    /* 新增：确保每一道题垂直向下排列（换行） */
-    align-items: center;       /* 新增：让所有行在中间居中 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .match-row {
-    width: 100%;               /* 新增：撑满容器，配合 max-width 使用 */
+    width: 100%;
     max-width: 600px;
-    margin: 12px auto;         /* 调整：稍微缩小上下间距，更紧凑 */
+    margin: 12px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    border-bottom: 1px dashed #e2e8f0; /* 新增：加一条淡淡的虚线分割，更美观 */
-    padding-bottom: 12px;      /* 新增：给虚线留出空隙 */
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 12px;
 }
 
 .match-row label {
     font-weight: 600;
     min-width: 150px;
     text-align: left;
-    color: #334155;            /* 新增：稍微加深字体颜色 */
+    color: #334155;
 }
 
 .match-row select {
     flex: 1;
-    max-width: 250px;          /* 新增：限制下拉框最大宽度，防止拉得太长偏离 */
+    max-width: 250px;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #cbd5e1; /* 优化：换一个更好看的浅灰色边框 */
+    border: 1px solid #cbd5e1;
     font-size: 1rem;
-    background-color: #fff;    /* 新增：防背景透明 */
+    background-color: #fff;
+}
+
+.check-btn {
+    display: inline-block;
+    margin: 25px auto 0 auto;
+    padding: 16px 35px;
+    border: none !important;
+    border-radius: 10px;
+    background: #2563eb !important;
+    color: white !important;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.check-btn:hover {
+    transform: translateY(-3px);
+}
+
+#matching-result {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 /* ===================================
@@ -291,45 +220,28 @@ section:nth-of-type(even) {
 =================================== */
 
 .score-section {
-
     text-align: center;
-
 }
 
 .score-btn {
-
     padding: 16px 35px;
-
     border: none;
-
     border-radius: 10px;
-
     background: #2563eb;
-
     color: white;
-
     font-size: 1.1rem;
-
     cursor: pointer;
-
     transition: 0.3s;
-
 }
 
 .score-btn:hover {
-
     transform: translateY(-3px);
-
 }
 
 #final-score {
-
     margin-top: 30px;
-
     font-size: 1.5rem;
-
     font-weight: 700;
-
 }
 
 /* ===================================
@@ -337,37 +249,25 @@ section:nth-of-type(even) {
 =================================== */
 
 .rank {
-
     margin-top: 15px;
-
     padding: 20px;
-
     border-radius: 15px;
-
 }
 
 .beginner {
-
     background: #f3f4f6;
-
 }
 
 .school {
-
     background: #dbeafe;
-
 }
 
 .elite {
-
     background: #fef3c7;
-
 }
 
 .ultimate {
-
     background: #dcfce7;
-
 }
 
 /* ===================================
@@ -375,43 +275,33 @@ section:nth-of-type(even) {
 =================================== */
 
 @media (max-width: 768px) {
-
     .hero h1 {
-
         font-size: 2.5rem;
-
     }
-
+    
     .match-row {
-
         flex-direction: column;
-
         align-items: stretch;
-
+        gap: 10px;
     }
-
+    
     .match-row label {
-
         text-align: center;
-
     }
 
+    .match-row select {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
-
     .flashcard {
-
         height: 180px;
-
     }
-
+    
     .question button {
-
         font-size: 0.9rem;
-
     }
-
 }
 
 /* ===================================
@@ -419,40 +309,26 @@ section:nth-of-type(even) {
 =================================== */
 
 .certificate {
-
     margin-top: 40px;
-
     padding: 40px;
-
     background: linear-gradient(
         135deg,
         #fff8dc,
         #ffe082
     );
-
     border: 4px solid #f59e0b;
-
     border-radius: 20px;
-
     max-width: 800px;
-
     margin-left: auto;
     margin-right: auto;
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-
 }
 
 .certificate h2 {
-
     margin-bottom: 20px;
-
 }
 
 .certificate h3 {
-
     margin-top: 20px;
-
     font-size: 1.5rem;
-
 }
