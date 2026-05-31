@@ -246,91 +246,44 @@ section:nth-of-type(even) {
 }
 
 /* ===================================
+/* ===================================
    MATCHING SECTION
 =================================== */
 
 .matching-section {
-
     text-align: center;
-
+    display: flex;             /* 新增：让匹配区域变成列布局 */
+    flex-direction: column;    /* 新增：确保每一道题垂直向下排列（换行） */
+    align-items: center;       /* 新增：让所有行在中间居中 */
 }
 
 .match-row {
-
+    width: 100%;               /* 新增：撑满容器，配合 max-width 使用 */
     max-width: 600px;
-
-    margin: 20px auto;
-
+    margin: 12px auto;         /* 调整：稍微缩小上下间距，更紧凑 */
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 20px;
-
+    border-bottom: 1px dashed #e2e8f0; /* 新增：加一条淡淡的虚线分割，更美观 */
+    padding-bottom: 12px;      /* 新增：给虚线留出空隙 */
 }
 
 .match-row label {
-
     font-weight: 600;
-
     min-width: 150px;
-
     text-align: left;
-
+    color: #334155;            /* 新增：稍微加深字体颜色 */
 }
 
 .match-row select {
-
     flex: 1;
-
+    max-width: 250px;          /* 新增：限制下拉框最大宽度，防止拉得太长偏离 */
     padding: 12px;
-
     border-radius: 10px;
-
-    border: 1px solid #ccc;
-
+    border: 1px solid #cbd5e1; /* 优化：换一个更好看的浅灰色边框 */
     font-size: 1rem;
-
-}
-
-.check-btn {
-
-    margin-top: 25px;
-
-    padding: 14px 30px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    background: #2563eb;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 1rem;
-
-    transition: 0.3s;
-
-}
-
-.check-btn:hover {
-
-    transform: translateY(-3px);
-
-}
-
-#matching-result {
-
-    margin-top: 25px;
-
-    font-size: 1.2rem;
-
-    font-weight: 600;
-
+    background-color: #fff;    /* 新增：防背景透明 */
 }
 
 /* ===================================
