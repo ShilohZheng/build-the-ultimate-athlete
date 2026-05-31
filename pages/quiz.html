@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Center | Build the Ultimate Athlete</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Build the Ultimate Athlete
+            </div>
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="muscular-system.html">Muscular System</a></li>
+                <li><a href="sports-lab.html">Sports Lab</a></li>
+                <li><a href="workout-simulator.html">Workout Simulator</a></li>
+                <li><a href="vocabulary.html">Vocabulary</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                Ultimate Athlete Challenge
+            </span>
+
+            <h1>
+                Test Your Muscular System Knowledge
+            </h1>
+
+            <p>
+                Complete the flashcards, multiple choice questions,
+                and matching challenge to discover what type of athlete
+                you are.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Flashcards -->
+
+    <section class="flashcards-section">
+
+        <h2>Challenge 1: Flashcards</h2>
+
+        <p>
+            Click each card to reveal the definition.
+        </p>
+
+        <div class="flashcard-grid">
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Biceps Brachii</div>
+                    <div class="flashcard-back">A muscle on the front of the upper arm responsible for elbow flexion.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Triceps Brachii</div>
+                    <div class="flashcard-back">A muscle on the back of the upper arm responsible for elbow extension.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Deltoid</div>
+                    <div class="flashcard-back">The primary shoulder muscle responsible for lifting and rotating the arm.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Quadriceps</div>
+                    <div class="flashcard-back">A group of four muscles on the front of the thigh that extend the knee.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Hamstrings</div>
+                    <div class="flashcard-back">A group of muscles on the back of the thigh that flex the knee.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Tendon</div>
+                    <div class="flashcard-back">A strong connective tissue that attaches muscle to bone.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Ligament</div>
+                    <div class="flashcard-back">A connective tissue that connects bone to bone.</div>
+                </div>
+            </div>
+
+            <div class="flashcard">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">Sarcomere</div>
+                    <div class="flashcard-back">The smallest functional unit responsible for muscle contraction.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Multiple Choice -->
+
+    <section class="mcq-section">
+
+        <h2>Challenge 2: Multiple Choice</h2>
+
+        <div class="question">
+
+            <h3>1. Which type of muscle is attached to bones?</h3>
+
+            <button onclick="checkAnswer(this,true,'Skeletal muscles attach to bones using tendons and create voluntary movement.')">
+                Skeletal Muscle
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Cardiac muscle is found only in the heart.')">
+                Cardiac Muscle
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Smooth muscle is found in organs such as the stomach and intestines.')">
+                Smooth Muscle
+            </button>
+
+            <button onclick="checkAnswer(this,false,'A tendon is connective tissue, not a muscle.')">
+                Tendon
+            </button>
+
+            <div class="feedback"></div>
+
+        </div>
+
+        <div class="question">
+
+            <h3>2. Which muscle acts as the agonist during a biceps curl?</h3>
+
+            <button onclick="checkAnswer(this,true,'The biceps is the primary muscle producing the movement.')">
+                Biceps
+            </button>
+
+            <button onclick="checkAnswer(this,false,'The triceps acts as the antagonist during a curl.')">
+                Triceps
+            </button>
+
+            <button onclick="checkAnswer(this,false,'The deltoid is primarily a shoulder muscle.')">
+                Deltoid
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Quadriceps are located in the thigh.')">
+                Quadriceps
+            </button>
+
+            <div class="feedback"></div>
+
+        </div>
+
+        <div class="question">
+
+            <h3>3. Which muscle fiber type is best suited for marathon runners?</h3>
+
+            <button onclick="checkAnswer(this,true,'Type I fibers resist fatigue and support endurance activities.')">
+                Type I
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Type II fibers are specialized for power and speed.')">
+                Type II
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Cardiac muscle is found only in the heart.')">
+                Cardiac Muscle
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Smooth muscle is found in organs.')">
+                Smooth Muscle
+            </button>
+
+            <div class="feedback"></div>
+
+        </div>
+
+        <div class="question">
+
+            <h3>4. What connects muscle to bone?</h3>
+
+            <button onclick="checkAnswer(this,true,'Tendons connect muscles to bones.')">
+                Tendon
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Ligaments connect bone to bone.')">
+                Ligament
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Sarcomeres are microscopic contractile units.')">
+                Sarcomere
+            </button>
+
+            <button onclick="checkAnswer(this,false,'Myofibrils are structures inside muscle fibers.')">
+                Myofibril
+            </button>
+
+            <div class="feedback"></div>
+
+        </div>
+
+        <div class="question">
+
+            <h3>5. Which is the largest muscle in the human body?</h3>
+
+            <button onclick="checkAnswer(this,true,'The gluteus maximus is the largest muscle in the human body.')">
+                Gluteus Maximus
+            </button>
+
+            <button onclick="checkAnswer(this,false,'The deltoid is much smaller and located in the shoulder.')">
+                Deltoid
+            </button>
+
+            <button onclick="checkAnswer(this,false,'The biceps is located in the upper arm.')">
+                Biceps
+            </button>
+
+            <button onclick="checkAnswer(this,false,'The gastrocnemius is a calf muscle.')">
+                Gastrocnemius
+            </button>
+
+            <div class="feedback"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Matching -->
+
+    <section class="matching-section">
+
+        <h2>Challenge 3: Match the Muscle</h2>
+
+        <p>
+            Match each structure with its correct description.
+        </p>
+
+        <div class="match-row">
+
+            <label>Quadriceps</label>
+
+            <select id="match1">
+                <option value="">Choose</option>
+                <option value="front-thigh">Front of Thigh</option>
+                <option value="shoulder">Shoulder</option>
+                <option value="back-thigh">Back of Thigh</option>
+            </select>
+
+        </div>
+
+        <div class="match-row">
+
+            <label>Hamstrings</label>
+
+            <select id="match2">
+                <option value="">Choose</option>
+                <option value="front-thigh">Front of Thigh</option>
+                <option value="shoulder">Shoulder</option>
+                <option value="back-thigh">Back of Thigh</option>
+            </select>
+
+        </div>
+
+        <div class="match-row">
+
+            <label>Deltoid</label>
+
+            <select id="match3">
+                <option value="">Choose</option>
+                <option value="front-thigh">Front of Thigh</option>
+                <option value="shoulder">Shoulder</option>
+                <option value="back-thigh">Back of Thigh</option>
+            </select>
+
+        </div>
+
+        <button class="check-btn" onclick="checkMatching()">
+            Check Matching Answers
+        </button>
+
+        <div id="matching-result"></div>
+
+    </section>
+
+    <!-- Final Score -->
+
+    <section class="score-section">
+
+        <h2>Your Athlete Ranking</h2>
+
+        <button class="score-btn" onclick="showFinalScore()">
+            Calculate My Score
+        </button>
+
+        <div id="final-score"></div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Build the Ultimate Athlete | End-of-Year Anatomy & Physiology Project
+        </p>
+
+        <p>
+            Created by Shiloh Zheng
+        </p>
+
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/quiz.js"></script>
+
+</body>
+
+</html>
