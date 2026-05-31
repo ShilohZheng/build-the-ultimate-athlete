@@ -1,0 +1,462 @@
+/* ===================================
+   QUIZ PAGE
+=================================== */
+
+/* Hero */
+
+.hero {
+
+    min-height: 70vh;
+
+}
+
+.hero h1 {
+
+    font-size: 3.5rem;
+
+}
+
+.hero p {
+
+    max-width: 800px;
+
+    margin: 20px auto;
+
+}
+
+/* ===================================
+   GENERAL SECTION
+=================================== */
+
+section {
+
+    padding: 80px 10%;
+
+}
+
+section h2 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+section > p {
+
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 0 auto 40px auto;
+
+    color: #555;
+
+    line-height: 1.8;
+
+}
+
+section:nth-of-type(even) {
+
+    background: #f8fafc;
+
+}
+
+/* ===================================
+   FLASHCARDS
+=================================== */
+
+.flashcard-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+}
+
+.flashcard {
+
+    perspective: 1000px;
+
+    height: 220px;
+
+    cursor: pointer;
+
+}
+
+.flashcard-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    transition: transform 0.8s;
+
+    transform-style: preserve-3d;
+
+}
+
+.flashcard.flipped .flashcard-inner {
+
+    transform: rotateY(180deg);
+
+}
+
+.flashcard-front,
+.flashcard-back {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 15px;
+
+    backface-visibility: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.flashcard-front {
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+}
+
+.flashcard-back {
+
+    background: white;
+
+    color: #333;
+
+    transform: rotateY(180deg);
+
+    line-height: 1.6;
+
+}
+
+/* ===================================
+   MCQ SECTION
+=================================== */
+
+.question {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.question h3 {
+
+    margin-bottom: 20px;
+
+}
+
+.question button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #eef2ff;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+
+}
+
+.question button:hover {
+
+    background: #dbeafe;
+
+}
+
+.feedback {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    display: none;
+
+    line-height: 1.6;
+
+}
+
+.feedback.correct {
+
+    display: block;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+.feedback.incorrect {
+
+    display: block;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}
+
+/* ===================================
+   MATCHING SECTION
+=================================== */
+
+.matching-section {
+
+    text-align: center;
+
+}
+
+.match-row {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+.match-row label {
+
+    font-weight: 600;
+
+    min-width: 150px;
+
+    text-align: left;
+
+}
+
+.match-row select {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ccc;
+
+    font-size: 1rem;
+
+}
+
+.check-btn {
+
+    margin-top: 25px;
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+
+}
+
+.check-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+#matching-result {
+
+    margin-top: 25px;
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+}
+
+/* ===================================
+   SCORE SECTION
+=================================== */
+
+.score-section {
+
+    text-align: center;
+
+}
+
+.score-btn {
+
+    padding: 16px 35px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.score-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+#final-score {
+
+    margin-top: 30px;
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+}
+
+/* ===================================
+   ATHLETE BADGES
+=================================== */
+
+.rank {
+
+    margin-top: 15px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+}
+
+.beginner {
+
+    background: #f3f4f6;
+
+}
+
+.school {
+
+    background: #dbeafe;
+
+}
+
+.elite {
+
+    background: #fef3c7;
+
+}
+
+.ultimate {
+
+    background: #dcfce7;
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .match-row {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .match-row label {
+
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .flashcard {
+
+        height: 180px;
+
+    }
+
+    .question button {
+
+        font-size: 0.9rem;
+
+    }
+
+}
