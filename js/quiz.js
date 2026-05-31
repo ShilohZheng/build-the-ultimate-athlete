@@ -185,6 +185,34 @@ function showFinalScore() {
     }
 
     document.getElementById("final-score")
-        .innerHTML = finalMessage;
+    .innerHTML = finalMessage;
 
-}
+   const certificate =
+       document.getElementById("certificate");
+   
+   if (totalScore >= 7) {
+   
+       certificate.innerHTML = `
+           <div class="certificate">
+               <h2>🏆 Ultimate Athlete Certificate</h2>
+   
+               <p>
+                   Congratulations! You have demonstrated
+                   an excellent understanding of the muscular system.
+               </p>
+   
+               <h3>Build the Ultimate Athlete</h3>
+   
+               <p>
+                   Awarded to a future champion of anatomy and physiology.
+               </p>
+           </div>
+       `;
+   
+   }
+   
+   else {
+   
+       certificate.innerHTML = "";
+   
+   }
