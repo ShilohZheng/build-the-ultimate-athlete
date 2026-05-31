@@ -1,0 +1,228 @@
+/* =========================
+   VOCABULARY PAGE
+========================= */
+
+.hero {
+
+    min-height: 70vh;
+
+}
+
+.hero h1 {
+
+    font-size: 3.5rem;
+
+}
+
+.hero p {
+
+    max-width: 700px;
+    margin: auto;
+
+}
+
+/* =========================
+   SECTION STYLING
+========================= */
+
+section {
+
+    position: relative;
+
+}
+
+section h2 {
+
+    margin-bottom: 40px;
+
+}
+
+/* =========================
+   VOCABULARY CARDS
+========================= */
+
+.muscle-card {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    min-height: 240px;
+
+    padding: 30px;
+
+    border-top: 5px solid #2563eb;
+
+    transition: 0.3s;
+}
+
+.muscle-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+}
+
+.muscle-card h3 {
+
+    font-size: 1.3rem;
+
+    margin-bottom: 15px;
+
+}
+
+.muscle-card p {
+
+    color: #555;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+}
+
+/* =========================
+   CATEGORY SECTIONS
+========================= */
+
+section:nth-of-type(even) {
+
+    background-color: #ffffff;
+
+}
+
+section:nth-of-type(odd):not(.hero) {
+
+    background-color: #f7f8fa;
+
+}
+
+/* =========================
+   HIGHLIGHT EFFECT
+========================= */
+
+.muscle-card::before {
+
+    content: "📖";
+
+    font-size: 1.4rem;
+
+    margin-bottom: 10px;
+
+}
+
+/* =========================
+   SEARCH BAR
+   (for future use)
+========================= */
+
+.search-container {
+
+    max-width: 700px;
+
+    margin: 0 auto 60px auto;
+
+}
+
+.search-container input {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 2px solid #dbeafe;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    outline: none;
+
+}
+
+.search-container input:focus {
+
+    border-color: #2563eb;
+
+}
+
+/* =========================
+   QUICK STATS
+========================= */
+
+.vocab-stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+
+}
+
+.stat-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    min-width: 220px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+
+    font-size: 2rem;
+
+    color: #2563eb;
+
+}
+
+.stat-box p {
+
+    margin-top: 10px;
+
+    color: #666;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .muscle-card {
+
+        min-height: auto;
+
+    }
+
+}
