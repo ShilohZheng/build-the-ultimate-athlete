@@ -1,34 +1,46 @@
 /* ===================================
-   GLOBAL SCORE
+   BUILD THE ULTIMATE ATHLETE
+   QUIZ SCRIPT
 =================================== */
 
 let score = 0;
-let answeredQuestions = 0;
+let matchingScore = 0;
 
 /* ===================================
-   FLASHCARDS
+   WAIT FOR PAGE TO LOAD
 =================================== */
 
-const flashcards = document.querySelectorAll(".flashcard");
+document.addEventListener("DOMContentLoaded", function () {
 
-flashcards.forEach(card => {
+    console.log("Quiz Loaded");
 
-    card.addEventListener("click", () => {
+    /* ===================================
+       FLASHCARDS
+    =================================== */
 
-        card.classList.toggle("flipped");
+    const flashcards =
+        document.querySelectorAll(".flashcard");
+
+    flashcards.forEach(function(card) {
+
+        card.addEventListener("click", function() {
+
+            card.classList.toggle("flipped");
+
+        });
 
     });
 
 });
 
 /* ===================================
-   MULTIPLE CHOICE
+   MULTIPLE CHOICE QUESTIONS
 =================================== */
 
 function checkAnswer(button, isCorrect, explanation) {
 
     const question =
-        button.parentElement;
+        button.closest(".question");
 
     const feedback =
         question.querySelector(".feedback");
@@ -41,14 +53,21 @@ function checkAnswer(button, isCorrect, explanation) {
 
     question.dataset.answered = "true";
 
-    answeredQuestions++;
+    const buttons =
+        question.querySelectorAll("button");
+
+    buttons.forEach(function(btn) {
+
+        btn.disabled = true;
+
+    });
 
     if (isCorrect) {
 
         score++;
 
-        feedback.classList.remove("incorrect");
-        feedback.classList.add("correct");
+        feedback.className =
+            "feedback correct";
 
         feedback.innerHTML =
             "✅ Correct!<br><br>" +
@@ -58,8 +77,8 @@ function checkAnswer(button, isCorrect, explanation) {
 
     else {
 
-        feedback.classList.remove("correct");
-        feedback.classList.add("incorrect");
+        feedback.className =
+            "feedback incorrect";
 
         feedback.innerHTML =
             "❌ Incorrect<br><br>" +
@@ -67,61 +86,49 @@ function checkAnswer(button, isCorrect, explanation) {
 
     }
 
-    const buttons =
-        question.querySelectorAll("button");
-
-    buttons.forEach(btn => {
-
-        btn.disabled = true;
-
-    });
-
 }
 
 /* ===================================
    MATCHING CHALLENGE
 =================================== */
 
-let matchingScore = 0;
-
 function checkMatching() {
 
     matchingScore = 0;
 
-    const answer1 =
+    const match1 =
         document.getElementById("match1").value;
 
-    const answer2 =
+    const match2 =
         document.getElementById("match2").value;
 
-    const answer3 =
+    const match3 =
         document.getElementById("match3").value;
 
-    if (answer1 === "front-thigh") {
+    if (match1 === "front-thigh") {
 
         matchingScore++;
 
     }
 
-    if (answer2 === "back-thigh") {
+    if (match2 === "back-thigh") {
 
         matchingScore++;
 
     }
 
-    if (answer3 === "shoulder") {
+    if (match3 === "shoulder") {
 
         matchingScore++;
 
     }
 
-    const result =
-        document.getElementById("matching-result");
-
-    result.innerHTML =
-        "You matched " +
+    document.getElementById(
+        "matching-result"
+    ).innerHTML =
+        "✅ You matched " +
         matchingScore +
-        " / 3 correctly.";
+        " out of 3 correctly.";
 
 }
 
@@ -131,90 +138,89 @@ function checkMatching() {
 
 function showFinalScore() {
 
-    let totalScore =
+    const totalScore =
         score + matchingScore;
 
-    let finalMessage = "";
+    let rank = "";
+    let emoji = "";
 
     if (totalScore <= 2) {
 
-        finalMessage =
-            `
-            <div class="rank beginner">
-                🏃 Beginner Athlete<br><br>
-                Score: ${totalScore}/8
-            </div>
-            `;
+        rank = "Beginner Athlete";
+        emoji = "🏃";
 
     }
 
     else if (totalScore <= 4) {
 
-        finalMessage =
-            `
-            <div class="rank school">
-                ⚽ School Athlete<br><br>
-                Score: ${totalScore}/8
-            </div>
-            `;
+        rank = "School Athlete";
+        emoji = "⚽";
 
     }
 
     else if (totalScore <= 6) {
 
-        finalMessage =
-            `
-            <div class="rank elite">
-                🏅 Elite Athlete<br><br>
-                Score: ${totalScore}/8
-            </div>
-            `;
+        rank = "Elite Athlete";
+        emoji = "🏅";
 
     }
 
     else {
 
-        finalMessage =
-            `
-            <div class="rank ultimate">
-                🏆 Ultimate Athlete!<br><br>
-                Score: ${totalScore}/8
-            </div>
-            `;
+        rank = "Ultimate Athlete";
+        emoji = "🏆";
 
     }
 
-    document.getElementById("final-score")
-    .innerHTML = finalMessage;
+    document.getElementById(
+        "final-score"
+    ).innerHTML =
 
-   const certificate =
-       document.getElementById("certificate");
-   
-   if (totalScore >= 7) {
-   
-       certificate.innerHTML = `
-           <div class="certificate">
-               <h2>🏆 Ultimate Athlete Certificate</h2>
-   
-               <p>
-                   Congratulations! You have demonstrated
-                   an excellent understanding of the muscular system.
-               </p>
-   
-               <h3>Build the Ultimate Athlete</h3>
-   
-               <p>
-                   Awarded to a future champion of anatomy and physiology.
-               </p>
-           </div>
-       `;
-   
-   }
-   
-   else {
-   
-       certificate.innerHTML = "";
-   
-   }
+        `<div class="rank">
+            <h3>${emoji} ${rank}</h3>
+            <p>Your Score: ${totalScore}/8</p>
+        </div>`;
 
-   }
+    const certificate =
+        document.getElementById(
+            "certificate"
+        );
+
+    if (totalScore >= 7) {
+
+        certificate.innerHTML =
+
+        `<div class="certificate">
+
+            <h2>
+                🏆 Ultimate Athlete Certificate
+            </h2>
+
+            <p>
+                Congratulations!
+            </p>
+
+            <p>
+                You demonstrated an excellent
+                understanding of the muscular system.
+            </p>
+
+            <h3>
+                Build the Ultimate Athlete
+            </h3>
+
+            <p>
+                Awarded for outstanding anatomy knowledge.
+            </p>
+
+        </div>`;
+
+    }
+
+    else {
+
+        certificate.innerHTML = "";
+
+    }
+
+}
