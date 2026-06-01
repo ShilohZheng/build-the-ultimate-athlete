@@ -336,10 +336,13 @@ switch (sport) {
    BUILD YOUR ATHLETE
 =================================== */
 
-function generateAthlete() {
+function generateAthleteDNA() {
 
     const goal =
         document.getElementById("goal-select").value;
+
+    const sport =
+        document.getElementById("sport-select").value;
 
     const muscle =
         document.getElementById("muscle-select").value;
@@ -347,81 +350,97 @@ function generateAthlete() {
     const info =
         document.getElementById("goal-info");
 
-    let athleteName = "";
-    let description = "";
+    let athleteType = "";
+    let exercise = "";
     let image = "";
 
-    if (goal === "strength" && muscle === "chest") {
+    if (goal === "strength") {
 
-        athleteName = "Power Lifter";
-        description =
-            "You focus on maximum upper-body strength. Bench press is your specialty.";
-
+        athleteType = "Power Athlete";
+        exercise = "Bench Press, Squats, Deadlifts";
         image = "../images/bench-press.jpg";
     }
 
-    else if (goal === "speed" && muscle === "legs") {
+    else if (goal === "speed") {
 
-        athleteName = "Elite Sprinter";
-        description =
-            "Your explosive leg power helps you accelerate quickly and dominate short-distance events.";
-
+        athleteType = "Elite Sprinter";
+        exercise = "Sprints, Plyometrics, Power Cleans";
         image = "../images/sprinting.jpg";
-    }
-
-    else if (goal === "jump" && muscle === "legs") {
-
-        athleteName = "Vertical Jump Specialist";
-        description =
-            "You train for explosive jumping ability using squats and plyometrics.";
-
-        image = "../images/volleyball.jpg";
     }
 
     else if (goal === "endurance") {
 
-        athleteName = "Endurance Athlete";
-        description =
-            "You excel at long-duration activities and aerobic performance.";
-
+        athleteType = "Endurance Champion";
+        exercise = "Distance Running, Swimming, Circuits";
         image = "../images/swimming.jpg";
     }
 
     else {
 
-        athleteName = "Balanced Athlete";
-        description =
-            "You combine multiple fitness qualities to become a well-rounded performer.";
-
-        image = "../images/gym-background.jpg";
+        athleteType = "Jump Specialist";
+        exercise = "Box Jumps, Squats, Lunges";
+        image = "../images/volleyball.jpg";
     }
+
+    const power =
+        Math.floor(Math.random() * 21) + 80;
+
+    const speed =
+        Math.floor(Math.random() * 21) + 80;
+
+    const endurance =
+        Math.floor(Math.random() * 21) + 80;
+
+    const potential =
+        Math.floor((power + speed + endurance) / 3);
 
     info.innerHTML = `
 
         <div class="info-text-side">
 
-            <h3>${athleteName}</h3>
+            <h3>${athleteType}</h3>
 
-            <p>${description}</p>
+            <p><strong>Goal:</strong> ${goal}</p>
 
-            <p>
-                <strong>Goal:</strong>
-                ${goal}
-            </p>
+            <p><strong>Favorite Sport:</strong> ${sport}</p>
 
-            <p>
-                <strong>Muscle Focus:</strong>
-                ${muscle}
-            </p>
+            <p><strong>Strongest Muscle:</strong> ${muscle}</p>
+
+            <hr>
+
+            <p><strong>Power:</strong> ${power}/100</p>
+
+            <p><strong>Speed:</strong> ${speed}/100</p>
+
+            <p><strong>Endurance:</strong> ${endurance}/100</p>
+
+            <p><strong>Recommended Training:</strong></p>
+
+            <p>${exercise}</p>
+
+            <div class="dna-score">
+
+                Athlete Potential:
+                ${potential}/100
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"
+                     style="width:${potential}%">
+                </div>
+
+            </div>
 
         </div>
 
         <div class="info-image-side">
 
-            <img src="${image}" alt="${athleteName}">
+            <img src="${image}"
+                 alt="${athleteType}">
 
         </div>
 
     `;
 }
-
