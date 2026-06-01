@@ -444,3 +444,157 @@ function generateAthleteDNA() {
 
     `;
 }
+
+function generateWorkout() {
+
+    const goal =
+        document.getElementById("workout-goal").value;
+
+    const result =
+        document.getElementById("workout-result");
+
+    let workout = "";
+
+    switch(goal) {
+
+        case "strength":
+
+            workout = `
+                <h3>Strength Workout</h3>
+
+                <p>Squat: 4 × 6</p>
+                <p>Bench Press: 4 × 6</p>
+                <p>Deadlift: 3 × 5</p>
+                <p>Estimated Calories Burned: 500 kcal</p>
+            `;
+            break;
+
+        case "speed":
+
+            workout = `
+                <h3>Speed Workout</h3>
+
+                <p>40m Sprint × 8</p>
+                <p>Hill Sprint × 6</p>
+                <p>Bounding Drill × 3</p>
+                <p>Estimated Calories Burned: 450 kcal</p>
+            `;
+            break;
+
+        case "endurance":
+
+            workout = `
+                <h3>Endurance Workout</h3>
+
+                <p>5 km Run</p>
+                <p>Bike: 20 min</p>
+                <p>Jump Rope: 10 min</p>
+                <p>Estimated Calories Burned: 600 kcal</p>
+            `;
+            break;
+
+        case "jump":
+
+            workout = `
+                <h3>Vertical Jump Workout</h3>
+
+                <p>Box Jumps × 12</p>
+                <p>Jump Squats × 15</p>
+                <p>Broad Jumps × 10</p>
+                <p>Estimated Calories Burned: 420 kcal</p>
+            `;
+            break;
+
+    }
+
+    result.innerHTML = workout;
+
+}
+
+let reactionStart;
+let reactionReady = false;
+
+function startReactionTest() {
+
+    const box =
+        document.getElementById("reaction-box");
+
+    const result =
+        document.getElementById("reaction-result");
+
+    reactionReady = false;
+
+    result.innerHTML = "";
+
+    box.style.background = "#e74c3c";
+
+    box.innerHTML = "Wait...";
+
+    const delay =
+        Math.random() * 3000 + 2000;
+
+    setTimeout(function() {
+
+        reactionReady = true;
+
+        reactionStart = Date.now();
+
+        box.style.background = "#2ecc71";
+
+        box.innerHTML = "CLICK NOW!";
+
+    }, delay);
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const box =
+        document.getElementById("reaction-box");
+
+    box.addEventListener("click", function() {
+
+        if (!reactionReady) {
+
+            return;
+
+        }
+
+        const time =
+            Date.now() - reactionStart;
+
+        const result =
+            document.getElementById("reaction-result");
+
+        let rating = "";
+
+        if (time < 250) {
+
+            rating = "🏆 Elite Athlete Reflexes";
+
+        }
+
+        else if (time < 400) {
+
+            rating = "🔥 Excellent Reaction Time";
+
+        }
+
+        else {
+
+            rating = "👍 Average Human Reaction Time";
+
+        }
+
+        result.innerHTML =
+            `Reaction Time: ${time} ms<br>${rating}`;
+
+        reactionReady = false;
+
+        box.style.background = "#cccccc";
+
+        box.innerHTML = "Start Again";
+
+    });
+
+});
