@@ -242,66 +242,61 @@
 
 <section class="builder-section">
 
-    <h2>Build Your Athlete</h2>
+    <h2>Build Your Dream Athlete</h2>
 
     <p>
-        Hover or click the cards to choose your training goal and receive recommendations.
+        Choose your goal and muscle focus, then generate your athlete profile.
     </p>
 
-    <div class="goal-flip-container">
+    <div class="builder-controls">
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h3>Strength</h3>
-                </div>
-                <div class="flip-card-back">
-                    <button onclick="buildAthlete('strength')">Activate Plan</button>
-                </div>
-            </div>
+        <div class="builder-choice">
+
+            <h3>Step 1: Choose a Goal</h3>
+
+            <select id="goal-select">
+
+                <option value="strength">Strength</option>
+                <option value="speed">Speed</option>
+                <option value="endurance">Endurance</option>
+                <option value="jump">Vertical Jump</option>
+
+            </select>
+
         </div>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h3>Speed</h3>
-                </div>
-                <div class="flip-card-back">
-                    <button onclick="buildAthlete('speed')">Activate Plan</button>
-                </div>
-            </div>
-        </div>
+        <div class="builder-choice">
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h3>Endurance</h3>
-                </div>
-                <div class="flip-card-back">
-                    <button onclick="buildAthlete('endurance')">Activate Plan</button>
-                </div>
-            </div>
-        </div>
+            <h3>Step 2: Choose a Muscle Focus</h3>
 
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h3>Vertical Jump</h3>
-                </div>
-                <div class="flip-card-back">
-                    <button onclick="buildAthlete('jump')">Activate Plan</button>
-                </div>
-            </div>
+            <select id="muscle-select">
+
+                <option value="chest">Chest</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="arms">Arms</option>
+                <option value="core">Core</option>
+                <option value="back">Back</option>
+                <option value="legs">Legs</option>
+
+            </select>
+
         </div>
 
     </div>
 
+    <button class="generate-btn"
+            onclick="generateAthlete()">
+
+        Generate My Athlete
+
+    </button>
+
     <div id="goal-info" class="info-box">
 
-        <h3>Choose a Goal</h3>
+        <h3>Your Athlete Profile</h3>
 
         <p>
-            Your personalized athlete plan will appear here.
+            Click Generate My Athlete to begin.
         </p>
 
     </div>
