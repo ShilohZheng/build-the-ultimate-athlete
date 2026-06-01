@@ -287,7 +287,7 @@ CARD TITLES
 }
 
 /* ===================================
-INFO BOX (已微调：放大照片至黄金比例尺寸)
+INFO BOX (已优化：自适应不同比例照片，完整不裁剪显示)
 =================================== */
 
 .info-box {
@@ -303,7 +303,7 @@ INFO BOX (已微调：放大照片至黄金比例尺寸)
     margin-left: auto;
     margin-right: auto;
 
-    /* 左右分栏 */
+    /* 左右弹性分栏 */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -339,21 +339,26 @@ INFO BOX (已微调：放大照片至黄金比例尺寸)
     margin-bottom: 6px;
 }
 
-/* 右侧图片容器区块 —— 调整到了极具美感的矩形尺寸 */
+/* 右侧图片容器区块 */
 .info-image-side {
-    flex: 0 0 240px;  /* 宽度从 140px 调大到 240px */
+    flex: 0 0 240px;  
     max-width: 240px;
-    height: 160px;    /* 高度从 140px 调大到 160px */
+    height: 160px;    
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    
+    /* 核心改动 1：加入极其内敛的淡灰色背景。当照片比例不对时，两边或者上下的留白会以优雅的现代灰色填充，非常具有设计感 */
+    background: #f8fafc; 
 }
 
-/* 确保图片无损缩放填充 */
+/* 精准控制展开图完整显现 */
 .info-image-side img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    
+    /* 核心改动 2：从 cover 改为 contain。强制图片缩放到容器内，保留全部原始画面，绝对不再切图 */
+    object-fit: contain; 
     display: block;
 }
 
