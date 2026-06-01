@@ -277,7 +277,18 @@
                 <option value="volleyball">Volleyball</option>
                 <option value="track">Sprinting</option>
                 <option value="badminton">Badminton</option>
-
+                <option value="frisbee">Ultimate Frisbee</option>
+                <option value="hockey">Hockey</option>
+                <option value="tabletennis">Table Tennis</option>
+                <option value="tennis">Tennis</option>
+                <option value="baseball">Baseball</option>
+                <option value="football">Football</option>
+                <option value="rugby">Rugby</option>
+                <option value="golf">Golf</option>
+                <option value="boxing">Boxing</option>
+                <option value="wrestling">Wrestling</option>
+                <option value="jogging">Jogging</option>
+            
             </select>
 
         </div>
@@ -315,6 +326,65 @@
         <p>
             Complete your analysis to reveal your athlete profile.
         </p>
+
+    </div>
+
+</section>
+
+<section class="workout-generator-section">
+
+    <h2>Workout Generator</h2>
+
+    <p>
+        Choose your training goal and instantly generate a workout plan.
+    </p>
+
+    <select id="workout-goal">
+
+        <option value="strength">Strength</option>
+        <option value="speed">Speed</option>
+        <option value="endurance">Endurance</option>
+        <option value="jump">Vertical Jump</option>
+
+    </select>
+
+    <button onclick="generateWorkout()">
+        Generate Workout
+    </button>
+
+    <div id="workout-result" class="info-box">
+
+        <h3>Your Workout Plan</h3>
+
+        <p>
+            Click Generate Workout to begin.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="reaction-section">
+
+    <h2>Reaction Time Challenge</h2>
+
+    <p>
+        Test your athletic reflexes.
+    </p>
+
+    <button onclick="startReactionTest()">
+
+        Start Test
+
+    </button>
+
+    <div id="reaction-box">
+
+        Wait for green...
+
+    </div>
+
+    <div id="reaction-result">
 
     </div>
 
