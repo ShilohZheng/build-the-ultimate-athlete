@@ -615,3 +615,93 @@ RESPONSIVE & MOBILE TIMING
 
     transition: 1s;
 }
+
+/* ==========================
+   WORKOUT GENERATOR
+========================== */
+
+.workout-generator-section {
+
+    text-align: center;
+    padding: 80px 10%;
+
+}
+
+.workout-generator-section select {
+
+    padding: 12px;
+    font-size: 1rem;
+    margin-right: 10px;
+
+}
+
+.workout-generator-section button {
+
+    padding: 12px 24px;
+    cursor: pointer;
+
+}
+
+
+/* ==========================
+   REACTION TEST
+========================== */
+
+.reaction-section {
+
+    text-align: center;
+    padding: 80px 10%;
+
+}
+
+#reaction-box {
+
+    margin: 30px auto;
+
+    width: 300px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #cccccc;
+
+    border-radius: 15px;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+#reaction-result {
+
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.generate-btn,
+.workout-generator-section button,
+.reaction-section button {
+
+    background: #3b82f6;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+}
+
+.generate-btn:hover,
+.workout-generator-section button:hover,
+.reaction-section button:hover {
+
+    transform: translateY(-3px);
+
+}
