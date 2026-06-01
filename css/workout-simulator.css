@@ -120,12 +120,11 @@ section > p {
 }
 
 /* =========================
-   EXERCISE BUTTONS
+   EXERCISE BUTTONS & GRID LAYOUTS
 ========================= */
 
 .exercise-buttons,
-.sports-buttons,
-.goal-buttons {
+.sports-buttons {
 
     display: grid;
 
@@ -138,8 +137,7 @@ section > p {
 }
 
 .exercise-buttons button,
-.sports-buttons button,
-.goal-buttons button {
+.sports-buttons button {
 
     padding: 18px;
 
@@ -159,55 +157,11 @@ section > p {
 }
 
 .exercise-buttons button:hover,
-.sports-buttons button:hover,
-.goal-buttons button:hover {
+.sports-buttons button:hover {
 
     background: #3730a3;
 
     transform: translateY(-4px);
-}
-
-/* =========================
-   INFO BOX
-========================= */
-
-.info-box {
-
-    margin-top: 40px;
-
-    background: white;
-
-    padding: 35px;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,0.08);
-
-    min-height: 180px;
-}
-
-.info-box h3 {
-
-    color: #1e3a8a;
-
-    margin-bottom: 15px;
-}
-
-.info-box p {
-
-    line-height: 1.8;
-}
-
-.info-box ul {
-
-    margin-top: 15px;
-    padding-left: 25px;
-}
-
-.info-box li {
-
-    margin-bottom: 8px;
 }
 
 /* =========================
@@ -245,22 +199,6 @@ footer p {
     margin: 10px 0;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-        font-size: 2.4rem;
-    }
-
-    section {
-        padding: 60px 6%;
-    }
-
-}
-
 /* ===================================
 IMAGE GRIDS
 =================================== */
@@ -269,14 +207,14 @@ IMAGE GRIDS
 .exercise-grid,
 .sports-grid {
 
-display: grid;
+    display: grid;
 
-grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
 
-gap: 25px;
+    gap: 25px;
 
-margin-top: 40px;
+    margin-top: 40px;
 
 }
 
@@ -288,17 +226,17 @@ IMAGE CARDS
 .exercise-card,
 .sport-card {
 
-background: white;
+    background: white;
 
-border-radius: 15px;
+    border-radius: 15px;
 
-overflow: hidden;
+    overflow: hidden;
 
-cursor: pointer;
+    cursor: pointer;
 
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 
-transition: 0.3s;
+    transition: 0.3s;
 
 }
 
@@ -306,9 +244,9 @@ transition: 0.3s;
 .exercise-card:hover,
 .sport-card:hover {
 
-transform: translateY(-8px);
+    transform: translateY(-8px);
 
-box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 
 }
 
@@ -319,14 +257,14 @@ IMAGES
 .muscle-card img,
 .exercise-card img,
 .sport-card img { 
-   
-width: 100%;
+    
+    width: 100%;
 
-height: 220px;
+    height: 220px;
 
-object-fit: cover;
+    object-fit: cover;
 
-display: block;
+    display: block;
 
 }
 
@@ -338,13 +276,13 @@ CARD TITLES
 .exercise-card h3,
 .sport-card h3 {
 
-padding: 18px;
+    padding: 18px;
 
-text-align: center;
+    text-align: center;
 
-font-size: 1.2rem;
+    font-size: 1.2rem;
 
-color: #222;
+    color: #222;
 
 }
 
@@ -354,92 +292,163 @@ INFO BOX
 
 .info-box {
 
-margin-top: 35px;
+    margin-top: 35px;
 
-background: white;
+    background: white;
 
-padding: 30px;
+    padding: 30px;
 
-border-radius: 15px;
+    border-radius: 15px;
 
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 
-min-height: 180px;
+    min-height: 180px;
 
 }
 
 .info-box h3 {
 
-margin-bottom: 15px;
+    margin-bottom: 15px;
 
-color: #1f2937;
+    color: #1f2937;
 
 }
 
 .info-box p {
 
-line-height: 1.8;
+    line-height: 1.8;
 
 }
 
+.info-box ul {
+
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+.info-box li {
+
+    margin-bottom: 8px;
+}
+
 /* ===================================
-GOAL BUTTONS
+NEW: GOAL FLIP CARDS STYLE
 =================================== */
 
-.goal-buttons {
-
-display: flex;
-
-flex-wrap: wrap;
-
-justify-content: center;
-
-gap: 15px;
-
-margin-top: 30px;
-
+/* 翻转卡片的外层弹性盒容器 */
+.goal-flip-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
-.goal-buttons button {
-
-padding: 14px 24px;
-
-border: none;
-
-border-radius: 10px;
-
-background: #2563eb;
-
-color: white;
-
-font-size: 1rem;
-
-cursor: pointer;
-
-transition: 0.3s;
-
+/* 单张卡片的 3D 视角基础容器 */
+.flip-card {
+    background-color: transparent;
+    width: 220px;
+    height: 140px;
+    perspective: 1000px; /* 控制 3D 透视深度 */
 }
 
-.goal-buttons button:hover {
+/* 包含正反两面的核心运动容器 */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
 
-background: #1d4ed8;
+/* 鼠标悬停时沿 Y 轴翻转 180 度 */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
 
-transform: translateY(-3px);
+/* 正面和背面的共有样式属性 */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* 翻转时隐藏背面视效 */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
 
+/* 卡片正面样式 - 采用富有张力的深色调 */
+.flip-card-front {
+    background: #1e293b;
+    color: #ffffff;
+}
+
+.flip-card-front h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* 卡片背面样式 - 采用激活状态的活力蓝 */
+.flip-card-back {
+    background: #2563eb;
+    color: #ffffff;
+    transform: rotateY(180deg); /* 初始状态背面背对用户 */
+}
+
+/* 背面触发按钮样式 */
+.flip-card-back button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #2563eb;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.2s ease;
+}
+
+/* 背面按钮悬停动画 */
+.flip-card-back button:hover {
+    background: #f1f5f9;
+    transform: scale(1.05);
 }
 
 /* ===================================
-MOBILE
+RESPONSIVE & MOBILE TIMING
 =================================== */
 
 @media (max-width: 768px) {
 
-.muscle-card img,
-.exercise-card img,
-.sport-card img {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
 
-    height: 180px;
+    section {
+        padding: 60px 6%;
+    }
 
-}
+    .muscle-card img,
+    .exercise-card img,
+    .sport-card img {
+        height: 180px;
+    }
 
+    /* 移动端下翻转卡片自适应宽度提升体验 */
+    .flip-card {
+        width: 100%;
+        max-width: 280px;
+        height: 130px;
+    }
 }
