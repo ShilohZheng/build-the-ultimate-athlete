@@ -476,14 +476,12 @@ RESPONSIVE & MOBILE TIMING
         height: 180px;
     }
 
-    /* 移动端下翻转卡片自适应宽度 */
     .flip-card {
         width: 100%;
         max-width: 280px;
         height: 130px;
     }
 
-    /* 移动端处理 */
     .info-box {
         flex-direction: column-reverse; 
         align-items: center;
