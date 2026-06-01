@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workout Simulator | Build the Ultimate Athlete</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/workout-simulator.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Build the Ultimate Athlete
+        </div>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="muscular-system.html">Muscular System</a></li>
+            <li><a href="sports-lab.html">Sports Lab</a></li>
+            <li><a href="workout-simulator.html">Workout Simulator</a></li>
+            <li><a href="vocabulary.html">Vocabulary</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            Interactive Athlete Performance Lab
+        </span>
+
+        <h1>
+            Build the Ultimate Athlete
+        </h1>
+
+        <p>
+            Explore how muscles work during exercise, sports,
+            and athletic performance. Click, discover, and build
+            your own training plan.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HUMAN BODY MAP -->
+
+<section class="muscle-map-section">
+
+    <h2>Interactive Muscle Map</h2>
+
+    <p>
+        Click a muscle group to learn its location, function,
+        exercises, and sports applications.
+    </p>
+
+    <div class="body-map">
+
+        <button onclick="showMuscle('chest')">
+            Chest
+        </button>
+
+        <button onclick="showMuscle('shoulders')">
+            Shoulders
+        </button>
+
+        <button onclick="showMuscle('arms')">
+            Arms
+        </button>
+
+        <button onclick="showMuscle('core')">
+            Core
+        </button>
+
+        <button onclick="showMuscle('back')">
+            Back
+        </button>
+
+        <button onclick="showMuscle('legs')">
+            Legs
+        </button>
+
+    </div>
+
+    <div id="muscle-info" class="info-box">
+
+        <h3>Select a Muscle Group</h3>
+
+        <p>
+            Information will appear here.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- EXERCISE ANALYZER -->
+
+<section class="exercise-section">
+
+    <h2>Exercise Analyzer</h2>
+
+    <p>
+        Select an exercise to see which muscles are working.
+    </p>
+
+    <div class="exercise-buttons">
+
+        <button onclick="showExercise('bench')">
+            Bench Press
+        </button>
+
+        <button onclick="showExercise('squat')">
+            Squat
+        </button>
+
+        <button onclick="showExercise('deadlift')">
+            Deadlift
+        </button>
+
+        <button onclick="showExercise('pullup')">
+            Pull-Up
+        </button>
+
+        <button onclick="showExercise('pushup')">
+            Push-Up
+        </button>
+
+        <button onclick="showExercise('shoulderpress')">
+            Shoulder Press
+        </button>
+
+    </div>
+
+    <div id="exercise-info" class="info-box">
+
+        <h3>Choose an Exercise</h3>
+
+        <p>
+            Muscle activation information will appear here.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SPORTS LAB -->
+
+<section class="sports-section">
+
+    <h2>Sports Performance Lab</h2>
+
+    <p>
+        Discover which muscle groups athletes rely on in different sports.
+    </p>
+
+    <div class="sports-buttons">
+
+        <button onclick="showSport('basketball')">
+            Basketball
+        </button>
+
+        <button onclick="showSport('soccer')">
+            Soccer
+        </button>
+
+        <button onclick="showSport('swimming')">
+            Swimming
+        </button>
+
+        <button onclick="showSport('volleyball')">
+            Volleyball
+        </button>
+
+        <button onclick="showSport('track')">
+            Sprinting
+        </button>
+
+    </div>
+
+    <div id="sport-info" class="info-box">
+
+        <h3>Select a Sport</h3>
+
+        <p>
+            Sports performance information will appear here.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- BUILD YOUR ATHLETE -->
+
+<section class="builder-section">
+
+    <h2>Build Your Athlete</h2>
+
+    <p>
+        Choose your training goal and receive recommendations.
+    </p>
+
+    <div class="goal-buttons">
+
+        <button onclick="buildAthlete('strength')">
+            Build Strength
+        </button>
+
+        <button onclick="buildAthlete('speed')">
+            Increase Speed
+        </button>
+
+        <button onclick="buildAthlete('endurance')">
+            Improve Endurance
+        </button>
+
+        <button onclick="buildAthlete('jump')">
+            Improve Vertical Jump
+        </button>
+
+    </div>
+
+    <div id="goal-info" class="info-box">
+
+        <h3>Choose a Goal</h3>
+
+        <p>
+            Your personalized athlete plan will appear here.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        Build the Ultimate Athlete | End-of-Year Anatomy & Physiology Project
+    </p>
+
+    <p>
+        Created by Shiloh Zheng
+    </p>
+
+</footer>
+
+<script src="../js/main.js"></script>
+<script src="../js/workout-simulator.js"></script>
+
+</body>
+
+</html>
