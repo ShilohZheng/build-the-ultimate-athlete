@@ -12,7 +12,7 @@ function showMuscle(muscle) {
         case "chest":
 
             info.innerHTML = `
-                <img src="../images/chest.jpg" alt="Chest">
+                <img src="../images/workout-simulator-chest.jpg" alt="Chest">
                 <h3>Chest (Pectoralis Major)</h3>
                 <p>
                     Responsible for pushing movements and bringing
@@ -27,7 +27,7 @@ function showMuscle(muscle) {
         case "shoulders":
 
             info.innerHTML = `
-                <img src="../images/shoulders.jpg" alt="Shoulders">
+                <img src="../images/workout-simulator-shoulders.jpg" alt="Shoulders">
                 <h3>Shoulders (Deltoids)</h3>
                 <p>
                     Lift, rotate, and stabilize the arms.
@@ -41,7 +41,7 @@ function showMuscle(muscle) {
         case "arms":
 
             info.innerHTML = `
-                <img src="../images/arms.jpg" alt="Arms">
+                <img src="../images/workout-simulator-arms.jpg" alt="Arms">
                 <h3>Arms</h3>
                 <p>
                     Biceps flex the elbow while triceps extend it.
@@ -55,7 +55,7 @@ function showMuscle(muscle) {
         case "core":
 
             info.innerHTML = `
-                <img src="../images/core.jpg" alt="Core">
+                <img src="../images/workout-simulator-core.jpg" alt="Core">
                 <h3>Core</h3>
                 <p>
                     Stabilizes the torso and transfers force
@@ -70,7 +70,7 @@ function showMuscle(muscle) {
         case "back":
 
             info.innerHTML = `
-                <img src="../images/back.jpg" alt="Back">
+                <img src="../images/workout-simulator-back.jpg" alt="Back">
                 <h3>Back</h3>
                 <p>
                     Supports posture and controls pulling motions.
@@ -84,7 +84,7 @@ function showMuscle(muscle) {
         case "legs":
 
             info.innerHTML = `
-                <img src="../images/legs.jpg" alt="Legs">
+                <img src="../images/workout-simulator-legs.jpg" alt="Legs">
                 <h3>Legs</h3>
                 <p>
                     Generate power for running, jumping,
@@ -114,7 +114,7 @@ function showExercise(exercise) {
         case "bench":
 
             info.innerHTML = `
-                <img src="../images/bench-press.jpg" alt="Bench Press">
+                <img src="../images/workout-simulator-bench.jpg" alt="Bench Press">
                 <h3>Bench Press</h3>
                 <p>
                     Primary Muscles:
@@ -126,7 +126,7 @@ function showExercise(exercise) {
         case "squat":
 
             info.innerHTML = `
-                <img src="../images/squat.jpg" alt="Squat">
+                <img src="../images/workout-simulator-squat.jpg" alt="Squat">
                 <h3>Squat</h3>
                 <p>
                     Primary Muscles:
@@ -138,7 +138,7 @@ function showExercise(exercise) {
         case "deadlift":
 
             info.innerHTML = `
-                <img src="../images/deadlift.jpg" alt="Deadlift">
+                <img src="../images/workout-simulator-deadlift.jpg" alt="Deadlift">
                 <h3>Deadlift</h3>
                 <p>
                     Primary Muscles:
@@ -150,7 +150,7 @@ function showExercise(exercise) {
         case "pullup":
 
             info.innerHTML = `
-                <img src="../images/pull-up.jpg" alt="Pull-Up">
+                <img src="../images/workout-simulator-pullup.jpg" alt="Pull-Up">
                 <h3>Pull-Up</h3>
                 <p>
                     Primary Muscles:
@@ -162,7 +162,7 @@ function showExercise(exercise) {
         case "pushup":
 
             info.innerHTML = `
-                <img src="../images/push-up.jpg" alt="Push-Up">
+                <img src="../images/workout-simulator-pushup.jpg" alt="Push-Up">
                 <h3>Push-Up</h3>
                 <p>
                     Primary Muscles:
@@ -174,7 +174,7 @@ function showExercise(exercise) {
         case "shoulderpress":
 
             info.innerHTML = `
-                <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
+                <img src="../images/workout-simulator-shoulderpress.jpg" alt="Shoulder Press">
                 <h3>Shoulder Press</h3>
                 <p>
                     Primary Muscles:
@@ -201,7 +201,7 @@ function showSport(sport) {
         case "basketball":
 
             info.innerHTML = `
-                <img src="../images/basketball.jpg" alt="Basketball">
+                <img src="../images/workout-simulator-basketball.jpg" alt="Basketball">
                 <h3>Basketball</h3>
                 <p>
                     Relies heavily on legs, core,
@@ -214,7 +214,7 @@ function showSport(sport) {
         case "soccer":
 
             info.innerHTML = `
-                <img src="../images/soccer.jpg" alt="Soccer">
+                <img src="../images/workout-simulator-soccer.jpg" alt="Soccer">
                 <h3>Soccer</h3>
                 <p>
                     Uses quadriceps, hamstrings,
@@ -227,7 +227,7 @@ function showSport(sport) {
         case "swimming":
 
             info.innerHTML = `
-                <img src="../images/swimming.jpg" alt="Swimming">
+                <img src="../images/workout-simulator-swimming.jpg" alt="Swimming">
                 <h3>Swimming</h3>
                 <p>
                     A full-body sport requiring
@@ -240,7 +240,7 @@ function showSport(sport) {
         case "volleyball":
 
             info.innerHTML = `
-                <img src="../images/volleyball.jpg" alt="Volleyball">
+                <img src="../images/workout-simulator-volleyball.jpg" alt="Volleyball">
                 <h3>Volleyball</h3>
                 <p>
                     Requires explosive leg power,
@@ -253,7 +253,7 @@ function showSport(sport) {
         case "track":
 
             info.innerHTML = `
-                <img src="../images/sprinting.jpg" alt="Sprinting">
+                <img src="../images/workout-simulator-sprinting.jpg" alt="Sprinting">
                 <h3>Sprinting</h3>
                 <p>
                     Depends on powerful glutes,
