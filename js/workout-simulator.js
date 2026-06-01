@@ -213,6 +213,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Basketball</h3>
                     <p>Relies heavily on legs, core, shoulders, and arms for jumping, shooting, and sprinting.</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Calves, Deltoids, Core</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/basketball.jpg" alt="Basketball">
@@ -226,6 +227,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Soccer</h3>
                     <p>Uses quadriceps, hamstrings, calves, and core muscles for explosive kicking, cutting, and running.</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves, Core</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/soccer.jpg" alt="Soccer">
@@ -239,6 +241,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Swimming</h3>
                     <p>A full-body sport requiring intense coordination of the shoulders, back, core, and legs.</p>
+                    <p><strong>Primary Muscles:</strong> Deltoids, Latissimus Dorsi, Core, Quadriceps</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/swimming.jpg" alt="Swimming">
@@ -252,6 +255,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Volleyball</h3>
                     <p>Requires explosive leg power for vertical jumps, strong shoulders for spiking, and quick reaction speed.</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Calves, Deltoids, Core</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/volleyball.jpg" alt="Volleyball">
@@ -265,6 +269,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Sprinting</h3>
                     <p>Depends on rapid, powerful contractions of the glutes, hamstrings, quadriceps, and calves.</p>
+                    <p><strong>Primary Muscles:</strong> Glutes, Hamstrings, Quadriceps, Calves</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/sprinting.jpg" alt="Sprinting">
@@ -278,7 +283,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Ultimate Frisbee</h3>
                     <p>Requires speed, agility, endurance, and quick changes of direction.</p>
-                    <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves, Core</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/frisbee.jpg" alt="Frisbee">
@@ -292,7 +297,7 @@ function showSport(sport) {
                 <div class="info-text-side">
                     <h3>Hockey</h3>
                     <p>Relies on explosive leg power, balance, and upper-body strength for skating and shooting.</p>
-                    <p><strong>Primary Muscles:</strong> Quadriceps, Glutes, Core</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Glutes, Core, Shoulders</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/hockey.jpg" alt="Hockey">
@@ -305,8 +310,8 @@ function showSport(sport) {
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Badminton</h3>
-                    <p>Requires quick reactions, agility, balance, and explosive movement.</p>
-                    <p><strong>Primary Muscles:</strong> Deltoids, Quadriceps, Calves</p>
+                    <p>Requires explosive footwork, quick reactions, agility, and excellent hand-eye coordination.</p>
+                    <p><strong>Primary Muscles:</strong> Deltoids, Forearms, Quadriceps, Calves, Core</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/badminton.jpg" alt="Badminton">
@@ -319,8 +324,8 @@ function showSport(sport) {
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Table Tennis</h3>
-                    <p>Requires lightning-fast reflexes, hand-eye coordination, precision, and agility.</p>
-                    <p><strong>Primary Muscles:</strong> Forearms, Deltoids, Core</p>
+                    <p>Requires lightning-fast reflexes, precision, balance, and rapid lateral movement.</p>
+                    <p><strong>Primary Muscles:</strong> Forearms, Deltoids, Core, Quadriceps</p>
                 </div>
                 <div class="info-image-side">
                     <img src="../images/table-tennis.jpg" alt="Table Tennis">
