@@ -260,3 +260,186 @@ footer p {
     }
 
 }
+
+/* ===================================
+IMAGE GRIDS
+=================================== */
+
+.muscle-grid,
+.exercise-grid,
+.sports-grid {
+
+display: grid;
+
+grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+gap: 25px;
+
+margin-top: 40px;
+
+}
+
+/* ===================================
+IMAGE CARDS
+=================================== */
+
+.muscle-card,
+.exercise-card,
+.sport-card {
+
+background: white;
+
+border-radius: 15px;
+
+overflow: hidden;
+
+cursor: pointer;
+
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+transition: 0.3s;
+
+}
+
+.muscle-card:hover,
+.exercise-card:hover,
+.sport-card:hover {
+
+transform: translateY(-8px);
+
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+/* ===================================
+IMAGES
+=================================== */
+
+.muscle-card img,
+.exercise-card img,
+.sport-card img { 
+   
+width: 100%;
+
+height: 220px;
+
+object-fit: cover;
+
+display: block;
+
+}
+
+/* ===================================
+CARD TITLES
+=================================== */
+
+.muscle-card h3,
+.exercise-card h3,
+.sport-card h3 {
+
+padding: 18px;
+
+text-align: center;
+
+font-size: 1.2rem;
+
+color: #222;
+
+}
+
+/* ===================================
+INFO BOX
+=================================== */
+
+.info-box {
+
+margin-top: 35px;
+
+background: white;
+
+padding: 30px;
+
+border-radius: 15px;
+
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+min-height: 180px;
+
+}
+
+.info-box h3 {
+
+margin-bottom: 15px;
+
+color: #1f2937;
+
+}
+
+.info-box p {
+
+line-height: 1.8;
+
+}
+
+/* ===================================
+GOAL BUTTONS
+=================================== */
+
+.goal-buttons {
+
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+gap: 15px;
+
+margin-top: 30px;
+
+}
+
+.goal-buttons button {
+
+padding: 14px 24px;
+
+border: none;
+
+border-radius: 10px;
+
+background: #2563eb;
+
+color: white;
+
+font-size: 1rem;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+.goal-buttons button:hover {
+
+background: #1d4ed8;
+
+transform: translateY(-3px);
+
+}
+
+/* ===================================
+MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+
+.muscle-card img,
+.exercise-card img,
+.sport-card img {
+
+    height: 180px;
+
+}
+
+}
