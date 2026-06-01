@@ -498,3 +498,32 @@ RESPONSIVE & MOBILE TIMING
         height: 160px;
     }
 }
+
+.athlete-score-bar {
+
+    width: 100%;
+    height: 20px;
+
+    background: #dfe6e9;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    margin-top: 15px;
+}
+
+#score-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: linear-gradient(
+        90deg,
+        #00b894,
+        #55efc4
+    );
+
+    transition: 1s;
+}
