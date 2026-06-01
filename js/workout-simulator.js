@@ -336,70 +336,92 @@ switch (sport) {
    BUILD YOUR ATHLETE
 =================================== */
 
-function buildAthlete(goal) {
+function generateAthlete() {
+
+    const goal =
+        document.getElementById("goal-select").value;
+
+    const muscle =
+        document.getElementById("muscle-select").value;
 
     const info =
         document.getElementById("goal-info");
 
-    switch (goal) {
+    let athleteName = "";
+    let description = "";
+    let image = "";
 
-        case "strength":
+    if (goal === "strength" && muscle === "chest") {
 
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Strength Athlete Plan</h3>
-                    <p>Focus on heavy compound movements like Squats, Bench Press, and Deadlifts.</p>
-                    <p>Use progressive overload with lower rep ranges (3-6 reps) to maximize neuromuscular adaptation.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/gym-background.jpg" alt="Strength Training">
-                </div>
-            `;
-            break;
+        athleteName = "Power Lifter";
+        description =
+            "You focus on maximum upper-body strength. Bench press is your specialty.";
 
-        case "speed":
-
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Speed Athlete Plan</h3>
-                    <p>Focus on sprint mechanics, interval training, and plyometrics.</p>
-                    <p>Train the nervous system using explosive movements like power cleans and resisted sprints.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/sprinting.jpg" alt="Speed Training">
-                </div>
-            `;
-            break;
-
-        case "endurance":
-
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Endurance Athlete Plan</h3>
-                    <p>Focus on continuous aerobic conditioning, tempo runs, and muscular endurance circuit training.</p>
-                    <p>Optimize your VO2 max and steady-state energy pathways while incorporating proper recovery protocols.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/swimming.jpg" alt="Endurance Training">
-                </div>
-            `;
-            break;
-
-        case "jump":
-
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Vertical Jump Athlete Plan</h3>
-                    <p>Focus on the stretch-shortening cycle (SSC) through intensive plyometric drills and box jumps.</p>
-                    <p>Combine maximum strength (squats) with high-velocity movements to improve your overall Rate of Force Development (RFD).</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/volleyball.jpg" alt="Vertical Jump Training">
-                </div>
-            `;
-            break;
-
+        image = "../images/bench-press.jpg";
     }
 
+    else if (goal === "speed" && muscle === "legs") {
+
+        athleteName = "Elite Sprinter";
+        description =
+            "Your explosive leg power helps you accelerate quickly and dominate short-distance events.";
+
+        image = "../images/sprinting.jpg";
+    }
+
+    else if (goal === "jump" && muscle === "legs") {
+
+        athleteName = "Vertical Jump Specialist";
+        description =
+            "You train for explosive jumping ability using squats and plyometrics.";
+
+        image = "../images/volleyball.jpg";
+    }
+
+    else if (goal === "endurance") {
+
+        athleteName = "Endurance Athlete";
+        description =
+            "You excel at long-duration activities and aerobic performance.";
+
+        image = "../images/swimming.jpg";
+    }
+
+    else {
+
+        athleteName = "Balanced Athlete";
+        description =
+            "You combine multiple fitness qualities to become a well-rounded performer.";
+
+        image = "../images/gym-background.jpg";
+    }
+
+    info.innerHTML = `
+
+        <div class="info-text-side">
+
+            <h3>${athleteName}</h3>
+
+            <p>${description}</p>
+
+            <p>
+                <strong>Goal:</strong>
+                ${goal}
+            </p>
+
+            <p>
+                <strong>Muscle Focus:</strong>
+                ${muscle}
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+
+            <img src="${image}" alt="${athleteName}">
+
+        </div>
+
+    `;
 }
 
