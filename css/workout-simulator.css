@@ -209,8 +209,7 @@ IMAGE GRIDS
 
     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 
@@ -470,11 +469,12 @@ RESPONSIVE & MOBILE TIMING
         padding: 60px 6%;
     }
 
-    .muscle-card img,
-    .exercise-card img,
-    .sport-card img {
-        height: 180px;
-    }
+   .muscle-grid,
+   .exercise-grid,
+   .sports-grid {
+   
+       grid-template-columns: 1fr;
+   }
 
     .flip-card {
         width: 100%;
