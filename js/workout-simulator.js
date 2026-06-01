@@ -1,375 +1,326 @@
-/* =========================
+/* ===================================
    MUSCLE MAP
-========================= */
+=================================== */
 
 function showMuscle(muscle) {
 
-    const box =
+    const info =
         document.getElementById("muscle-info");
 
-    if (muscle === "chest") {
+    switch (muscle) {
 
-        box.innerHTML = `
-            <h3>Pectoralis Major & Chest Muscles</h3>
+        case "chest":
 
-            <p>
-                The chest muscles help move the arms toward the body
-                and generate pushing force.
-            </p>
+            info.innerHTML = `
+                <img src="../images/chest.jpg" alt="Chest">
+                <h3>Chest (Pectoralis Major)</h3>
+                <p>
+                    Responsible for pushing movements and bringing
+                    the arms toward the body.
+                </p>
+                <p>
+                    Common Exercises: Bench Press, Push-Up
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li><strong>Main Muscles:</strong> Pectoralis Major, Pectoralis Minor</li>
-                <li><strong>Exercises:</strong> Bench Press, Push-Ups, Chest Fly</li>
-                <li><strong>Sports:</strong> Basketball, Volleyball, Swimming</li>
-            </ul>
-        `;
-    }
+        case "shoulders":
 
-    else if (muscle === "shoulders") {
+            info.innerHTML = `
+                <img src="../images/shoulders.jpg" alt="Shoulders">
+                <h3>Shoulders (Deltoids)</h3>
+                <p>
+                    Lift, rotate, and stabilize the arms.
+                </p>
+                <p>
+                    Common Exercises: Shoulder Press, Lateral Raise
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Deltoids & Shoulder Muscles</h3>
+        case "arms":
 
-            <p>
-                The shoulders allow the arms to lift, rotate,
-                and stabilize during movement.
-            </p>
+            info.innerHTML = `
+                <img src="../images/arms.jpg" alt="Arms">
+                <h3>Arms</h3>
+                <p>
+                    Biceps flex the elbow while triceps extend it.
+                </p>
+                <p>
+                    Common Exercises: Curls, Dips
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li><strong>Main Muscles:</strong> Anterior, Lateral, Posterior Deltoid</li>
-                <li><strong>Exercises:</strong> Shoulder Press, Lateral Raise</li>
-                <li><strong>Sports:</strong> Volleyball, Tennis, Baseball</li>
-            </ul>
-        `;
-    }
+        case "core":
 
-    else if (muscle === "arms") {
+            info.innerHTML = `
+                <img src="../images/core.jpg" alt="Core">
+                <h3>Core</h3>
+                <p>
+                    Stabilizes the torso and transfers force
+                    between the upper and lower body.
+                </p>
+                <p>
+                    Common Exercises: Plank, Crunches
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Arm Muscles</h3>
+        case "back":
 
-            <p>
-                Arm muscles control elbow movement and gripping strength.
-            </p>
+            info.innerHTML = `
+                <img src="../images/back.jpg" alt="Back">
+                <h3>Back</h3>
+                <p>
+                    Supports posture and controls pulling motions.
+                </p>
+                <p>
+                    Common Exercises: Pull-Ups, Rows
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li><strong>Main Muscles:</strong> Biceps, Triceps, Brachialis</li>
-                <li><strong>Exercises:</strong> Bicep Curl, Tricep Pushdown</li>
-                <li><strong>Sports:</strong> Rock Climbing, Basketball, Baseball</li>
-            </ul>
-        `;
-    }
+        case "legs":
 
-    else if (muscle === "core") {
+            info.innerHTML = `
+                <img src="../images/legs.jpg" alt="Legs">
+                <h3>Legs</h3>
+                <p>
+                    Generate power for running, jumping,
+                    and athletic performance.
+                </p>
+                <p>
+                    Common Exercises: Squats, Lunges
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Core Muscles</h3>
-
-            <p>
-                The core stabilizes the body and transfers force
-                between the upper and lower body.
-            </p>
-
-            <ul>
-                <li><strong>Main Muscles:</strong> Rectus Abdominis, Obliques, Transverse Abdominis</li>
-                <li><strong>Exercises:</strong> Planks, Sit-Ups, Russian Twists</li>
-                <li><strong>Sports:</strong> Nearly Every Sport</li>
-            </ul>
-        `;
-    }
-
-    else if (muscle === "back") {
-
-        box.innerHTML = `
-            <h3>Back Muscles</h3>
-
-            <p>
-                Back muscles support posture and generate pulling power.
-            </p>
-
-            <ul>
-                <li><strong>Main Muscles:</strong> Latissimus Dorsi, Trapezius, Rhomboids</li>
-                <li><strong>Exercises:</strong> Pull-Ups, Rows, Deadlifts</li>
-                <li><strong>Sports:</strong> Swimming, Rowing, Wrestling</li>
-            </ul>
-        `;
-    }
-
-    else if (muscle === "legs") {
-
-        box.innerHTML = `
-            <h3>Leg Muscles</h3>
-
-            <p>
-                Leg muscles produce speed, power, jumping,
-                and running performance.
-            </p>
-
-            <ul>
-                <li><strong>Main Muscles:</strong> Quadriceps, Hamstrings, Gluteus Maximus, Calves</li>
-                <li><strong>Exercises:</strong> Squats, Lunges, Leg Press</li>
-                <li><strong>Sports:</strong> Soccer, Basketball, Track & Field</li>
-            </ul>
-        `;
     }
 
 }
 
-/* =========================
+/* ===================================
    EXERCISE ANALYZER
-========================= */
+=================================== */
 
 function showExercise(exercise) {
 
-    const box =
+    const info =
         document.getElementById("exercise-info");
 
-    if (exercise === "bench") {
+    switch (exercise) {
 
-        box.innerHTML = `
-            <h3>Bench Press</h3>
+        case "bench":
 
-            <ul>
-                <li><strong>Primary Muscles:</strong> Pectoralis Major, Triceps, Front Deltoids</li>
-                <li><strong>Movement Type:</strong> Push</li>
-                <li><strong>Athletic Benefit:</strong> Upper-body strength and power</li>
-            </ul>
-        `;
-    }
+            info.innerHTML = `
+                <img src="../images/bench-press.jpg" alt="Bench Press">
+                <h3>Bench Press</h3>
+                <p>
+                    Primary Muscles:
+                    Chest, Triceps, Front Deltoids
+                </p>
+            `;
+            break;
 
-    else if (exercise === "squat") {
+        case "squat":
 
-        box.innerHTML = `
-            <h3>Squat</h3>
+            info.innerHTML = `
+                <img src="../images/squat.jpg" alt="Squat">
+                <h3>Squat</h3>
+                <p>
+                    Primary Muscles:
+                    Quadriceps, Glutes, Hamstrings
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li><strong>Primary Muscles:</strong> Quadriceps, Glutes, Hamstrings</li>
-                <li><strong>Movement Type:</strong> Lower Body Push</li>
-                <li><strong>Athletic Benefit:</strong> Jumping, sprinting, power</li>
-            </ul>
-        `;
-    }
+        case "deadlift":
 
-    else if (exercise === "deadlift") {
+            info.innerHTML = `
+                <img src="../images/deadlift.jpg" alt="Deadlift">
+                <h3>Deadlift</h3>
+                <p>
+                    Primary Muscles:
+                    Hamstrings, Glutes, Back
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Deadlift</h3>
+        case "pullup":
 
-            <ul>
-                <li><strong>Primary Muscles:</strong> Hamstrings, Glutes, Back</li>
-                <li><strong>Movement Type:</strong> Hip Hinge</li>
-                <li><strong>Athletic Benefit:</strong> Full-body strength</li>
-            </ul>
-        `;
-    }
+            info.innerHTML = `
+                <img src="../images/pull-up.jpg" alt="Pull-Up">
+                <h3>Pull-Up</h3>
+                <p>
+                    Primary Muscles:
+                    Latissimus Dorsi, Biceps
+                </p>
+            `;
+            break;
 
-    else if (exercise === "pullup") {
+        case "pushup":
 
-        box.innerHTML = `
-            <h3>Pull-Up</h3>
+            info.innerHTML = `
+                <img src="../images/push-up.jpg" alt="Push-Up">
+                <h3>Push-Up</h3>
+                <p>
+                    Primary Muscles:
+                    Chest, Triceps, Core
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li><strong>Primary Muscles:</strong> Lats, Biceps, Trapezius</li>
-                <li><strong>Movement Type:</strong> Pull</li>
-                <li><strong>Athletic Benefit:</strong> Upper-body pulling strength</li>
-            </ul>
-        `;
-    }
+        case "shoulderpress":
 
-    else if (exercise === "pushup") {
+            info.innerHTML = `
+                <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
+                <h3>Shoulder Press</h3>
+                <p>
+                    Primary Muscles:
+                    Deltoids and Triceps
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Push-Up</h3>
-
-            <ul>
-                <li><strong>Primary Muscles:</strong> Chest, Triceps, Shoulders</li>
-                <li><strong>Movement Type:</strong> Push</li>
-                <li><strong>Athletic Benefit:</strong> Muscular endurance</li>
-            </ul>
-        `;
-    }
-
-    else if (exercise === "shoulderpress") {
-
-        box.innerHTML = `
-            <h3>Shoulder Press</h3>
-
-            <ul>
-                <li><strong>Primary Muscles:</strong> Deltoids, Triceps</li>
-                <li><strong>Movement Type:</strong> Vertical Push</li>
-                <li><strong>Athletic Benefit:</strong> Shoulder stability and power</li>
-            </ul>
-        `;
     }
 
 }
 
-/* =========================
+/* ===================================
    SPORTS LAB
-========================= */
+=================================== */
 
 function showSport(sport) {
 
-    const box =
+    const info =
         document.getElementById("sport-info");
 
-    if (sport === "basketball") {
+    switch (sport) {
 
-        box.innerHTML = `
-            <h3>Basketball</h3>
+        case "basketball":
 
-            <ul>
-                <li>Quadriceps</li>
-                <li>Calves</li>
-                <li>Glutes</li>
-                <li>Core</li>
-                <li>Deltoids</li>
-            </ul>
+            info.innerHTML = `
+                <img src="../images/basketball.jpg" alt="Basketball">
+                <h3>Basketball</h3>
+                <p>
+                    Relies heavily on legs, core,
+                    shoulders, and arms for jumping,
+                    shooting, and sprinting.
+                </p>
+            `;
+            break;
 
-            <p>
-                These muscles support jumping, sprinting,
-                rebounding, and shooting.
-            </p>
-        `;
-    }
+        case "soccer":
 
-    else if (sport === "soccer") {
+            info.innerHTML = `
+                <img src="../images/soccer.jpg" alt="Soccer">
+                <h3>Soccer</h3>
+                <p>
+                    Uses quadriceps, hamstrings,
+                    calves, and core muscles for
+                    kicking and running.
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Soccer</h3>
+        case "swimming":
 
-            <ul>
-                <li>Quadriceps</li>
-                <li>Hamstrings</li>
-                <li>Calves</li>
-                <li>Hip Flexors</li>
-            </ul>
+            info.innerHTML = `
+                <img src="../images/swimming.jpg" alt="Swimming">
+                <h3>Swimming</h3>
+                <p>
+                    A full-body sport requiring
+                    strong shoulders, back, core,
+                    and legs.
+                </p>
+            `;
+            break;
 
-            <p>
-                These muscles support running, kicking,
-                acceleration, and endurance.
-            </p>
-        `;
-    }
+        case "volleyball":
 
-    else if (sport === "swimming") {
+            info.innerHTML = `
+                <img src="../images/volleyball.jpg" alt="Volleyball">
+                <h3>Volleyball</h3>
+                <p>
+                    Requires explosive leg power,
+                    strong shoulders, and quick
+                    reaction speed.
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Swimming</h3>
+        case "track":
 
-            <ul>
-                <li>Latissimus Dorsi</li>
-                <li>Shoulders</li>
-                <li>Core</li>
-                <li>Chest</li>
-            </ul>
+            info.innerHTML = `
+                <img src="../images/sprinting.jpg" alt="Sprinting">
+                <h3>Sprinting</h3>
+                <p>
+                    Depends on powerful glutes,
+                    hamstrings, quadriceps, and calves.
+                </p>
+            `;
+            break;
 
-            <p>
-                Swimming requires coordination and strength
-                across the entire body.
-            </p>
-        `;
-    }
-
-    else if (sport === "volleyball") {
-
-        box.innerHTML = `
-            <h3>Volleyball</h3>
-
-            <ul>
-                <li>Quadriceps</li>
-                <li>Calves</li>
-                <li>Deltoids</li>
-                <li>Core</li>
-            </ul>
-
-            <p>
-                Important for jumping, blocking,
-                serving, and spiking.
-            </p>
-        `;
-    }
-
-    else if (sport === "track") {
-
-        box.innerHTML = `
-            <h3>Sprinting</h3>
-
-            <ul>
-                <li>Hamstrings</li>
-                <li>Glutes</li>
-                <li>Quadriceps</li>
-                <li>Calves</li>
-            </ul>
-
-            <p>
-                Sprinting depends on explosive power
-                and rapid force production.
-            </p>
-        `;
     }
 
 }
 
-/* =========================
+/* ===================================
    BUILD YOUR ATHLETE
-========================= */
+=================================== */
 
 function buildAthlete(goal) {
 
-    const box =
+    const info =
         document.getElementById("goal-info");
 
-    if (goal === "strength") {
+    switch (goal) {
 
-        box.innerHTML = `
-            <h3>Build Strength</h3>
+        case "strength":
 
-            <ul>
-                <li>Focus Muscles: Chest, Back, Legs</li>
-                <li>Exercises: Squat, Bench Press, Deadlift</li>
-                <li>Goal: Increase force production</li>
-            </ul>
-        `;
-    }
+            info.innerHTML = `
+                <h3>Strength Athlete</h3>
+                <p>
+                    Focus on Squats, Bench Press,
+                    Deadlifts, and progressive overload.
+                </p>
+            `;
+            break;
 
-    else if (goal === "speed") {
+        case "speed":
 
-        box.innerHTML = `
-            <h3>Increase Speed</h3>
+            info.innerHTML = `
+                <h3>Speed Athlete</h3>
+                <p>
+                    Focus on sprint training,
+                    plyometrics, and explosive exercises.
+                </p>
+            `;
+            break;
 
-            <ul>
-                <li>Focus Muscles: Hamstrings, Glutes, Calves</li>
-                <li>Exercises: Sprinting, Lunges, Box Jumps</li>
-                <li>Goal: Improve acceleration</li>
-            </ul>
-        `;
-    }
+        case "endurance":
 
-    else if (goal === "endurance") {
+            info.innerHTML = `
+                <h3>Endurance Athlete</h3>
+                <p>
+                    Focus on aerobic conditioning,
+                    long-distance training, and recovery.
+                </p>
+            `;
+            break;
 
-        box.innerHTML = `
-            <h3>Improve Endurance</h3>
+        case "jump":
 
-            <ul>
-                <li>Focus Muscles: Entire Body</li>
-                <li>Exercises: Running, Swimming, Cycling</li>
-                <li>Goal: Delay fatigue</li>
-            </ul>
-        `;
-    }
+            info.innerHTML = `
+                <h3>Vertical Jump Athlete</h3>
+                <p>
+                    Focus on squats, lunges,
+                    box jumps, and plyometric drills.
+                </p>
+            `;
+            break;
 
-    else if (goal === "jump") {
-
-        box.innerHTML = `
-            <h3>Improve Vertical Jump</h3>
-
-            <ul>
-                <li>Focus Muscles: Quadriceps, Glutes, Calves</li>
-                <li>Exercises: Squats, Jump Squats, Box Jumps</li>
-                <li>Goal: Generate explosive power</li>
-            </ul>
-        `;
     }
 
 }
