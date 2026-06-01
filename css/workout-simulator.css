@@ -287,19 +287,19 @@ CARD TITLES
 }
 
 /* ===================================
-INFO BOX (已优化：限制整体最大宽度，照片缩小为精致尺寸)
+INFO BOX (已微调：放大照片至黄金比例尺寸)
 =================================== */
 
 .info-box {
     margin-top: 35px;
     background: white;
-    padding: 25px 30px;
+    padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    min-height: 140px;
+    min-height: 160px;
 
-    /* 优化：限制整个框的最大宽度，并在页面水平居中，让排版更紧凑 */
-    max-width: 750px;
+    /* 限制整个框的最大宽度，并在页面水平居中 */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 
@@ -307,7 +307,7 @@ INFO BOX (已优化：限制整体最大宽度，照片缩小为精致尺寸)
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px; 
+    gap: 30px; 
 }
 
 /* 左侧文字区块 */
@@ -320,14 +320,14 @@ INFO BOX (已优化：限制整体最大宽度，照片缩小为精致尺寸)
     margin-top: 0;
     margin-bottom: 12px;
     color: #1f2937;
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 
 .info-box p {
     line-height: 1.7;
     color: #4b5563;
     margin-bottom: 8px;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .info-box ul {
@@ -339,17 +339,17 @@ INFO BOX (已优化：限制整体最大宽度，照片缩小为精致尺寸)
     margin-bottom: 6px;
 }
 
-/* 右侧图片容器区块 —— 修改这里成功控制照片在小范围内 */
+/* 右侧图片容器区块 —— 调整到了极具美感的矩形尺寸 */
 .info-image-side {
-    flex: 0 0 140px; /* 固定宽度缩减至 140px */
-    max-width: 140px;
-    height: 140px;   /* 高度缩减至 140px，形成完美的精美正方形小框 */
-    border-radius: 10px;
+    flex: 0 0 240px;  /* 宽度从 140px 调大到 240px */
+    max-width: 240px;
+    height: 160px;    /* 高度从 140px 调大到 160px */
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* 确保图片自适应填满小方框 */
+/* 确保图片无损缩放填充 */
 .info-image-side img {
     width: 100%;
     height: 100%;
@@ -482,13 +482,14 @@ RESPONSIVE & MOBILE TIMING
     .info-box {
         flex-direction: column-reverse; 
         align-items: center;
-        gap: 15px;
+        gap: 20px;
         padding: 20px;
     }
 
     .info-image-side {
         flex: none;
-        width: 120px;
-        height: 120px;
+        width: 100%;
+        max-width: 280px;
+        height: 160px;
     }
 }
