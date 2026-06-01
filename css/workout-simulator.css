@@ -703,3 +703,218 @@ RESPONSIVE & MOBILE TIMING
     transform: translateY(-3px);
 
 }
+
+/* ===================================
+UPGRADE BUTTONS
+=================================== */
+
+.generate-btn,
+.workout-generator-section button,
+.reaction-section button {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(37,99,235,0.25);
+
+    transition: all 0.3s ease;
+}
+
+.generate-btn:hover,
+.workout-generator-section button:hover,
+.reaction-section button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(37,99,235,0.35);
+
+    background: linear-gradient(
+        135deg,
+        #1d4ed8,
+        #2563eb
+    );
+}
+
+.generate-btn:active,
+.workout-generator-section button:active,
+.reaction-section button:active {
+
+    transform: scale(0.97);
+}
+
+/* ===================================
+ATHLETE DNA LAB
+=================================== */
+
+.builder-section {
+
+    background: #f8fafc;
+}
+
+.builder-controls {
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    margin: 40px 0;
+}
+
+.builder-choice {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    min-width: 220px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+}
+
+.builder-choice h3 {
+
+    margin-bottom: 15px;
+}
+
+.builder-choice select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d1d5db;
+
+    font-size: 1rem;
+}
+
+/* ===================================
+WORKOUT GENERATOR
+=================================== */
+
+.workout-generator-section {
+
+    background: white;
+
+    text-align: center;
+
+    padding: 80px 10%;
+}
+
+.workout-generator-section select {
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d1d5db;
+
+    font-size: 1rem;
+
+    min-width: 240px;
+
+    margin-bottom: 20px;
+}
+
+/* ===================================
+REACTION TEST
+=================================== */
+
+.reaction-section {
+
+    background: #f8fafc;
+
+    text-align: center;
+
+    padding: 80px 10%;
+}
+
+#reaction-box {
+
+    width: 320px;
+    height: 180px;
+
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #d1d5db;
+
+    border-radius: 20px;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#reaction-box:hover {
+
+    transform: scale(1.03);
+}
+
+#reaction-result {
+
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ===================================
+ATHLETE REPORT CARD
+=================================== */
+
+.athlete-report {
+
+    text-align: center;
+}
+
+.athlete-report h3 {
+
+    color: #2563eb;
+}
+
+.athlete-rank {
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+.athlete-strengths {
+
+    margin-top: 15px;
+
+    line-height: 1.8;
+}
