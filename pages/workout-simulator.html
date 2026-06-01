@@ -242,17 +242,17 @@
 
 <section class="builder-section">
 
-    <h2>Build Your Dream Athlete</h2>
+    <h2>Athlete DNA Lab</h2>
 
     <p>
-        Choose your goal and muscle focus, then generate your athlete profile.
+        Analyze your athletic DNA and discover the type of athlete you could become.
     </p>
 
     <div class="builder-controls">
 
         <div class="builder-choice">
 
-            <h3>Step 1: Choose a Goal</h3>
+            <h3>Goal</h3>
 
             <select id="goal-select">
 
@@ -267,7 +267,24 @@
 
         <div class="builder-choice">
 
-            <h3>Step 2: Choose a Muscle Focus</h3>
+            <h3>Favorite Sport</h3>
+
+            <select id="sport-select">
+
+                <option value="basketball">Basketball</option>
+                <option value="soccer">Soccer</option>
+                <option value="swimming">Swimming</option>
+                <option value="volleyball">Volleyball</option>
+                <option value="track">Sprinting</option>
+                <option value="badminton">Badminton</option>
+
+            </select>
+
+        </div>
+
+        <div class="builder-choice">
+
+            <h3>Strongest Muscle</h3>
 
             <select id="muscle-select">
 
@@ -285,26 +302,20 @@
     </div>
 
     <button class="generate-btn"
-            onclick="generateAthlete()">
+            onclick="generateAthleteDNA()">
 
-        Generate My Athlete
+        Analyze My DNA
 
     </button>
 
     <div id="goal-info" class="info-box">
 
-        <h3>Your Athlete Profile</h3>
-    
+        <h3>Athlete Report</h3>
+
         <p>
-            Click Generate My Athlete to begin.
+            Complete your analysis to reveal your athlete profile.
         </p>
-    
-        <div class="athlete-score-bar">
-    
-            <div id="score-fill"></div>
-    
-        </div>
-    
+
     </div>
 
 </section>
