@@ -938,3 +938,14 @@ ATHLETE REPORT CARD
 
     line-height: 1.8;
 }
+
+.generate-btn,
+.workout-generator-section button,
+.reaction-section button {
+
+    display: block !important;
+
+    width: fit-content;
+
+    margin: 25px auto !important;
+}
