@@ -12,87 +12,84 @@ function showMuscle(muscle) {
         case "chest":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-chest.jpg" alt="Chest">
-                <h3>Chest (Pectoralis Major)</h3>
-                <p>
-                    Responsible for pushing movements and bringing
-                    the arms toward the body.
-                </p>
-                <p>
-                    Common Exercises: Bench Press, Push-Up
-                </p>
+                <div class="info-text-side">
+                    <h3>Chest (Pectoralis Major)</h3>
+                    <p>Responsible for pushing movements and bringing the arms toward the body.</p>
+                    <p><strong>Common Exercises:</strong> Bench Press, Push-Up</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/chest.jpg" alt="Chest">
+                </div>
             `;
             break;
 
         case "shoulders":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-shoulders.jpg" alt="Shoulders">
-                <h3>Shoulders (Deltoids)</h3>
-                <p>
-                    Lift, rotate, and stabilize the arms.
-                </p>
-                <p>
-                    Common Exercises: Shoulder Press, Lateral Raise
-                </p>
+                <div class="info-text-side">
+                    <h3>Shoulders (Deltoids)</h3>
+                    <p>Lift, rotate, and stabilize the arms.</p>
+                    <p><strong>Common Exercises:</strong> Shoulder Press, Lateral Raise</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/shoulders.jpg" alt="Shoulders">
+                </div>
             `;
             break;
 
         case "arms":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-arms.jpg" alt="Arms">
-                <h3>Arms</h3>
-                <p>
-                    Biceps flex the elbow while triceps extend it.
-                </p>
-                <p>
-                    Common Exercises: Curls, Dips
-                </p>
+                <div class="info-text-side">
+                    <h3>Arms</h3>
+                    <p>Biceps flex the elbow while triceps extend it.</p>
+                    <p><strong>Common Exercises:</strong> Curls, Dips</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/arms.jpg" alt="Arms">
+                </div>
             `;
             break;
 
         case "core":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-core.jpg" alt="Core">
-                <h3>Core</h3>
-                <p>
-                    Stabilizes the torso and transfers force
-                    between the upper and lower body.
-                </p>
-                <p>
-                    Common Exercises: Plank, Crunches
-                </p>
+                <div class="info-text-side">
+                    <h3>Core</h3>
+                    <p>Stabilizes the torso and transfers force between the upper and lower body.</p>
+                    <p><strong>Common Exercises:</strong> Plank, Crunches</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/core.jpg" alt="Core">
+                </div>
             `;
             break;
 
         case "back":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-back.jpg" alt="Back">
-                <h3>Back</h3>
-                <p>
-                    Supports posture and controls pulling motions.
-                </p>
-                <p>
-                    Common Exercises: Pull-Ups, Rows
-                </p>
+                <div class="info-text-side">
+                    <h3>Back</h3>
+                    <p>Supports posture and controls pulling motions.</p>
+                    <p><strong>Common Exercises:</strong> Pull-Ups, Rows</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/back.jpg" alt="Back">
+                </div>
             `;
             break;
 
         case "legs":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-legs.jpg" alt="Legs">
-                <h3>Legs</h3>
-                <p>
-                    Generate power for running, jumping,
-                    and athletic performance.
-                </p>
-                <p>
-                    Common Exercises: Squats, Lunges
-                </p>
+                <div class="info-text-side">
+                    <h3>Legs</h3>
+                    <p>Generate power for running, jumping, and athletic performance.</p>
+                    <p><strong>Common Exercises:</strong> Squats, Lunges</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/legs.jpg" alt="Legs">
+                </div>
             `;
             break;
 
@@ -114,72 +111,84 @@ function showExercise(exercise) {
         case "bench":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-bench.jpg" alt="Bench Press">
-                <h3>Bench Press</h3>
-                <p>
-                    Primary Muscles:
-                    Chest, Triceps, Front Deltoids
-                </p>
+                <div class="info-text-side">
+                    <h3>Bench Press</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Chest (Pectoralis Major), Triceps, Front Deltoids (Shoulders)</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/bench-press.jpg" alt="Bench Press">
+                </div>
             `;
             break;
 
         case "squat":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-squat.jpg" alt="Squat">
-                <h3>Squat</h3>
-                <p>
-                    Primary Muscles:
-                    Quadriceps, Glutes, Hamstrings
-                </p>
+                <div class="info-text-side">
+                    <h3>Squat</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Quadriceps, Glutes (Buttocks), Hamstrings, and Core</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/squat.jpg" alt="Squat">
+                </div>
             `;
             break;
 
         case "deadlift":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-deadlift.jpg" alt="Deadlift">
-                <h3>Deadlift</h3>
-                <p>
-                    Primary Muscles:
-                    Hamstrings, Glutes, Back
-                </p>
+                <div class="info-text-side">
+                    <h3>Deadlift</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Hamstrings, Glutes, Lower Back, Erector Spinae, and Trapezius</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/deadlift.jpg" alt="Deadlift">
+                </div>
             `;
             break;
 
         case "pullup":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-pullup.jpg" alt="Pull-Up">
-                <h3>Pull-Up</h3>
-                <p>
-                    Primary Muscles:
-                    Latissimus Dorsi, Biceps
-                </p>
+                <div class="info-text-side">
+                    <h3>Pull-Up</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Latissimus Dorsi (Lats/Back), Biceps, Upper Back</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/pull-up.jpg" alt="Pull-Up">
+                </div>
             `;
             break;
 
         case "pushup":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-pushup.jpg" alt="Push-Up">
-                <h3>Push-Up</h3>
-                <p>
-                    Primary Muscles:
-                    Chest, Triceps, Core
-                </p>
+                <div class="info-text-side">
+                    <h3>Push-Up</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Chest, Triceps, Anterior Deltoids, and Core Stability</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/push-up.jpg" alt="Push-Up">
+                </div>
             `;
             break;
 
         case "shoulderpress":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-shoulderpress.jpg" alt="Shoulder Press">
-                <h3>Shoulder Press</h3>
-                <p>
-                    Primary Muscles:
-                    Deltoids and Triceps
-                </p>
+                <div class="info-text-side">
+                    <h3>Shoulder Press</h3>
+                    <p><strong>Primary Muscles Involved:</strong></p>
+                    <p>Deltoids (Shoulders), Triceps, Upper Chest</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
+                </div>
             `;
             break;
 
@@ -201,64 +210,65 @@ function showSport(sport) {
         case "basketball":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-basketball.jpg" alt="Basketball">
-                <h3>Basketball</h3>
-                <p>
-                    Relies heavily on legs, core,
-                    shoulders, and arms for jumping,
-                    shooting, and sprinting.
-                </p>
+                <div class="info-text-side">
+                    <h3>Basketball</h3>
+                    <p>Relies heavily on legs, core, shoulders, and arms for jumping, shooting, and sprinting.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/basketball.jpg" alt="Basketball">
+                </div>
             `;
             break;
 
         case "soccer":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-soccer.jpg" alt="Soccer">
-                <h3>Soccer</h3>
-                <p>
-                    Uses quadriceps, hamstrings,
-                    calves, and core muscles for
-                    kicking and running.
-                </p>
+                <div class="info-text-side">
+                    <h3>Soccer</h3>
+                    <p>Uses quadriceps, hamstrings, calves, and core muscles for explosive kicking, cutting, and running.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/soccer.jpg" alt="Soccer">
+                </div>
             `;
             break;
 
         case "swimming":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-swimming.jpg" alt="Swimming">
-                <h3>Swimming</h3>
-                <p>
-                    A full-body sport requiring
-                    strong shoulders, back, core,
-                    and legs.
-                </p>
+                <div class="info-text-side">
+                    <h3>Swimming</h3>
+                    <p>A full-body sport requiring intense coordination of the shoulders, back (lats), core, and legs.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/swimming.jpg" alt="Swimming">
+                </div>
             `;
             break;
 
         case "volleyball":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-volleyball.jpg" alt="Volleyball">
-                <h3>Volleyball</h3>
-                <p>
-                    Requires explosive leg power,
-                    strong shoulders, and quick
-                    reaction speed.
-                </p>
+                <div class="info-text-side">
+                    <h3>Volleyball</h3>
+                    <p>Requires explosive leg power for vertical jumps, strong shoulders for spiking, and quick reaction speed.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/volleyball.jpg" alt="Volleyball">
+                </div>
             `;
             break;
 
         case "track":
 
             info.innerHTML = `
-                <img src="../images/workout-simulator-sprinting.jpg" alt="Sprinting">
-                <h3>Sprinting</h3>
-                <p>
-                    Depends on powerful glutes,
-                    hamstrings, quadriceps, and calves.
-                </p>
+                <div class="info-text-side">
+                    <h3>Sprinting</h3>
+                    <p>Depends on rapid, powerful contractions of the glutes, hamstrings, quadriceps, and calves.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/sprinting.jpg" alt="Sprinting">
+                </div>
             `;
             break;
 
@@ -280,47 +290,60 @@ function buildAthlete(goal) {
         case "strength":
 
             info.innerHTML = `
-                <h3>Strength Athlete</h3>
-                <p>
-                    Focus on Squats, Bench Press,
-                    Deadlifts, and progressive overload.
-                </p>
+                <div class="info-text-side">
+                    <h3>Strength Athlete Plan</h3>
+                    <p>Focus on heavy compound movements like Squats, Bench Press, and Deadlifts.</p>
+                    <p>Use progressive overload with lower rep ranges (3-6 reps) to maximize neuromuscular adaptation.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/gym-background.jpg" alt="Strength Training">
+                </div>
             `;
             break;
 
         case "speed":
 
             info.innerHTML = `
-                <h3>Speed Athlete</h3>
-                <p>
-                    Focus on sprint training,
-                    plyometrics, and explosive exercises.
-                </p>
+                <div class="info-text-side">
+                    <h3>Speed Athlete Plan</h3>
+                    <p>Focus on sprint mechanics, interval training, and plyometrics.</p>
+                    <p>Train the nervous system using explosive movements like power cleans and resisted sprints.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/sprinting.jpg" alt="Speed Training">
+                </div>
             `;
             break;
 
         case "endurance":
 
             info.innerHTML = `
-                <h3>Endurance Athlete</h3>
-                <p>
-                    Focus on aerobic conditioning,
-                    long-distance training, and recovery.
-                </p>
+                <div class="info-text-side">
+                    <h3>Endurance Athlete Plan</h3>
+                    <p>Focus on continuous aerobic conditioning, tempo runs, and muscular endurance circuit training.</p>
+                    <p>Optimize your VO2 max and steady-state energy pathways while incorporating proper recovery protocols.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/swimming.jpg" alt="Endurance Training">
+                </div>
             `;
             break;
 
         case "jump":
 
             info.innerHTML = `
-                <h3>Vertical Jump Athlete</h3>
-                <p>
-                    Focus on squats, lunges,
-                    box jumps, and plyometric drills.
-                </p>
+                <div class="info-text-side">
+                    <h3>Vertical Jump Athlete Plan</h3>
+                    <p>Focus on the stretch-shortening cycle (SSC) through intensive plyometric drills and box jumps.</p>
+                    <p>Combine maximum strength (squats) with high-velocity movements to improve your overall Rate of Force Development (RFD).</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/volleyball.jpg" alt="Vertical Jump Training">
+                </div>
             `;
             break;
 
     }
 
 }
+
