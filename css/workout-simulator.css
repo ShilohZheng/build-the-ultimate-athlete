@@ -33,8 +33,14 @@
 }
 
 .hero p {
+
     font-size: 1.2rem;
+
     line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    color: white;
 }
 
 .badge {
@@ -948,4 +954,18 @@ ATHLETE REPORT CARD
     width: fit-content;
 
     margin: 25px auto !important;
+}
+
+.bmi-image {
+
+    width: 100%;
+
+    max-width: 220px;
+
+    margin-top: 15px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.1);
 }
