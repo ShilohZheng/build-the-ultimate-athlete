@@ -1,35 +1,6 @@
 // ===========================
 // BMI CALCULATOR
 // ===========================
-const sportImages = {
-
-    "Basketball": "sports-lab-basketball.jpg",
-    "Soccer": "sports-lab-soccer.jpg",
-    "Volleyball": "sports-lab-volleyball.jpg",
-    "Ultimate Frisbee": "sports-lab-frisbee.jpg",
-    "Hockey": "sports-lab-hockey.jpg",
-    "Rugby": "sports-lab-rugby.jpg",
-    "Skiing": "sports-lab-skiing.jpg",
-    "Baseball": "sports-lab-baseball.jpg",
-
-    "Tennis": "sports-lab-tennis.jpg",
-    "Badminton": "sports-lab-badminton.jpg",
-    "Table Tennis": "sports-lab-tabletennis.jpg",
-
-    "Swimming": "sports-lab-swimming.jpg",
-    "Rock Climbing": "sports-lab-rockclimbing.jpg",
-    "Cycling": "sports-lab-cycling.jpg",
-
-    "Sprinting": "sports-lab-sprinting.jpg",
-    "Distance Running": "sports-lab-distance-running.jpg",
-    "Archery": "sports-lab-archery.jpg",
-
-    "Boxing": "sports-lab-boxing.jpg",
-    "Gym Workout": "sports-lab-gymworkout.jpg",
-
-    "Rowing": "sports-lab-rowing.jpg"
-
-};
 
 const heightInput = document.getElementById("height");
 const weightInput = document.getElementById("weight");
@@ -265,64 +236,35 @@ function findMySport() {
 
     document.getElementById("sport-result").innerHTML =
 
-`
-<h3>Your Ultimate Athlete Report</h3>
+        "<h3>Your Ultimate Athlete Report</h3>" +
 
-<div class="sport-match">
+        "<p><strong>#1 Best Match:</strong> " +
+        sport1 +
+        " (" +
+        match1 +
+        "% Match)</p>" +
 
-    <img src="../images/${sportImages[sport1]}">
+        "<p><strong>#2 Alternative Match:</strong> " +
+        sport2 +
+        " (" +
+        match2 +
+        "% Match)</p>" +
 
-    <div>
+        "<p><strong>#3 Alternative Match:</strong> " +
+        sport3 +
+        " (" +
+        match3 +
+        "% Match)</p>" +
 
-        <h4>🏆 #1 Best Match</h4>
+        "<br>" +
 
-        <p>${sport1}</p>
+        "<p><strong>Why?</strong></p>" +
 
-        <p>${match1}% Match</p>
+        "<p>" +
+        reason +
+        "</p>" +
 
-    </div>
-
-</div>
-
-<div class="sport-match">
-
-    <img src="../images/${sportImages[sport1]}">
-
-    <div>
-
-        <h4>🥈 Alternative Match</h4>
-
-        <p>${sport2}</p>
-
-        <p>${match2}% Match</p>
-
-    </div>
-
-</div>
-
-<div class="sport-match">
-
-    <img src="../images/${sportImages[sport1]}">
-
-    <div>
-
-        <h4>🥉 Alternative Match</h4>
-
-        <p>${sport3}</p>
-
-        <p>${match3}% Match</p>
-
-    </div>
-
-</div>
-
-<p>
-${reason}
-</p>
-
-<p>
-Your athletic goal is <strong>${goal}</strong>.
-These sports match your physical profile,
-training goals, and athletic preferences.
-</p>
-`;
+        "<p>Your athletic goal is <strong>" +
+        goal +
+        "</strong>, and your preferences suggest that these sports fit your personality, physical profile, and training interests.</p>";
+}
