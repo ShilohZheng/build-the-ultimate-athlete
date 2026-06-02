@@ -955,17 +955,3 @@ ATHLETE REPORT CARD
 
     margin: 25px auto !important;
 }
-
-.bmi-image {
-
-    width: 100%;
-
-    max-width: 220px;
-
-    margin-top: 15px;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,0.1);
-}
