@@ -468,11 +468,13 @@ footer p {
 
 .champion-image img {
 
-    width: 220px;
+    width: 250px;
 
-    height: 220px;
+    height: auto;
 
-    object-fit: cover;
+    max-width: 100%;
+
+    object-fit: contain;
 
     border-radius: 20px;
 
