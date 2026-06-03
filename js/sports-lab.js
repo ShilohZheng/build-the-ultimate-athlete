@@ -359,7 +359,21 @@ document.getElementById("sport-result").innerHTML =
     "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>" +
 
     "<div class='champion-image'>" +
-        "<img src='../images/sports-lab-champion.jpg' alt='Champion Trophy'>" +
-    "</div>";
+
+    "<img src='../images/sports-lab-champion.jpg' alt='Champion Trophy'>" +
+
+    "<div style='max-width:320px;'>" +
+
+        "<h3>Athlete Potential</h3>" +
+
+        "<p>Your assessment results indicate strong potential for success in <strong>" +
+        sport1 +
+        "</strong>. Continued training, proper conditioning, and consistent practice can further develop your athletic performance and overall fitness.</p>" +
+
+    "</div>" +
+
+    "<img src='../images/sports-lab-muscular-man.jpg' alt='Athlete'>" +
+
+"</div>";
 
 }
