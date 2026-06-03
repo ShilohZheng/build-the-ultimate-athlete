@@ -299,65 +299,6 @@
 
 </section>
 
-    <section class="fatigue-section">
-    <h2>⚡ Muscle Fatigue Simulator</h2>
-    <p>Select your training load, then smash the lift button to test your muscular endurance before hitting total failure!</p>
-
-    <div class="fatigue-container">
-        <div class="fatigue-controls">
-            <div class="control-group">
-                <label for="fatigue-exercise">Target Muscle Group:</label>
-                <select id="fatigue-exercise" onchange="updateFatigueImage()">
-                    <option value="arms">Arms (Bicep Curls)</option>
-                    <option value="chest">Chest (Bench Press)</option>
-                    <option value="legs">Legs (Squats)</option>
-                </select>
-            </div>
-                <select id="fatigue-exercise">
-                    <option value="arms">Arms (Bicep Curls)</option>
-                    <option value="chest">Chest (Bench Press)</option>
-                    <option value="legs">Legs (Squats)</option>
-                </select>
-            </div>
-            
-            <div class="control-group">
-                <label for="fatigue-weight">Training Intensity (Weight):</label>
-                <select id="fatigue-weight">
-                    <option value="light">Light Weight (50% 1RM) - High Endurance</option>
-                    <option value="medium" selected>Medium Weight (70% 1RM) - Moderate</option>
-                    <option value="heavy">Heavy Weight (90% 1RM) - Rapid Fatigue</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="fatigue-display">
-            <div class="fatigue-image-box">
-                <img id="fatigue-gear-img" src="../images/dumbbell.jpg" alt="Training Gear">
-            </div>
-
-            <div class="status-box">
-                <span class="status-label">Muscle Energy Left:</span>
-                <span id="energy-text">100%</span>
-            </div>
-            
-            <div class="energy-bar-container">
-                <div id="energy-fill"></div>
-            </div>
-
-            <div class="counter-box">
-                Repetitions Completed: <span id="rep-count">0</span>
-            </div>
-
-            <div class="fatigue-actions">
-                <button id="start-fatigue-btn" onclick="startFatigueSim()">Initialize Simulator</button>
-                <button id="lift-btn" onclick="performRep()" disabled>LIFT! 🏋️</button>
-            </div>
-
-            <div id="fatigue-report" class="fatigue-report-card"></div>
-        </div>
-    </div>
-</section>
-
 <footer>
 
     <p>
