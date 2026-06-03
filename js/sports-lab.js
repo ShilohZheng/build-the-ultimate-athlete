@@ -90,6 +90,15 @@ function findMySport() {
     const motivation =
         document.getElementById("motivation").value;
 
+    const fitness =
+        document.getElementById("fitness").value;
+    
+    const experience =
+        document.getElementById("experience").value;
+    
+    const hours =
+        document.getElementById("hours").value;
+
     let sport1 = "";
     let sport2 = "";
     let sport3 = "";
@@ -235,37 +244,78 @@ function findMySport() {
     const match3 =
         Math.floor(Math.random() * 6) + 84;
 
-    document.getElementById("sport-result").innerHTML =
+document.getElementById("sport-result").innerHTML =
 
-        "<h3>Your Ultimate Athlete Report</h3>" +
+    "<h2>Your Ultimate Athlete Report</h2>" +
 
-        "<p><strong>#1 Best Match:</strong> " +
-        sport1 +
-        " (" +
-        match1 +
-        "% Match)</p>" +
+    "<h3>#1 Best Match: " +
+    sport1 +
+    " (" +
+    match1 +
+    "% Match)</h3>" +
 
-        "<p><strong>#2 Alternative Match:</strong> " +
-        sport2 +
-        " (" +
-        match2 +
-        "% Match)</p>" +
+    "<h3>#2 Alternative Match: " +
+    sport2 +
+    " (" +
+    match2 +
+    "% Match)</h3>" +
 
-        "<p><strong>#3 Alternative Match:</strong> " +
-        sport3 +
-        " (" +
-        match3 +
-        "% Match)</p>" +
+    "<h3>#3 Alternative Match: " +
+    sport3 +
+    " (" +
+    match3 +
+    "% Match)</h3>" +
 
-        "<br>" +
+    "<hr>" +
 
-        "<p><strong>Why?</strong></p>" +
+    "<p><strong>Fitness Level:</strong> " +
+    fitness +
+    "</p>" +
 
-        "<p>" +
-        reason +
-        "</p>" +
+    "<p><strong>Sports Experience:</strong> " +
+    experience +
+    "</p>" +
 
-        "<p>Your athletic goal is <strong>" +
-        goal +
-        "</strong>, and your preferences suggest that these sports fit your personality, physical profile, and training interests.</p>";
-}
+    "<p><strong>Weekly Training Hours:</strong> " +
+    hours +
+    "</p>" +
+
+    "<p><strong>Main Athletic Goal:</strong> " +
+    goal +
+    "</p>" +
+
+    "<p><strong>Strongest Muscle Group:</strong> " +
+    muscle +
+    "</p>" +
+
+    "<hr>" +
+
+    "<h3>Performance Analysis</h3>" +
+
+    "<p>" +
+    reason +
+    "</p>" +
+
+    "<p>Your profile indicates a <strong>" +
+    fitness +
+    "</strong> fitness level with <strong>" +
+    experience +
+    "</strong> of sports experience.</p>" +
+
+    "<p>You currently train approximately <strong>" +
+    hours +
+    "</strong> per week and are primarily focused on <strong>" +
+    goal +
+    "</strong>.</p>" +
+
+    "<p>Based on your physical profile, training habits, athletic goals, and personal preferences, <strong>" +
+    sport1 +
+    "</strong> appears to be your strongest overall sport match.</p>" +
+
+    "<p>The additional recommendations of <strong>" +
+    sport2 +
+    "</strong> and <strong>" +
+    sport3 +
+    "</strong> provide alternative pathways that align closely with your athletic strengths and interests.</p>" +
+
+    "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>";
