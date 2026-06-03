@@ -426,3 +426,142 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+/* ===================================================
+   MUSCLE FATIGUE SIMULATOR LOGIC (COMPLETE & FINAL)
+=================================================== */
+
+let muscleEnergy = 100;
+let repCount = 0;
+let fatigueInterval = null;
+let isSimulating = false;
+
+// 1. 初始化并启动模拟器
+function startFatigueSim() {
+    // 自动获取用户选了哪个动作
+    const exercise = document.getElementById("fatigue-exercise").value;
+    const gearImg = document.getElementById("fatigue-gear-img");
+
+    // 🌟 核心修改：全部采用高质量的网络公共健身图标链接（免本地下载）
+    if (exercise === "arms") {
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/3043/3043232.png"; // 哑铃图标
+    } else if (exercise === "chest") {
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/2548/2548537.png"; // 卧推/杠铃图标
+    } else if (exercise === "legs") {
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/4813/4813354.png"; // 深蹲/腿部图标
+    }
+
+    // 重置核心数值状态
+    muscleEnergy = 100;
+    repCount = 0;
+    isSimulating = true;
+    
+    document.getElementById("rep-count").innerText = repCount;
+    document.getElementById("energy-text").innerText = "100%";
+    
+    const energyFill = document.getElementById("energy-fill");
+    energyFill.style.width = "100%";
+    energyFill.style.background = "#00b894";
+    document.getElementById("energy-text").style.color = "#00b894";
+    
+    // 隐藏上一次生成的报告
+    const report = document.getElementById("fatigue-report");
+    report.classList.remove("show");
+    report.innerHTML = "";
+
+    // 激活 LIFT 按钮，并修改重置按钮文本
+    document.getElementById("lift-btn").disabled = false;
+    document.getElementById("start-fatigue-btn").innerText = "Restart Simulator";
+
+    // 清除上一次的计时器，开启全新的自主恢复循环
+    if (fatigueInterval) clearInterval(fatigueInterval);
+    
+    fatigueInterval = setInterval(function() {
+        if (!isSimulating) return;
+
+        const weight = document.getElementById("fatigue-weight").value;
+        
+        // 模拟体内能量恢复：负荷越轻恢复越快
+        let recoveryRate = 0;
+        if (weight === "light") recoveryRate = 2.2;
+        else if (weight === "medium") recoveryRate = 1.0;
+        else if (weight === "heavy") recoveryRate = 0.3;
+
+        if (muscleEnergy < 100) {
+            muscleEnergy = Math.min(100, muscleEnergy + recoveryRate);
+            updateEnergyUI();
+        }
+    }, 300); // 每 0.3 秒做一次生理恢复模拟计算
+}
+
+// 2. 每次点击 LIFT! 按钮代表做了一次标准的动作
+function performRep() {
+    if (!isSimulating || muscleEnergy <= 0) return;
+
+    const weight = document.getElementById("fatigue-weight").value;
+    
+    // 根据重量不同扣除不同比例的能量
+    let energyCost = 0;
+    if (weight === "light") energyCost = 7;
+    else if (weight === "medium") energyCost = 14;
+    else if (weight === "heavy") energyCost = 26;
+
+    muscleEnergy = Math.max(0, muscleEnergy - energyCost);
+    repCount++;
+    
+    document.getElementById("rep-count").innerText = repCount;
+    updateEnergyUI();
+
+    // 判定是否达到极限（力竭）
+    if (muscleEnergy <= 0) {
+        triggerMuscleFailure();
+    }
+}
+
+// 3. UI 状态条刷新逻辑
+function updateEnergyUI() {
+    const energyFill = document.getElementById("energy-fill");
+    const energyText = document.getElementById("energy-text");
+    
+    energyFill.style.width = muscleEnergy + "%";
+    energyText.innerText = Math.round(muscleEnergy) + "%";
+
+    // 能量三段式变色
+    if (muscleEnergy > 50) {
+        energyFill.style.background = "#00b894"; // 绿色
+        energyText.style.color = "#00b894";
+    } else if (muscleEnergy > 20) {
+        energyFill.style.background = "#f1c40f"; // 黄色
+        energyText.style.color = "#f1c40f";
+    } else {
+        energyFill.style.background = "#e74c3c"; // 红色
+        energyText.style.color = "#e74c3c";
+    }
+}
+
+// 4. 触发力竭，给出分析报告
+function triggerMuscleFailure() {
+    isSimulating = false;
+    document.getElementById("lift-btn").disabled = true;
+    if (fatigueInterval) clearInterval(fatigueInterval);
+
+    const exercise = document.getElementById("fatigue-exercise").value;
+    const weight = document.getElementById("fatigue-weight").value;
+    const report = document.getElementById("fatigue-report");
+
+    let evaluation = "";
+    if (repCount >= 15) {
+        evaluation = "🏆 Outstanding Muscular Endurance! Your slow-twitch muscle fibers handled that load like a true professional athlete.";
+    } else if (repCount >= 8) {
+        evaluation = "💪 Great Hypertrophy Range! This combination perfectly triggers muscle protein synthesis and strength growth.";
+    } else {
+        evaluation = "⚠️ Rapid Neuromuscular Fatigue! Heavy intensity causes high central nervous system strain. Rest up completely before your next set!";
+    }
+
+    report.innerHTML = `
+        <h4>🚨 TOTAL MUSCLE FAILURE HIT!</h4>
+        <p>You completed <strong>${repCount} reps</strong> before complete exhaustion on the <strong>${exercise}</strong> simulation at <strong>${weight} intensity</strong>. ${evaluation}</p>
+    `;
+    
+    report.classList.add("show");
+}
