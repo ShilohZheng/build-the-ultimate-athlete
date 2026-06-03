@@ -240,34 +240,204 @@
 
 </section>
 
-<section class="workout-generator-section">
+<section class="adaptation-section">
 
-    <h2>Workout Generator</h2>
+    <h2>Muscle Development Simulator</h2>
 
     <p>
-        Choose your training goal and instantly generate a workout plan.
+        Explore how different training methods affect muscle fibers,
+        strength, endurance, and athletic performance.
     </p>
 
-    <select id="workout-goal">
+    <div class="simulator-controls">
 
-        <option value="strength">Strength</option>
-        <option value="speed">Speed</option>
-        <option value="endurance">Endurance</option>
-        <option value="jump">Vertical Jump</option>
+        <div class="control-group">
 
-    </select>
+            <label for="training-type">
+                Training Type
+            </label>
 
-    <button onclick="generateWorkout()">
-        Generate Workout
-    </button>
+            <select id="training-type">
 
-    <div id="workout-result" class="info-box">
+                <option value="strength">
+                    Strength Training
+                </option>
 
-        <h3>Your Workout Plan</h3>
+                <option value="hypertrophy">
+                    Muscle Growth (Hypertrophy)
+                </option>
+
+                <option value="endurance">
+                    Muscular Endurance
+                </option>
+
+                <option value="power">
+                    Explosive Power
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="control-group">
+
+            <label for="target-muscle">
+                Target Muscle Group
+            </label>
+
+            <select id="target-muscle">
+
+                <option value="chest">
+                    Chest
+                </option>
+
+                <option value="back">
+                    Back
+                </option>
+
+                <option value="legs">
+                    Legs
+                </option>
+
+                <option value="core">
+                    Core
+                </option>
+
+                <option value="shoulders">
+                    Shoulders
+                </option>
+
+                <option value="arms">
+                    Arms
+                </option>
+
+            </select>
+
+        </div>
+
+        <button onclick="generateAdaptation()">
+            Generate Muscle Report
+        </button>
+
+    </div>
+
+    <div id="adaptation-result" class="info-box">
+
+        <h3>Muscle Response Report</h3>
 
         <p>
-            Click Generate Workout to begin.
+            Select a training type and muscle group to begin.
         </p>
+
+    </div>
+
+</section>
+
+    <section class="fiber-section">
+
+    <h2>Muscle Fiber Explorer</h2>
+
+    <p>
+        Compare the characteristics of fast-twitch and slow-twitch muscle fibers.
+    </p>
+
+    <div class="fiber-grid">
+
+        <div class="fiber-card">
+
+            <img src="../images/fast-twitch.jpg" alt="Fast Twitch">
+
+            <h3>Type II Fast-Twitch Fibers</h3>
+
+            <ul>
+
+                <li>Generate high force</li>
+
+                <li>Contract quickly</li>
+
+                <li>Fatigue faster</li>
+
+                <li>Important for sprinting and jumping</li>
+
+            </ul>
+
+        </div>
+
+        <div class="fiber-card">
+
+            <img src="../images/slow-twitch.jpg" alt="Slow Twitch">
+
+            <h3>Type I Slow-Twitch Fibers</h3>
+
+            <ul>
+
+                <li>High endurance</li>
+
+                <li>Resist fatigue</li>
+
+                <li>Efficient oxygen use</li>
+
+                <li>Important for distance events</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="contraction-section">
+
+    <h2>Muscle Contraction Types</h2>
+
+    <p>
+        Learn how muscles produce movement through different contractions.
+    </p>
+
+    <div class="contraction-grid">
+
+        <div class="contraction-card">
+
+            <h3>Concentric Contraction</h3>
+
+            <p>
+                The muscle shortens while producing force.
+            </p>
+
+            <p>
+                Example: lifting a dumbbell during a bicep curl.
+            </p>
+
+        </div>
+
+        <div class="contraction-card">
+
+            <h3>Eccentric Contraction</h3>
+
+            <p>
+                The muscle lengthens while resisting force.
+            </p>
+
+            <p>
+                Example: lowering a dumbbell during a bicep curl.
+            </p>
+
+        </div>
+
+        <div class="contraction-card">
+
+            <h3>Isometric Contraction</h3>
+
+            <p>
+                The muscle produces force without changing length.
+            </p>
+
+            <p>
+                Example: holding a plank position.
+            </p>
+
+        </div>
 
     </div>
 
