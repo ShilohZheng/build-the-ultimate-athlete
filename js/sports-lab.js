@@ -56,18 +56,12 @@ function calculateBMI() {
     }
 
     /* 💡 核心修改：在计算出来的数字和分类下方，追加包裹了你指定的精美照片 */
-    bmiResult.innerHTML = `
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%;">
-            <div style="font-size: 1.4rem; font-weight: 600; color: #1f2937;">
-                ${bmi.toFixed(1)} (${category})
-            </div>
-            
-            <div class="info-image-side" style="flex: none; margin: 0 auto;">
-                <img src="../images/sports-lab-bmi.jpg" alt="BMI Status Chart">
-            </div>
-        </div>
-    `;
-}
+    bmiResult.innerHTML =
+        bmi.toFixed(1) +
+        " (" +
+        category +
+        ")";
+    }
 
 // ===========================
 // SPORT MATCHMAKER
