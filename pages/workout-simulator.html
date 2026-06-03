@@ -307,6 +307,12 @@
         <div class="fatigue-controls">
             <div class="control-group">
                 <label for="fatigue-exercise">Target Muscle Group:</label>
+                <select id="fatigue-exercise" onchange="updateFatigueImage()">
+                    <option value="arms">Arms (Bicep Curls)</option>
+                    <option value="chest">Chest (Bench Press)</option>
+                    <option value="legs">Legs (Squats)</option>
+                </select>
+            </div>
                 <select id="fatigue-exercise">
                     <option value="arms">Arms (Bicep Curls)</option>
                     <option value="chest">Chest (Bench Press)</option>
