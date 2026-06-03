@@ -319,3 +319,5 @@ document.getElementById("sport-result").innerHTML =
     "</strong> provide alternative pathways that align closely with your athletic strengths and interests.</p>" +
 
     "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>";
+
+}
