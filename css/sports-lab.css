@@ -385,3 +385,27 @@ footer p {
         padding: 60px 6%;
     }
 }
+
+.matchmaker-btn{
+
+    display:block;
+
+    margin:40px auto;
+
+    padding:15px 40px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
