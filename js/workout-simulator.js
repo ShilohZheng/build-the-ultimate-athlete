@@ -566,7 +566,7 @@ function generateAdaptation() {
             "<p class='adaptation-intro'>" +
             "Scientific analysis of how " +
             muscleName +
-            " muscles respond to this style of training."
+            " muscles respond to this style of training." +
             "</p>" +
 
         "</div>" +
@@ -578,7 +578,7 @@ function generateAdaptation() {
         "<div class='adapt-card'>" +
             "<h4>Target Muscle Group</h4>" +
             "<p>" +
-            muscleName
+            muscleName +
             "</p>" +
         "</div>" +
 
