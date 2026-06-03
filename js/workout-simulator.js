@@ -391,6 +391,7 @@ function generateAdaptation() {
     let contraction = "";
     let recovery = "";
     let sports = "";
+    let athleteType = "";
 
     if(training === "strength") {
 
@@ -414,6 +415,9 @@ function generateAdaptation() {
 
         sports =
             "Useful for football, rugby, wrestling, powerlifting, and many team sports.";
+
+       athleteType =
+             "Power Athlete";
 
     }
 
@@ -440,6 +444,9 @@ function generateAdaptation() {
         sports =
             "Common among bodybuilders and athletes who want increased muscle mass.";
 
+        athleteType =
+             "Muscle Builder";
+
     }
 
     else if(training === "endurance") {
@@ -464,6 +471,9 @@ function generateAdaptation() {
 
         sports =
             "Important for distance running, cycling, rowing, and swimming.";
+
+        athleteType =
+             "Endurance Athlete";
 
     }
 
@@ -490,8 +500,15 @@ function generateAdaptation() {
         sports =
             "Important for basketball, volleyball, sprinting, and many field sports.";
 
+        athleteType =
+             "Explosive Athlete";
+
     }
 
+   const muscleName =
+    muscle.charAt(0).toUpperCase() +
+    muscle.slice(1);
+   
     let muscleFunction = "";
 
     if(muscle === "chest") {
@@ -538,43 +555,74 @@ function generateAdaptation() {
 
     result.innerHTML =
 
-        "<h3>" + title + "</h3>" +
+    "<div class='adaptation-header'>" +
 
-        "<img src='" +
-        image +
-        "' style='width:100%; max-width:500px; border-radius:12px; margin:15px 0;'>" +
+        "<img src='" + image + "' class='adaptation-image'>" +
 
-        "<p><strong>Target Muscle Group:</strong> " +
-        muscle.charAt(0).toUpperCase() +
-        muscle.slice(1) +
-        "</p>" +
+        "<div>" +
 
-        "<p><strong>Muscle Function:</strong> " +
-        muscleFunction +
-        "</p>" +
+            "<h2>" + title + "</h2>" +
 
-        "<p><strong>Training Adaptation:</strong> " +
-        adaptation +
-        "</p>" +
+            "<p class='adaptation-intro'>" +
+            "Scientific analysis of how " +
+            muscleName +
+            " muscles respond to this style of training."
+            "</p>" +
 
-        "<p><strong>Muscle Fiber Response:</strong> " +
-        fibers +
-        "</p>" +
+        "</div>" +
 
-        "<p><strong>Contraction Type:</strong> " +
-        contraction +
-        "</p>" +
+    "</div>" +
 
-        "<p><strong>Recovery Considerations:</strong> " +
-        recovery +
-        "</p>" +
+    "<div class='adaptation-cards'>" +
 
-        "<p><strong>Sports Applications:</strong> " +
-        sports +
-        "</p>" +
+        "<div class='adapt-card'>" +
+            "<h4>Target Muscle Group</h4>" +
+            "<p>" +
+            muscleName
+            "</p>" +
+        "</div>" +
 
-        "<hr>" +
+        "<div class='adapt-card'>" +
+            "<h4>Muscle Function</h4>" +
+            "<p>" + muscleFunction + "</p>" +
+        "</div>" +
 
-        "<p><strong>Key Anatomy Concept:</strong> Muscles adapt to the demands placed upon them. Different training styles produce different physiological changes in muscle tissue.</p>";
+        "<div class='adapt-card'>" +
+            "<h4>Training Adaptation</h4>" +
+            "<p>" + adaptation + "</p>" +
+        "</div>" +
 
-}
+        "<div class='adapt-card'>" +
+            "<h4>Muscle Fiber Response</h4>" +
+            "<p>" + fibers + "</p>" +
+        "</div>" +
+
+        "<div class='adapt-card'>" +
+            "<h4>Contraction Type</h4>" +
+            "<p>" + contraction + "</p>" +
+        "</div>" +
+
+        "<div class='adapt-card'>" +
+            "<h4>Recovery Considerations</h4>" +
+            "<p>" + recovery + "</p>" +
+        "</div>" +
+
+        "<div class='adapt-card'>" +
+            "<h4>Sports Applications</h4>" +
+            "<p>" + sports + "</p>" +
+        "</div>" +
+
+         "<div class='adapt-card'>" +
+             "<h4>Athlete Profile</h4>" +
+             "<p>" + athleteType + "</p>" +
+         "</div>" +
+
+        "<div class='adapt-card anatomy'>" +
+            "<h4>Key Anatomy Concept</h4>" +
+            "<p>" +
+            "Muscles adapt to the demands placed upon them. Different training styles produce different physiological changes in muscle tissue." +
+            "</p>" +
+        "</div>" +
+
+    "</div>";
+   
