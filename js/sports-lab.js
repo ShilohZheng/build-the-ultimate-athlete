@@ -1,6 +1,6 @@
-// ===========================
+// ==========================
 // BMI CALCULATOR
-// ===========================
+// ==========================
 
 const heightInput = document.getElementById("height");
 const weightInput = document.getElementById("weight");
