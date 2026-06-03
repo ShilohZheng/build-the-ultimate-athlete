@@ -470,7 +470,7 @@ function generateAdaptation() {
     else if(training === "power") {
 
         title =
-            "Explosive Power Report";
+            "Vertical Jump Development Report";
 
         image =
             "../images/workout-speed.jpg";
