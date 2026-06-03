@@ -3,27 +3,25 @@
 =================================== */
 
 /* Hero */
+
 .hero {
+
     min-height: 75vh;
-    position: relative;
-    overflow: hidden;
-    /* 💡 注入深蓝色渐变底色，给文字提供强烈的对比背景 */
-    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* 💡 确保整个 Hero 区域内的文字默认是白色的 */
+
 }
 
 .hero h1 {
+
     font-size: 3.8rem;
-    color: white;
+
 }
 
 .hero p {
+
     max-width: 800px;
+
     margin: 20px auto;
-    color: rgba(255, 255, 255, 0.9); /* 💡 稍微带一点通透感的白色，提升阅读高级感 */
+
 }
 
 /* ===================================
@@ -31,20 +29,31 @@
 =================================== */
 
 section {
+
     padding: 80px 10%;
+
 }
 
 section h2 {
+
     text-align: center;
+
     margin-bottom: 30px;
+
 }
 
 section > p {
+
     max-width: 900px;
+
     margin: 0 auto 40px auto;
+
     text-align: center;
+
     line-height: 1.8;
+
     color: #555;
+
 }
 
 /* ===================================
@@ -52,36 +61,59 @@ section > p {
 =================================== */
 
 .vocab-stats {
+
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
+
     gap: 25px;
+
     padding: 60px 10%;
+
     background: #f8fafc;
+
 }
 
 .stat-box {
+
     background: white;
+
     padding: 30px;
+
     min-width: 220px;
+
     border-radius: 15px;
+
     text-align: center;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
     transition: 0.3s;
+
 }
 
 .stat-box:hover {
+
     transform: translateY(-8px);
+
 }
 
 .stat-box h3 {
+
     font-size: 2.5rem;
+
     margin-bottom: 10px;
+
     color: #2563eb;
+
 }
 
 .stat-box p {
+
     color: #666;
+
 }
 
 /* ===================================
@@ -89,28 +121,45 @@ section > p {
 =================================== */
 
 .function-cards {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 25px;
+
     margin-top: 40px;
+
 }
 
 .card {
+
     background: white;
+
     padding: 30px;
+
     border-radius: 15px;
+
     text-align: center;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
     transition: 0.3s;
+
 }
 
 .card:hover {
+
     transform: translateY(-10px);
+
 }
 
 .card h3 {
+
     margin-bottom: 15px;
+
     color: #2563eb;
+
 }
 
 /* ===================================
@@ -118,32 +167,51 @@ section > p {
 =================================== */
 
 .muscle-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
     gap: 25px;
+
 }
 
 .muscle-card {
+
     background: white;
+
     padding: 30px;
+
     border-radius: 15px;
+
     border-top: 5px solid #2563eb;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
     transition: 0.3s;
+
 }
 
 .muscle-card:hover {
+
     transform: translateY(-10px);
+
 }
 
 .muscle-card h3 {
+
     margin-bottom: 15px;
+
     color: #2563eb;
+
 }
 
 .muscle-card p {
+
     color: #555;
+
     line-height: 1.8;
+
 }
 
 /* ===================================
@@ -151,36 +219,61 @@ section > p {
 =================================== */
 
 .steps {
+
     display: flex;
+
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 25px;
+
     margin-top: 50px;
+
 }
 
 .step {
+
     width: 180px;
+
     background: white;
+
     padding: 25px;
+
     border-radius: 15px;
+
     text-align: center;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
     transition: 0.3s;
+
 }
 
 .step:hover {
+
     transform: translateY(-8px);
+
 }
 
 .step h3 {
+
     width: 60px;
+
     height: 60px;
+
     line-height: 60px;
+
     border-radius: 50%;
+
     background: #2563eb;
+
     color: white;
+
     margin: 0 auto 15px auto;
+
     font-size: 1.5rem;
+
 }
 
 /* ===================================
@@ -188,28 +281,45 @@ section > p {
 =================================== */
 
 table {
+
     width: 100%;
+
     border-collapse: collapse;
+
     margin-top: 40px;
+
     background: white;
+
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
     border-radius: 15px;
+
     overflow: hidden;
+
 }
 
 th {
+
     background: #2563eb;
+
     color: white;
+
     padding: 18px;
+
 }
 
 td {
+
     padding: 18px;
+
     border-bottom: 1px solid #e5e7eb;
+
 }
 
 tr:hover {
+
     background: #f8fafc;
+
 }
 
 /* ===================================
@@ -217,13 +327,19 @@ tr:hover {
 =================================== */
 
 .cta {
+
     text-align: center;
+
 }
 
 .cta p {
+
     max-width: 900px;
+
     margin: auto;
+
     line-height: 1.8;
+
 }
 
 /* ===================================
@@ -231,11 +347,15 @@ tr:hover {
 =================================== */
 
 section:nth-of-type(even) {
+
     background-color: #f8fafc;
+
 }
 
 section:nth-of-type(odd):not(.hero) {
+
     background-color: white;
+
 }
 
 /* ===================================
@@ -243,89 +363,135 @@ section:nth-of-type(odd):not(.hero) {
 =================================== */
 
 @media (max-width: 900px) {
+
     .hero h1 {
+
         font-size: 3rem;
+
     }
+
     .steps {
+
         flex-direction: column;
+
         align-items: center;
+
     }
+
 }
 
 @media (max-width: 600px) {
+
     .hero h1 {
+
         font-size: 2.3rem;
+
     }
+
     .stat-box {
+
         width: 100%;
+
     }
+
     .step {
+
         width: 100%;
+
         max-width: 300px;
+
     }
+
 }
 
 /* ===================================
-   IMAGES & FIXED LAYERS
+   IMAGES
 =================================== */
 
-/* 💡 修复背景运动员大图层，降低半透明度，退到最底层，不再导致文字泛白 */
+.hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
 .hero-image {
+
     position: absolute;
+
     inset: 0;
+
     width: 100%;
+
     height: 100%;
+
     object-fit: cover;
-    opacity: 0.12; 
-    z-index: 1; 
+
+    opacity: 0.25;
+
+    z-index: 0;
+
 }
 
 .hero-content {
+
     position: relative;
-    z-index: 3; /* 💡 提到最前，确保文字绝对清晰不被干扰 */
+
+    z-index: 2;
+
 }
 
 .content-image {
+
     display: block;
+
     width: 100%;
+
     max-width: 900px;
+
     margin: 30px auto 40px auto;
+
     border-radius: 15px;
+
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
 }
 
 @media (max-width: 768px) {
+
     .content-image {
+
         width: 100%;
+
     }
+
 }
 
 /* ==========================================================================
-   💡 DYNAMIC FLOATING ICONS SYSTEM (19 Sports Icons For Muscular Page)
+   💡 以下为独立追加的 19 个新 ICON 样式与动画，其余原有格式均无触碰 
    ========================================================================== */
 
 .floating-icon {
     position: absolute;
-    font-size: 2.4rem; 
-    opacity: 0.15;     /* 淡淡的半透明效果，作为精致的学术背景 */
+    font-size: 2.3rem; 
+    opacity: 0.18;     
     animation: muscleFloat 6s ease-in-out infinite;
     user-select: none;
     pointer-events: none;
-    z-index: 2;        /* 卡在背景底图之上，在文字内容之下 */
+    z-index: 1;        
 }
 
-/* 优雅的上下呼吸效果，带有轻微旋转 */
 @keyframes muscleFloat {
     0%, 100% { 
         transform: translateY(0) rotate(0deg); 
     }
     50% { 
-        transform: translateY(-22px) rotate(6deg); 
+        transform: translateY(-20px) rotate(5deg); 
     }
 }
 
-/* 精准在肌肉页 Hero 区域左侧和右侧错落散开的 19 种运动坐标 */
-/* --- Left Side Icons --- */
+/* 19种运动图标两旁散开坐标分布 */
 .icon-1  { top: 12%; left: 4%;  animation-delay: 0.0s; animation-duration: 5.5s; }
 .icon-2  { top: 24%; left: 14%; animation-delay: 1.2s; animation-duration: 6.2s; }
 .icon-3  { top: 38%; left: 5%;  animation-delay: 0.5s; animation-duration: 5.8s; }
@@ -337,7 +503,6 @@ section:nth-of-type(odd):not(.hero) {
 .icon-9  { top: 58%; left: 26%; animation-delay: 4.0s; animation-duration: 7.0s; }
 .icon-10 { top: 82%; left: 22%; animation-delay: 1.5s; animation-duration: 5.6s; }
 
-/* --- Right Side Icons --- */
 .icon-11 { top: 14%; right: 4%;  animation-delay: 0.3s; animation-duration: 5.9s; }
 .icon-12 { top: 26%; right: 15%; animation-delay: 1.8s; animation-duration: 6.1s; }
 .icon-13 { top: 40%; right: 5%;  animation-delay: 0.9s; animation-duration: 5.3s; }
