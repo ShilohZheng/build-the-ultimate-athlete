@@ -244,27 +244,65 @@ function findMySport() {
     const match3 =
         Math.floor(Math.random() * 6) + 84;
 
+    const imageMap = {
+
+    "Basketball": "../images/sports-lab-basketball.jpg",
+    "Soccer": "../images/sports-lab-soccer.jpg",
+    "Volleyball": "../images/sports-lab-volleyball.jpg",
+    "Ultimate Frisbee": "../images/sports-lab-frisbee.jpg",
+    "Hockey": "../images/sports-lab-hockey.jpg",
+    "Rugby": "../images/sports-lab-rugby.jpg",
+    "Skiing": "../images/sports-lab-skiing.jpg",
+    "Baseball": "../images/sports-lab-baseball.jpg",
+    "Tennis": "../images/sports-lab-tennis.jpg",
+    "Badminton": "../images/sports-lab-badminton.jpg",
+    "Table Tennis": "../images/sports-lab-tabletennis.jpg",
+    "Swimming": "../images/sports-lab-swimming.jpg",
+    "Rock Climbing": "../images/sports-lab-rockclimbing.jpg",
+    "Cycling": "../images/sports-lab-cycling.jpg",
+    "Sprinting": "../images/sports-lab-sprinting.jpg",
+    "Distance Running": "../images/sports-lab-distance-running.jpg",
+    "Archery": "../images/sports-lab-archery.jpg",
+    "Boxing": "../images/sports-lab-boxing.jpg",
+    "Gym Workout": "../images/sports-lab-gymworkout.jpg",
+    "Rowing": "../images/sports-lab-rowing.jpg"
+
+};
+
 document.getElementById("sport-result").innerHTML =
 
     "<h2>Your Ultimate Athlete Report</h2>" +
 
-    "<h3>#1 Best Match: " +
-    sport1 +
-    " (" +
-    match1 +
-    "% Match)</h3>" +
+    "<div class='match-images'>" +
 
-    "<h3>#2 Alternative Match: " +
-    sport2 +
-    " (" +
-    match2 +
-    "% Match)</h3>" +
+        "<div class='match-sport'>" +
+            "<img src='" + imageMap[sport1] + "'>" +
+            "<h4>#1 Best Match<br>" +
+            sport1 +
+            "<br>(" +
+            match1 +
+            "% Match)</h4>" +
+        "</div>" +
 
-    "<h3>#3 Alternative Match: " +
-    sport3 +
-    " (" +
-    match3 +
-    "% Match)</h3>" +
+        "<div class='match-sport'>" +
+            "<img src='" + imageMap[sport2] + "'>" +
+            "<h4>#2 Alternative<br>" +
+            sport2 +
+            "<br>(" +
+            match2 +
+            "% Match)</h4>" +
+        "</div>" +
+
+        "<div class='match-sport'>" +
+            "<img src='" + imageMap[sport3] + "'>" +
+            "<h4>#3 Alternative<br>" +
+            sport3 +
+            "<br>(" +
+            match3 +
+            "% Match)</h4>" +
+        "</div>" +
+
+    "</div>" +
 
     "<hr>" +
 
@@ -318,6 +356,10 @@ document.getElementById("sport-result").innerHTML =
     sport3 +
     "</strong> provide alternative pathways that align closely with your athletic strengths and interests.</p>" +
 
-    "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>";
+    "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>" +
+
+    "<div class='champion-image'>" +
+        "<img src='../images/sports-lab-champion.jpg' alt='Champion Trophy'>" +
+    "</div>";
 
 }
