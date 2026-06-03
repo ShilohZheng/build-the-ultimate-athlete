@@ -309,64 +309,6 @@ function showSport(sport) {
 }
 
 /* ===================================
-   WORKOUT GENERATOR
-=================================== */
-
-function generateWorkout() {
-
-    const goal = document.getElementById("workout-goal").value;
-    const result = document.getElementById("workout-result");
-    let workout = "";
-
-    switch(goal) {
-
-        case "strength":
-            workout = `
-                <h3>Strength Workout</h3>
-                <p>Squat: 4 × 6</p>
-                <p>Bench Press: 4 × 6</p>
-                <p>Deadlift: 3 × 5</p>
-                <p>Estimated Calories Burned: 500 kcal</p>
-            `;
-            break;
-
-        case "speed":
-            workout = `
-                <h3>Speed Workout</h3>
-                <p>40m Sprint × 8</p>
-                <p>Hill Sprint × 6</p>
-                <p>Bounding Drill × 3</p>
-                <p>Estimated Calories Burned: 450 kcal</p>
-            `;
-            break;
-
-        case "endurance":
-            workout = `
-                <h3>Endurance Workout</h3>
-                <p>5 km Run</p>
-                <p>Bike: 20 min</p>
-                <p>Jump Rope: 10 min</p>
-                <p>Estimated Calories Burned: 600 kcal</p>
-            `;
-            break;
-
-        case "jump":
-            workout = `
-                <h3>Vertical Jump Workout</h3>
-                <p>Box Jumps × 12</p>
-                <p>Jump Squats × 15</p>
-                <p>Broad Jumps × 10</p>
-                <p>Estimated Calories Burned: 420 kcal</p>
-            `;
-            break;
-
-    }
-
-    result.innerHTML = workout;
-
-}
-
-/* ===================================
    REACTION TEST
 =================================== */
 
@@ -426,3 +368,213 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+// ===========================
+// MUSCLE DEVELOPMENT SIMULATOR
+// ===========================
+
+function generateAdaptation() {
+
+    const training =
+        document.getElementById("training-type").value;
+
+    const muscle =
+        document.getElementById("target-muscle").value;
+
+    const result =
+        document.getElementById("adaptation-result");
+
+    let title = "";
+    let image = "";
+    let adaptation = "";
+    let fibers = "";
+    let contraction = "";
+    let recovery = "";
+    let sports = "";
+
+    if(training === "strength") {
+
+        title =
+            "Strength Training Report";
+
+        image =
+            "../images/workout-strength.jpg";
+
+        adaptation =
+            "Heavy resistance training increases the ability of your muscles to produce force. Strength gains occur because the nervous system becomes more efficient at recruiting muscle fibers.";
+
+        fibers =
+            "Primarily recruits Type II fast-twitch muscle fibers, which generate high force but fatigue quickly.";
+
+        contraction =
+            "Strength exercises often involve both concentric and eccentric contractions under heavy loads.";
+
+        recovery =
+            "Allow 48–72 hours of recovery for the trained muscle group to repair and adapt.";
+
+        sports =
+            "Useful for football, rugby, wrestling, powerlifting, and many team sports.";
+
+    }
+
+    else if(training === "hypertrophy") {
+
+        title =
+            "Muscle Growth (Hypertrophy) Report";
+
+        image =
+            "../images/workout-strength.jpg";
+
+        adaptation =
+            "Repeated resistance training creates microscopic damage in muscle fibers. During recovery, the fibers repair and become larger.";
+
+        fibers =
+            "Both slow-twitch and fast-twitch fibers grow, although fast-twitch fibers usually show greater increases in size.";
+
+        contraction =
+            "Controlled concentric and eccentric movements maximize muscle tension.";
+
+        recovery =
+            "Adequate sleep and protein intake are essential for muscle growth.";
+
+        sports =
+            "Common among bodybuilders and athletes who want increased muscle mass.";
+
+    }
+
+    else if(training === "endurance") {
+
+        title =
+            "Muscular Endurance Report";
+
+        image =
+            "../images/workout-endurance.jpg";
+
+        adaptation =
+            "Endurance training improves the ability of muscles to sustain activity for long periods of time.";
+
+        fibers =
+            "Primarily develops Type I slow-twitch fibers, which resist fatigue and use oxygen efficiently.";
+
+        contraction =
+            "Repeated low-force contractions allow muscles to work continuously.";
+
+        recovery =
+            "Recovery is generally faster than heavy strength training because muscle damage is lower.";
+
+        sports =
+            "Important for distance running, cycling, rowing, and swimming.";
+
+    }
+
+    else if(training === "power") {
+
+        title =
+            "Explosive Power Report";
+
+        image =
+            "../images/workout-speed.jpg";
+
+        adaptation =
+            "Power training teaches muscles to generate force rapidly, increasing speed and explosiveness.";
+
+        fibers =
+            "Strongly recruits Type II fast-twitch fibers responsible for sprinting, jumping, and rapid acceleration.";
+
+        contraction =
+            "Explosive concentric contractions are the primary focus.";
+
+        recovery =
+            "High-intensity power sessions require adequate rest to maintain performance.";
+
+        sports =
+            "Important for basketball, volleyball, sprinting, and many field sports.";
+
+    }
+
+    let muscleFunction = "";
+
+    if(muscle === "chest") {
+
+        muscleFunction =
+            "The chest muscles help push objects away from the body and assist in upper-body power movements.";
+
+    }
+
+    if(muscle === "back") {
+
+        muscleFunction =
+            "The back muscles support posture and generate pulling strength.";
+
+    }
+
+    if(muscle === "legs") {
+
+        muscleFunction =
+            "The leg muscles produce movement for running, jumping, sprinting, and changing direction.";
+
+    }
+
+    if(muscle === "core") {
+
+        muscleFunction =
+            "The core stabilizes the spine and transfers force between the upper and lower body.";
+
+    }
+
+    if(muscle === "shoulders") {
+
+        muscleFunction =
+            "The shoulders provide mobility and power during overhead movements.";
+
+    }
+
+    if(muscle === "arms") {
+
+        muscleFunction =
+            "The arm muscles assist in pushing, pulling, throwing, and lifting movements.";
+
+    }
+
+    result.innerHTML =
+
+        "<h3>" + title + "</h3>" +
+
+        "<img src='" +
+        image +
+        "' style='width:100%; max-width:500px; border-radius:12px; margin:15px 0;'>" +
+
+        "<p><strong>Target Muscle Group:</strong> " +
+        muscle.charAt(0).toUpperCase() +
+        muscle.slice(1) +
+        "</p>" +
+
+        "<p><strong>Muscle Function:</strong> " +
+        muscleFunction +
+        "</p>" +
+
+        "<p><strong>Training Adaptation:</strong> " +
+        adaptation +
+        "</p>" +
+
+        "<p><strong>Muscle Fiber Response:</strong> " +
+        fibers +
+        "</p>" +
+
+        "<p><strong>Contraction Type:</strong> " +
+        contraction +
+        "</p>" +
+
+        "<p><strong>Recovery Considerations:</strong> " +
+        recovery +
+        "</p>" +
+
+        "<p><strong>Sports Applications:</strong> " +
+        sports +
+        "</p>" +
+
+        "<hr>" +
+
+        "<p><strong>Key Anatomy Concept:</strong> Muscles adapt to the demands placed upon them. Different training styles produce different physiological changes in muscle tissue.</p>";
+
+}
