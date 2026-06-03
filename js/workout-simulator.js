@@ -4,13 +4,11 @@
 
 function showMuscle(muscle) {
 
-    const info =
-        document.getElementById("muscle-info");
+    const info = document.getElementById("muscle-info");
 
     switch (muscle) {
 
         case "chest":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Chest (Pectoralis Major)</h3>
@@ -24,7 +22,6 @@ function showMuscle(muscle) {
             break;
 
         case "shoulders":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Shoulders (Deltoids)</h3>
@@ -38,7 +35,6 @@ function showMuscle(muscle) {
             break;
 
         case "arms":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Arms</h3>
@@ -52,7 +48,6 @@ function showMuscle(muscle) {
             break;
 
         case "core":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Core</h3>
@@ -66,7 +61,6 @@ function showMuscle(muscle) {
             break;
 
         case "back":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Back</h3>
@@ -80,7 +74,6 @@ function showMuscle(muscle) {
             break;
 
         case "legs":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Legs</h3>
@@ -103,13 +96,11 @@ function showMuscle(muscle) {
 
 function showExercise(exercise) {
 
-    const info =
-        document.getElementById("exercise-info");
+    const info = document.getElementById("exercise-info");
 
     switch (exercise) {
 
         case "bench":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Bench Press</h3>
@@ -123,7 +114,6 @@ function showExercise(exercise) {
             break;
 
         case "squat":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Squat</h3>
@@ -137,7 +127,6 @@ function showExercise(exercise) {
             break;
 
         case "deadlift":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Deadlift</h3>
@@ -151,7 +140,6 @@ function showExercise(exercise) {
             break;
 
         case "pullup":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Pull-Up</h3>
@@ -165,7 +153,6 @@ function showExercise(exercise) {
             break;
 
         case "pushup":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Push-Up</h3>
@@ -179,7 +166,6 @@ function showExercise(exercise) {
             break;
 
         case "shoulderpress":
-
             info.innerHTML = `
                 <div class="info-text-side">
                     <h3>Shoulder Press</h3>
@@ -197,271 +183,146 @@ function showExercise(exercise) {
 }
 
 /* ===================================
-SPORTS LAB
+   SPORTS LAB
 =================================== */
 
 function showSport(sport) {
 
-const info =
-    document.getElementById("sport-info");
+    const info = document.getElementById("sport-info");
 
-switch (sport) {
+    switch (sport) {
 
-    case "basketball":
+        case "basketball":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Basketball</h3>
+                    <p>Relies heavily on legs, core, shoulders, and arms for jumping, shooting, and sprinting.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/basketball.jpg" alt="Basketball">
+                </div>
+            `;
+            break;
 
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Basketball</h3>
-                <p>Relies heavily on legs, core, shoulders, and arms for jumping, shooting, and sprinting.</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/basketball.jpg" alt="Basketball">
-            </div>
-        `;
-        break;
+        case "soccer":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Soccer</h3>
+                    <p>Uses quadriceps, hamstrings, calves, and core muscles for explosive kicking, cutting, and running.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/soccer.jpg" alt="Soccer">
+                </div>
+            `;
+            break;
 
-    case "soccer":
+        case "swimming":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Swimming</h3>
+                    <p>A full-body sport requiring intense coordination of the shoulders, back, core, and legs.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/swimming.jpg" alt="Swimming">
+                </div>
+            `;
+            break;
 
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Soccer</h3>
-                <p>Uses quadriceps, hamstrings, calves, and core muscles for explosive kicking, cutting, and running.</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/soccer.jpg" alt="Soccer">
-            </div>
-        `;
-        break;
+        case "volleyball":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Volleyball</h3>
+                    <p>Requires explosive leg power for vertical jumps, strong shoulders for spiking, and quick reaction speed.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/volleyball.jpg" alt="Volleyball">
+                </div>
+            `;
+            break;
 
-    case "swimming":
+        case "track":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Sprinting</h3>
+                    <p>Depends on rapid, powerful contractions of the glutes, hamstrings, quadriceps, and calves.</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/sprinting.jpg" alt="Sprinting">
+                </div>
+            `;
+            break;
 
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Swimming</h3>
-                <p>A full-body sport requiring intense coordination of the shoulders, back, core, and legs.</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/swimming.jpg" alt="Swimming">
-            </div>
-        `;
-        break;
+        case "frisbee":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Ultimate Frisbee</h3>
+                    <p>Requires speed, agility, endurance, and quick changes of direction.</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/frisbee.jpg" alt="Frisbee">
+                </div>
+            `;
+            break;
 
-    case "volleyball":
+        case "hockey":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Hockey</h3>
+                    <p>Relies on explosive leg power, balance, and upper-body strength for skating and shooting.</p>
+                    <p><strong>Primary Muscles:</strong> Quadriceps, Glutes, Core</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/hockey.jpg" alt="Hockey">
+                </div>
+            `;
+            break;
 
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Volleyball</h3>
-                <p>Requires explosive leg power for vertical jumps, strong shoulders for spiking, and quick reaction speed.</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/volleyball.jpg" alt="Volleyball">
-            </div>
-        `;
-        break;
+        case "badminton":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Badminton</h3>
+                    <p>Requires quick reactions, agility, balance, and explosive movement.</p>
+                    <p><strong>Primary Muscles:</strong> Deltoids, Quadriceps, Calves</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/badminton.jpg" alt="Badminton">
+                </div>
+            `;
+            break;
 
-    case "track":
+        case "tabletennis":
+            info.innerHTML = `
+                <div class="info-text-side">
+                    <h3>Table Tennis</h3>
+                    <p>Requires lightning-fast reflexes, hand-eye coordination, precision, and agility.</p>
+                    <p><strong>Primary Muscles:</strong> Forearms, Deltoids, Core</p>
+                </div>
+                <div class="info-image-side">
+                    <img src="../images/table-tennis.jpg" alt="Table Tennis">
+                </div>
+            `;
+            break;
 
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Sprinting</h3>
-                <p>Depends on rapid, powerful contractions of the glutes, hamstrings, quadriceps, and calves.</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/sprinting.jpg" alt="Sprinting">
-            </div>
-        `;
-        break;
-
-    case "frisbee":
-
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Ultimate Frisbee</h3>
-                <p>Requires speed, agility, endurance, and quick changes of direction.</p>
-                <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/frisbee.jpg" alt="Frisbee">
-            </div>
-        `;
-        break;
-
-    case "hockey":
-
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Hockey</h3>
-                <p>Relies on explosive leg power, balance, and upper-body strength for skating and shooting.</p>
-                <p><strong>Primary Muscles:</strong> Quadriceps, Glutes, Core</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/hockey.jpg" alt="Hockey">
-            </div>
-        `;
-        break;
-
-    case "badminton":
-
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Badminton</h3>
-                <p>Requires quick reactions, agility, balance, and explosive movement.</p>
-                <p><strong>Primary Muscles:</strong> Deltoids, Quadriceps, Calves</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/badminton.jpg" alt="Badminton">
-            </div>
-        `;
-        break;
-
-    case "tabletennis":
-
-        info.innerHTML = `
-            <div class="info-text-side">
-                <h3>Table Tennis</h3>
-                <p>Requires lightning-fast reflexes, hand-eye coordination, precision, and agility.</p>
-                <p><strong>Primary Muscles:</strong> Forearms, Deltoids, Core</p>
-            </div>
-            <div class="info-image-side">
-                <img src="../images/table-tennis.jpg" alt="Table Tennis">
-            </div>
-        `;
-        break;
-
-}
+    }
 
 }
 
 /* ===================================
-   BUILD YOUR ATHLETE
+   WORKOUT GENERATOR
 =================================== */
-
-function generateAthleteDNA() {
-
-    const goal =
-        document.getElementById("goal-select").value;
-
-    const sport =
-        document.getElementById("sport-select").value;
-
-    const muscle =
-        document.getElementById("muscle-select").value;
-
-    const info =
-        document.getElementById("goal-info");
-
-    let athleteType = "";
-    let exercise = "";
-    let image = "";
-
-    if (goal === "strength") {
-
-        athleteType = "Power Athlete";
-        exercise = "Bench Press, Squats, Deadlifts";
-        image = "../images/bench-press.jpg";
-    }
-
-    else if (goal === "speed") {
-
-        athleteType = "Elite Sprinter";
-        exercise = "Sprints, Plyometrics, Power Cleans";
-        image = "../images/sprinting.jpg";
-    }
-
-    else if (goal === "endurance") {
-
-        athleteType = "Endurance Champion";
-        exercise = "Distance Running, Swimming, Circuits";
-        image = "../images/swimming.jpg";
-    }
-
-    else {
-
-        athleteType = "Jump Specialist";
-        exercise = "Box Jumps, Squats, Lunges";
-        image = "../images/volleyball.jpg";
-    }
-
-    const power =
-        Math.floor(Math.random() * 21) + 80;
-
-    const speed =
-        Math.floor(Math.random() * 21) + 80;
-
-    const endurance =
-        Math.floor(Math.random() * 21) + 80;
-
-    const potential =
-        Math.floor((power + speed + endurance) / 3);
-
-    info.innerHTML = `
-
-        <div class="info-text-side">
-
-            <h3>${athleteType}</h3>
-
-            <p><strong>Goal:</strong> ${goal}</p>
-
-            <p><strong>Favorite Sport:</strong> ${sport}</p>
-
-            <p><strong>Strongest Muscle:</strong> ${muscle}</p>
-
-            <hr>
-
-            <p><strong>Power:</strong> ${power}/100</p>
-
-            <p><strong>Speed:</strong> ${speed}/100</p>
-
-            <p><strong>Endurance:</strong> ${endurance}/100</p>
-
-            <p><strong>Recommended Training:</strong></p>
-
-            <p>${exercise}</p>
-
-            <div class="dna-score">
-
-                Athlete Potential:
-                ${potential}/100
-
-            </div>
-
-            <div class="progress-bar">
-
-                <div class="progress-fill"
-                     style="width:${potential}%">
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="info-image-side">
-
-            <img src="${image}"
-                 alt="${athleteType}">
-
-        </div>
-
-    `;
-}
 
 function generateWorkout() {
 
-    const goal =
-        document.getElementById("workout-goal").value;
-
-    const result =
-        document.getElementById("workout-result");
-
+    const goal = document.getElementById("workout-goal").value;
+    const result = document.getElementById("workout-result");
     let workout = "";
 
     switch(goal) {
 
         case "strength":
-
             workout = `
                 <h3>Strength Workout</h3>
-
                 <p>Squat: 4 × 6</p>
                 <p>Bench Press: 4 × 6</p>
                 <p>Deadlift: 3 × 5</p>
@@ -470,10 +331,8 @@ function generateWorkout() {
             break;
 
         case "speed":
-
             workout = `
                 <h3>Speed Workout</h3>
-
                 <p>40m Sprint × 8</p>
                 <p>Hill Sprint × 6</p>
                 <p>Bounding Drill × 3</p>
@@ -482,10 +341,8 @@ function generateWorkout() {
             break;
 
         case "endurance":
-
             workout = `
                 <h3>Endurance Workout</h3>
-
                 <p>5 km Run</p>
                 <p>Bike: 20 min</p>
                 <p>Jump Rope: 10 min</p>
@@ -494,10 +351,8 @@ function generateWorkout() {
             break;
 
         case "jump":
-
             workout = `
                 <h3>Vertical Jump Workout</h3>
-
                 <p>Box Jumps × 12</p>
                 <p>Jump Squats × 15</p>
                 <p>Broad Jumps × 10</p>
@@ -511,88 +366,61 @@ function generateWorkout() {
 
 }
 
+/* ===================================
+   REACTION TEST
+=================================== */
+
 let reactionStart;
 let reactionReady = false;
 
 function startReactionTest() {
 
-    const box =
-        document.getElementById("reaction-box");
-
-    const result =
-        document.getElementById("reaction-result");
+    const box = document.getElementById("reaction-box");
+    const result = document.getElementById("reaction-result");
 
     reactionReady = false;
-
     result.innerHTML = "";
-
     box.style.background = "#e74c3c";
-
     box.innerHTML = "Wait...";
 
-    const delay =
-        Math.random() * 3000 + 2000;
+    const delay = Math.random() * 3000 + 2000;
 
     setTimeout(function() {
-
         reactionReady = true;
-
         reactionStart = Date.now();
-
         box.style.background = "#2ecc71";
-
         box.innerHTML = "CLICK NOW!";
-
     }, delay);
 
 }
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const box =
-        document.getElementById("reaction-box");
+    const box = document.getElementById("reaction-box");
 
     box.addEventListener("click", function() {
 
         if (!reactionReady) {
-
             return;
-
         }
 
-        const time =
-            Date.now() - reactionStart;
-
-        const result =
-            document.getElementById("reaction-result");
-
+        const time = Date.now() - reactionStart;
+        const result = document.getElementById("reaction-result");
         let rating = "";
 
         if (time < 250) {
-
             rating = "🏆 Elite Athlete Reflexes";
-
         }
-
         else if (time < 400) {
-
             rating = "🔥 Excellent Reaction Time";
-
         }
-
         else {
-
             rating = "👍 Average Human Reaction Time";
-
         }
 
-        result.innerHTML =
-            `Reaction Time: ${time} ms<br>${rating}`;
-
+        result.innerHTML = `Reaction Time: ${time} ms<br>${rating}`;
         reactionReady = false;
-
         box.style.background = "#cccccc";
-
         box.innerHTML = "Start Again";
 
     });
