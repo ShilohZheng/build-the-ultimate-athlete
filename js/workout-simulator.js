@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* ===================================================
-   MUSCLE FATIGUE SIMULATOR LOGIC (COMPLETE & FINAL)
+   MUSCLE FATIGUE SIMULATOR LOGIC (AUTO-INITIALIZED)
 =================================================== */
 
 let muscleEnergy = 100;
@@ -436,20 +436,24 @@ let repCount = 0;
 let fatigueInterval = null;
 let isSimulating = false;
 
-// 1. 初始化并启动模拟器
-function startFatigueSim() {
-    // 自动获取用户选了哪个动作
+// 🌟 新增：专门用来实时切换图片的函数
+function updateFatigueImage() {
     const exercise = document.getElementById("fatigue-exercise").value;
     const gearImg = document.getElementById("fatigue-gear-img");
 
-    // 🌟 核心修改：全部采用高质量的网络公共健身图标链接（免本地下载）
     if (exercise === "arms") {
-        gearImg.src = "https://cdn-icons-png.flaticon.com/512/3043/3043232.png"; // 哑铃图标
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/3043/3043232.png"; // 哑铃
     } else if (exercise === "chest") {
-        gearImg.src = "https://cdn-icons-png.flaticon.com/512/2548/2548537.png"; // 卧推/杠铃图标
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/2548/2548537.png"; // 杠铃
     } else if (exercise === "legs") {
-        gearImg.src = "https://cdn-icons-png.flaticon.com/512/4813/4813354.png"; // 深蹲/腿部图标
+        gearImg.src = "https://cdn-icons-png.flaticon.com/512/4813/4813354.png"; // 深蹲
     }
+}
+
+// 1. 初始化并启动模拟器
+function startFatigueSim() {
+    // 启动时确信图片是最新的
+    updateFatigueImage();
 
     // 重置核心数值状态
     muscleEnergy = 100;
@@ -481,7 +485,6 @@ function startFatigueSim() {
 
         const weight = document.getElementById("fatigue-weight").value;
         
-        // 模拟体内能量恢复：负荷越轻恢复越快
         let recoveryRate = 0;
         if (weight === "light") recoveryRate = 2.2;
         else if (weight === "medium") recoveryRate = 1.0;
@@ -491,16 +494,15 @@ function startFatigueSim() {
             muscleEnergy = Math.min(100, muscleEnergy + recoveryRate);
             updateEnergyUI();
         }
-    }, 300); // 每 0.3 秒做一次生理恢复模拟计算
+    }, 300);
 }
 
-// 2. 每次点击 LIFT! 按钮代表做了一次标准的动作
+// 2. 每次点击 LIFT! 按钮
 function performRep() {
     if (!isSimulating || muscleEnergy <= 0) return;
 
     const weight = document.getElementById("fatigue-weight").value;
     
-    // 根据重量不同扣除不同比例的能量
     let energyCost = 0;
     if (weight === "light") energyCost = 7;
     else if (weight === "medium") energyCost = 14;
@@ -512,13 +514,12 @@ function performRep() {
     document.getElementById("rep-count").innerText = repCount;
     updateEnergyUI();
 
-    // 判定是否达到极限（力竭）
     if (muscleEnergy <= 0) {
         triggerMuscleFailure();
     }
 }
 
-// 3. UI 状态条刷新逻辑
+// 3. UI 状态条刷新
 function updateEnergyUI() {
     const energyFill = document.getElementById("energy-fill");
     const energyText = document.getElementById("energy-text");
@@ -526,20 +527,19 @@ function updateEnergyUI() {
     energyFill.style.width = muscleEnergy + "%";
     energyText.innerText = Math.round(muscleEnergy) + "%";
 
-    // 能量三段式变色
     if (muscleEnergy > 50) {
-        energyFill.style.background = "#00b894"; // 绿色
+        energyFill.style.background = "#00b894";
         energyText.style.color = "#00b894";
     } else if (muscleEnergy > 20) {
-        energyFill.style.background = "#f1c40f"; // 黄色
+        energyFill.style.background = "#f1c40f";
         energyText.style.color = "#f1c40f";
     } else {
-        energyFill.style.background = "#e74c3c"; // 红色
+        energyFill.style.background = "#e74c3c";
         energyText.style.color = "#e74c3c";
     }
 }
 
-// 4. 触发力竭，给出分析报告
+// 4. 触发力竭
 function triggerMuscleFailure() {
     isSimulating = false;
     document.getElementById("lift-btn").disabled = true;
@@ -565,3 +565,6 @@ function triggerMuscleFailure() {
     
     report.classList.add("show");
 }
+
+// 🌟 新增：让页面一加载完就先跑一次图片匹配，防止初始图裂开
+window.addEventListener('DOMContentLoaded', updateFatigueImage);
