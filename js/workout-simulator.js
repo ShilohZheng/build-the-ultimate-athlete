@@ -375,14 +375,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function generateAdaptation() {
 
-    const training =
-        document.getElementById("training-type").value;
-
-    const muscle =
-        document.getElementById("target-muscle").value;
-
-    const result =
-        document.getElementById("adaptation-result");
+    const training = document.getElementById("training-type").value;
+    const muscle = document.getElementById("target-muscle").value;
+    const result = document.getElementById("adaptation-result");
 
     let title = "";
     let image = "";
@@ -393,236 +388,120 @@ function generateAdaptation() {
     let sports = "";
     let athleteType = "";
 
-    if(training === "strength") {
+    if (training === "strength") {
 
-        title =
-            "Strength Training Report";
+        title = "Strength Training Report";
+        image = "../images/workout-strength.jpg";
 
-        image =
-            "../images/workout-strength.jpg";
+        adaptation = "Heavy resistance training increases force production through neural adaptation.";
+        fibers = "Primarily Type II fast-twitch fibers.";
+        contraction = "Heavy concentric + eccentric contractions.";
+        recovery = "48–72 hours recovery recommended.";
+        sports = "Football, rugby, powerlifting.";
+        athleteType = "Power Athlete";
 
-        adaptation =
-            "Heavy resistance training increases the ability of your muscles to produce force. Strength gains occur because the nervous system becomes more efficient at recruiting muscle fibers.";
+    } else if (training === "hypertrophy") {
 
-        fibers =
-            "Primarily recruits Type II fast-twitch muscle fibers, which generate high force but fatigue quickly.";
+        title = "Muscle Growth (Hypertrophy) Report";
+        image = "../images/workout-strength.jpg";
 
-        contraction =
-            "Strength exercises often involve both concentric and eccentric contractions under heavy loads.";
+        adaptation = "Muscle fibers grow through micro-tears and repair.";
+        fibers = "Type I and Type II fibers both increase in size.";
+        contraction = "Controlled tension-based contractions.";
+        recovery = "Sleep and protein are essential.";
+        sports = "Bodybuilding and aesthetic sports.";
+        athleteType = "Muscle Builder";
 
-        recovery =
-            "Allow 48–72 hours of recovery for the trained muscle group to repair and adapt.";
+    } else if (training === "endurance") {
 
-        sports =
-            "Useful for football, rugby, wrestling, powerlifting, and many team sports.";
+        title = "Muscular Endurance Report";
+        image = "../images/workout-endurance.jpg";
 
-       athleteType =
-             "Power Athlete";
+        adaptation = "Improves long-duration muscle performance.";
+        fibers = "Mainly Type I slow-twitch fibers.";
+        contraction = "Low-force repeated contractions.";
+        recovery = "Fast recovery due to low damage.";
+        sports = "Running, cycling, swimming.";
+        athleteType = "Endurance Athlete";
 
+    } else if (training === "power") {
+
+        title = "Explosive Power Report";
+        image = "../images/workout-speed.jpg";
+
+        adaptation = "Increases speed of force production.";
+        fibers = "Strong Type II activation.";
+        contraction = "Explosive concentric movements.";
+        recovery = "High rest demand.";
+        sports = "Basketball, sprinting, volleyball.";
+        athleteType = "Explosive Athlete";
     }
 
-    else if(training === "hypertrophy") {
+    const muscleName = muscle.charAt(0).toUpperCase() + muscle.slice(1);
 
-        title =
-            "Muscle Growth (Hypertrophy) Report";
-
-        image =
-            "../images/workout-strength.jpg";
-
-        adaptation =
-            "Repeated resistance training creates microscopic damage in muscle fibers. During recovery, the fibers repair and become larger.";
-
-        fibers =
-            "Both slow-twitch and fast-twitch fibers grow, although fast-twitch fibers usually show greater increases in size.";
-
-        contraction =
-            "Controlled concentric and eccentric movements maximize muscle tension.";
-
-        recovery =
-            "Adequate sleep and protein intake are essential for muscle growth.";
-
-        sports =
-            "Common among bodybuilders and athletes who want increased muscle mass.";
-
-        athleteType =
-             "Muscle Builder";
-
-    }
-
-    else if(training === "endurance") {
-
-        title =
-            "Muscular Endurance Report";
-
-        image =
-            "../images/workout-endurance.jpg";
-
-        adaptation =
-            "Endurance training improves the ability of muscles to sustain activity for long periods of time.";
-
-        fibers =
-            "Primarily develops Type I slow-twitch fibers, which resist fatigue and use oxygen efficiently.";
-
-        contraction =
-            "Repeated low-force contractions allow muscles to work continuously.";
-
-        recovery =
-            "Recovery is generally faster than heavy strength training because muscle damage is lower.";
-
-        sports =
-            "Important for distance running, cycling, rowing, and swimming.";
-
-        athleteType =
-             "Endurance Athlete";
-
-    }
-
-    else if(training === "power") {
-
-        title =
-            "Vertical Jump Development Report";
-
-        image =
-            "../images/workout-speed.jpg";
-
-        adaptation =
-            "Power training teaches muscles to generate force rapidly, increasing speed and explosiveness.";
-
-        fibers =
-            "Strongly recruits Type II fast-twitch fibers responsible for sprinting, jumping, and rapid acceleration.";
-
-        contraction =
-            "Explosive concentric contractions are the primary focus.";
-
-        recovery =
-            "High-intensity power sessions require adequate rest to maintain performance.";
-
-        sports =
-            "Important for basketball, volleyball, sprinting, and many field sports.";
-
-        athleteType =
-             "Explosive Athlete";
-
-    }
-
-   const muscleName =
-    muscle.charAt(0).toUpperCase() +
-    muscle.slice(1);
-   
     let muscleFunction = "";
 
-    if(muscle === "chest") {
+    if (muscle === "chest") muscleFunction = "Chest helps pushing movements.";
+    if (muscle === "back") muscleFunction = "Back supports pulling and posture.";
+    if (muscle === "legs") muscleFunction = "Legs generate movement and power.";
+    if (muscle === "core") muscleFunction = "Core stabilizes body.";
+    if (muscle === "shoulders") muscleFunction = "Shoulders control arm movement.";
+    if (muscle === "arms") muscleFunction = "Arms assist pushing and pulling.";
 
-        muscleFunction =
-            "The chest muscles help push objects away from the body and assist in upper-body power movements.";
+    // ❗关键修复：你原来这里少了很多 +
+    result.innerHTML = `
+        <div class="adaptation-header">
+            <img src="${image}" class="adaptation-image">
+            <div>
+                <h2>${title}</h2>
+                <p class="adaptation-intro">
+                    Scientific analysis of how ${muscleName} muscles respond.
+                </p>
+            </div>
+        </div>
 
-    }
+        <div class="adaptation-cards">
 
-    if(muscle === "back") {
+            <div class="adapt-card">
+                <h4>Target Muscle Group</h4>
+                <p>${muscleName}</p>
+            </div>
 
-        muscleFunction =
-            "The back muscles support posture and generate pulling strength.";
+            <div class="adapt-card">
+                <h4>Muscle Function</h4>
+                <p>${muscleFunction}</p>
+            </div>
 
-    }
+            <div class="adapt-card">
+                <h4>Training Adaptation</h4>
+                <p>${adaptation}</p>
+            </div>
 
-    if(muscle === "legs") {
+            <div class="adapt-card">
+                <h4>Muscle Fiber Response</h4>
+                <p>${fibers}</p>
+            </div>
 
-        muscleFunction =
-            "The leg muscles produce movement for running, jumping, sprinting, and changing direction.";
+            <div class="adapt-card">
+                <h4>Contraction Type</h4>
+                <p>${contraction}</p>
+            </div>
 
-    }
+            <div class="adapt-card">
+                <h4>Recovery</h4>
+                <p>${recovery}</p>
+            </div>
 
-    if(muscle === "core") {
+            <div class="adapt-card">
+                <h4>Sports Application</h4>
+                <p>${sports}</p>
+            </div>
 
-        muscleFunction =
-            "The core stabilizes the spine and transfers force between the upper and lower body.";
+            <div class="adapt-card">
+                <h4>Athlete Type</h4>
+                <p>${athleteType}</p>
+            </div>
 
-    }
-
-    if(muscle === "shoulders") {
-
-        muscleFunction =
-            "The shoulders provide mobility and power during overhead movements.";
-
-    }
-
-    if(muscle === "arms") {
-
-        muscleFunction =
-            "The arm muscles assist in pushing, pulling, throwing, and lifting movements.";
-
-    }
-
-    result.innerHTML =
-
-    "<div class='adaptation-header'>" +
-
-        "<img src='" + image + "' class='adaptation-image'>" +
-
-        "<div>" +
-
-            "<h2>" + title + "</h2>" +
-
-            "<p class='adaptation-intro'>" +
-            "Scientific analysis of how " +
-            muscleName +
-            " muscles respond to this style of training." +
-            "</p>" +
-
-        "</div>" +
-
-    "</div>" +
-
-    "<div class='adaptation-cards'>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Target Muscle Group</h4>" +
-            "<p>" +
-            muscleName +
-            "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Muscle Function</h4>" +
-            "<p>" + muscleFunction + "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Training Adaptation</h4>" +
-            "<p>" + adaptation + "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Muscle Fiber Response</h4>" +
-            "<p>" + fibers + "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Contraction Type</h4>" +
-            "<p>" + contraction + "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Recovery Considerations</h4>" +
-            "<p>" + recovery + "</p>" +
-        "</div>" +
-
-        "<div class='adapt-card'>" +
-            "<h4>Sports Applications</h4>" +
-            "<p>" + sports + "</p>" +
-        "</div>" +
-
-         "<div class='adapt-card'>" +
-             "<h4>Athlete Profile</h4>" +
-             "<p>" + athleteType + "</p>" +
-         "</div>" +
-
-        "<div class='adapt-card anatomy'>" +
-            "<h4>Key Anatomy Concept</h4>" +
-            "<p>" +
-            "Muscles adapt to the demands placed upon them. Different training styles produce different physiological changes in muscle tissue." +
-            "</p>" +
-        "</div>" +
-
-    "</div>";
-   
+        </div>
+    `;
+}
