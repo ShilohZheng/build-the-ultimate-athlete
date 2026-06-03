@@ -103,147 +103,384 @@ function findMySport() {
     let sport2 = "";
     let sport3 = "";
 
-    let reason = "";
+    const sports = {
 
-    // ===========================
-    // TEAM SPORTS
-    // ===========================
+    "Basketball": 0,
+    "Soccer": 0,
+    "Volleyball": 0,
+    "Ultimate Frisbee": 0,
+    "Hockey": 0,
+    "Rugby": 0,
+    "Skiing": 0,
+    "Baseball": 0,
+    "Tennis": 0,
+    "Badminton": 0,
+    "Table Tennis": 0,
+    "Swimming": 0,
+    "Rock Climbing": 0,
+    "Cycling": 0,
+    "Sprinting": 0,
+    "Distance Running": 0,
+    "Archery": 0,
+    "Boxing": 0,
+    "Gym Workout": 0,
+    "Rowing": 0
 
-    if (teamwork === "Team Sports") {
+};
 
-        if (goal === "Increase Speed") {
+    if(goal === "Increase Speed"){
 
-            sport1 = "Soccer";
-            sport2 = "Ultimate Frisbee";
-            sport3 = "Basketball";
+    sports["Sprinting"] += 5;
+    sports["Soccer"] += 4;
+    sports["Cycling"] += 4;
+    sports["Badminton"] += 3;
+    sports["Basketball"] += 3;
 
-        }
+}
 
-        else if (goal === "Become More Explosive") {
+if(goal === "Build Strength"){
 
-            sport1 = "Volleyball";
-            sport2 = "Basketball";
-            sport3 = "Rugby";
+    sports["Gym Workout"] += 5;
+    sports["Boxing"] += 4;
+    sports["Rugby"] += 4;
+    sports["Rock Climbing"] += 3;
+    sports["Rowing"] += 3;
 
-        }
+}
 
-        else if (goal === "Build Strength") {
+if(goal === "Improve Endurance"){
 
-            sport1 = "Rugby";
-            sport2 = "Hockey";
-            sport3 = "Rowing";
+    sports["Distance Running"] += 5;
+    sports["Swimming"] += 4;
+    sports["Cycling"] += 4;
+    sports["Rowing"] += 3;
 
-        }
+}
 
-        else {
+if(goal === "Become More Explosive"){
 
-            sport1 = "Soccer";
-            sport2 = "Hockey";
-            sport3 = "Distance Running";
+    sports["Volleyball"] += 5;
+    sports["Basketball"] += 4;
+    sports["Sprinting"] += 4;
+    sports["Boxing"] += 3;
 
-        }
+}
 
-    }
+    if(environment === "Outdoor"){
 
-    // ===========================
-    // INDIVIDUAL SPORTS
-    // ===========================
+    sports["Soccer"] += 3;
+    sports["Cycling"] += 3;
+    sports["Distance Running"] += 3;
+    sports["Ultimate Frisbee"] += 3;
+    sports["Skiing"] += 3;
+    sports["Rock Climbing"] += 3;
 
-    else {
+}
 
-        if (goal === "Build Strength") {
+if(environment === "Indoor"){
 
-            sport1 = "Gym Workout";
-            sport2 = "Boxing";
-            sport3 = "Rock Climbing";
+    sports["Badminton"] += 3;
+    sports["Table Tennis"] += 3;
+    sports["Gym Workout"] += 3;
+    sports["Volleyball"] += 3;
+    sports["Swimming"] += 2;
 
-        }
+}
 
-        else if (goal === "Increase Speed") {
+    if(favorite === "Outdoor Adventure"){
 
-            sport1 = "Sprinting";
-            sport2 = "Cycling";
-            sport3 = "Badminton";
+    sports["Rock Climbing"] += 5;
+    sports["Skiing"] += 5;
+    sports["Cycling"] += 4;
 
-        }
+}
 
-        else if (goal === "Improve Endurance") {
+if(favorite === "Strategy and Precision"){
 
-            sport1 = "Distance Running";
-            sport2 = "Swimming";
-            sport3 = "Cycling";
+    sports["Archery"] += 5;
+    sports["Table Tennis"] += 4;
+    sports["Baseball"] += 3;
 
-        }
+}
 
-        else {
+if(favorite === "Fitness and Strength"){
 
-            sport1 = "Sprinting";
-            sport2 = "Boxing";
-            sport3 = "Tennis";
+    sports["Gym Workout"] += 5;
+    sports["Boxing"] += 4;
+    sports["Rowing"] += 3;
 
-        }
+}
 
-    }
+    if(fitness === "Advanced"){
 
-    // ===========================
+    sports["Boxing"] += 2;
+    sports["Rugby"] += 2;
+    sports["Rowing"] += 2;
+
+}
+
+if(fitness === "Beginner"){
+
+    sports["Swimming"] += 2;
+    sports["Cycling"] += 2;
+    sports["Gym Workout"] += 2;
+
+}
+
+    if(experience === "0-1 year"){
+
+    sports["Swimming"] += 2;
+    sports["Cycling"] += 2;
+
+}
+
+if(experience === "2-3 years"){
+
+    sports["Basketball"] += 1;
+    sports["Soccer"] += 1;
+
+}
+
+if(experience === "4-6 years"){
+
+    sports["Volleyball"] += 2;
+    sports["Tennis"] += 2;
+
+}
+
+    if(experience === "7+ years"){
+
+    sports["Boxing"] += 2;
+    sports["Rock Climbing"] += 2;
+    sports["Rugby"] += 2;
+
+}
+
+if(hours === "1-3 hours"){
+
+    sports["Gym Workout"] += 1;
+    sports["Swimming"] += 1;
+
+}
+
+if(hours === "4-6 hours"){
+
+    sports["Basketball"] += 1;
+    sports["Soccer"] += 1;
+
+}
+
+if(hours === "7-9 hours"){
+
+    sports["Rowing"] += 1;
+    sports["Cycling"] += 1;
+
+}
+    
+    if(hours === "10+ hours"){
+
+    sports["Distance Running"] += 2;
+    sports["Rowing"] += 2;
+    sports["Cycling"] += 2;
+
+}
+
+    if(teamwork === "Team Sports"){
+
+    sports["Basketball"] += 3;
+    sports["Soccer"] += 3;
+    sports["Volleyball"] += 3;
+    sports["Hockey"] += 3;
+    sports["Rugby"] += 3;
+
+}
+else{
+
+    sports["Swimming"] += 3;
+    sports["Boxing"] += 3;
+    sports["Cycling"] += 3;
+    sports["Archery"] += 3;
+    sports["Rock Climbing"] += 3;
+
+}
+
     // MUSCLE BONUS
-    // ===========================
 
-    if (muscle === "Legs") {
+if(muscle === "Legs"){
 
-        reason =
-            "Your strong leg muscles support sports requiring speed, jumping, and endurance.";
+    sports["Soccer"] += 3;
+    sports["Sprinting"] += 3;
+    sports["Cycling"] += 3;
+    sports["Distance Running"] += 2;
+    sports["Volleyball"] += 2;
 
-    }
+}
 
-    else if (muscle === "Core") {
+if(muscle === "Arms"){
 
-        reason =
-            "A strong core improves balance, power transfer, and athletic stability.";
+    sports["Boxing"] += 3;
+    sports["Tennis"] += 3;
+    sports["Badminton"] += 3;
+    sports["Baseball"] += 2;
 
-    }
+}
 
-    else if (muscle === "Arms") {
+if(muscle === "Core"){
 
-        reason =
-            "Your upper-body strength is valuable for striking, throwing, and racket sports.";
+    sports["Swimming"] += 3;
+    sports["Rock Climbing"] += 3;
+    sports["Rowing"] += 2;
 
-    }
+}
 
-    else if (muscle === "Back") {
+if(muscle === "Back"){
 
-        reason =
-            "Back strength supports pulling power and overall athletic performance.";
+    sports["Rowing"] += 4;
+    sports["Rock Climbing"] += 3;
+    sports["Swimming"] += 2;
 
-    }
+}
 
-    else if (muscle === "Shoulders") {
+if(muscle === "Shoulders"){
 
-        reason =
-            "Strong shoulders help with overhead movements and explosive actions.";
+    sports["Volleyball"] += 3;
+    sports["Boxing"] += 2;
+    sports["Swimming"] += 2;
 
-    }
+}
 
-    else {
+if(muscle === "Chest"){
 
-        reason =
-            "Your upper-body strength contributes to athletic power and control.";
+    sports["Gym Workout"] += 3;
+    sports["Boxing"] += 2;
+    sports["Rugby"] += 2;
 
-    }
+}
 
-    // ===========================
-    // MATCH %
-    // ===========================
+    // MOTIVATION BONUS
 
-    const match1 =
-        Math.floor(Math.random() * 6) + 95;
+if(motivation === "Winning"){
 
-    const match2 =
-        Math.floor(Math.random() * 6) + 89;
+    sports["Basketball"] += 2;
+    sports["Soccer"] += 2;
+    sports["Volleyball"] += 2;
+    sports["Boxing"] += 2;
 
-    const match3 =
-        Math.floor(Math.random() * 6) + 84;
+}
 
+if(motivation === "Personal Improvement"){
+
+    sports["Swimming"] += 2;
+    sports["Cycling"] += 2;
+    sports["Gym Workout"] += 2;
+
+}
+
+if(motivation === "Adventure"){
+
+    sports["Rock Climbing"] += 3;
+    sports["Skiing"] += 3;
+    sports["Ultimate Frisbee"] += 2;
+
+}
+
+if(motivation === "Fitness"){
+
+    sports["Gym Workout"] += 3;
+    sports["Swimming"] += 2;
+    sports["Cycling"] += 2;
+
+}
+
+    // STYLE BONUS
+
+if(style === "Competitive"){
+
+    sports["Basketball"] += 2;
+    sports["Soccer"] += 2;
+    sports["Boxing"] += 2;
+
+}
+
+if(style === "Adventurous"){
+
+    sports["Rock Climbing"] += 3;
+    sports["Skiing"] += 3;
+
+}
+
+if(style === "Patient"){
+
+    sports["Archery"] += 3;
+    sports["Baseball"] += 2;
+    sports["Table Tennis"] += 2;
+
+}
+
+if(style === "Fast-Paced"){
+
+    sports["Sprinting"] += 3;
+    sports["Badminton"] += 2;
+    sports["Basketball"] += 2;
+
+}
+
+if(style === "Disciplined"){
+
+    sports["Swimming"] += 3;
+    sports["Rowing"] += 2;
+    sports["Gym Workout"] += 2;
+
+}
+
+   const rankedSports =
+Object.entries(sports)
+.sort((a,b) => b[1] - a[1]);
+
+sport1 = rankedSports[0][0];
+sport2 = rankedSports[1][0];
+sport3 = rankedSports[2][0];
+
+const maxScore = rankedSports[0][1];
+
+const match1 = 98;
+
+let match2 =
+Math.round(
+rankedSports[1][1] / maxScore * 92
+);
+
+let match3 =
+Math.round(
+rankedSports[2][1] / maxScore * 85
+);
+
+if(match2 >= match1){
+
+    match2 = match1 - 3;
+
+}
+
+if(match3 >= match2){
+
+    match3 = match2 - 3;
+
+}
+    
+let reason =
+
+    "Your " +
+    fitness +
+    " fitness level, preference for " +
+    environment +
+    " activities, and focus on " +
+    goal +
+    " indicate strong compatibility with sports that align with your athletic profile. Your " +
+    style +
+    " personality and motivation for " +
+    motivation +
+    " further support these recommendations.";
+    
     const imageMap = {
 
     "Basketball": "../images/sports-lab-basketball.jpg",
@@ -322,6 +559,18 @@ document.getElementById("sport-result").innerHTML =
     goal +
     "</p>" +
 
+    "<p><strong>Preferred Environment:</strong> " +
+environment +
+"</p>" +
+
+"<p><strong>Motivation:</strong> " +
+motivation +
+"</p>" +
+
+"<p><strong>Athletic Style:</strong> " +
+style +
+"</p>" +
+
     "<p><strong>Strongest Muscle Group:</strong> " +
     muscle +
     "</p>" +
@@ -350,6 +599,16 @@ document.getElementById("sport-result").innerHTML =
     sport1 +
     "</strong> appears to be your strongest overall sport match.</p>" +
 
+    "<p><strong>Why " +
+sport1 +
+"?</strong> This recommendation was strongly influenced by your preference for " +
+environment +
+" activities, your motivation for " +
+motivation +
+", and your goal of " +
+goal +
+".</p>" +
+
     "<p>The additional recommendations of <strong>" +
     sport2 +
     "</strong> and <strong>" +
@@ -357,6 +616,18 @@ document.getElementById("sport-result").innerHTML =
     "</strong> provide alternative pathways that align closely with your athletic strengths and interests.</p>" +
 
     "<p><strong>Overall Athlete Rating:</strong> Competitive Potential Detected ✓</p>" +
+
+    "<h3>Match Factors Considered</h3>" +
+
+"<p>✓ Athletic Goal</p>" +
+"<p>✓ Fitness Level</p>" +
+"<p>✓ Sports Experience</p>" +
+"<p>✓ Training Hours</p>" +
+"<p>✓ Preferred Environment</p>" +
+"<p>✓ Athletic Style</p>" +
+"<p>✓ Motivation</p>" +
+"<p>✓ Muscle Strength Profile</p>" +
+"<p>✓ Team vs Individual Preference</p>" +
 
     "<div class='champion-image'>" +
 
