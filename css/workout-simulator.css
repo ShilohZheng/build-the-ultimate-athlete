@@ -494,3 +494,216 @@ RESPONSIVE & MOBILE TIMING
     width: fit-content;
     margin: 25px auto !important;
 }
+
+/* ===================================================
+   MUSCLE FATIGUE SIMULATOR STYLES (ADD TO BOTTOM)
+=================================================== */
+
+.fatigue-section {
+    background: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.fatigue-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #f8fafc;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.fatigue-controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.control-group {
+    flex: 1;
+    min-width: 240px;
+    text-align: left;
+}
+
+.control-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+.control-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    background: white;
+}
+
+.fatigue-display {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* 图片器械盒子样式 */
+.fatigue-image-box {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f1f5f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.fatigue-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保证你的哑铃、杠铃图片不被拉伸变形 */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.fatigue-container:hover .fatigue-image-box img {
+    transform: scale(1.03);
+}
+
+.status-box {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#energy-text {
+    color: #00b894;
+    transition: color 0.3s;
+}
+
+/* 能量条外壳 */
+.energy-bar-container {
+    width: 100%;
+    height: 24px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* 能量条内层（带平滑过渡） */
+#energy-fill {
+    height: 100%;
+    width: 100%;
+    background: #00b894;
+    transition: width 0.15s ease-out, background-color 0.3s;
+    border-radius: 12px;
+}
+
+.counter-box {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 15px 0;
+}
+
+#rep-count {
+    color: #2563eb;
+    font-size: 1.5rem;
+}
+
+.fatigue-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#start-fatigue-btn {
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#start-fatigue-btn:hover {
+    background: #334155;
+}
+
+/* 举重按钮（活力红） */
+#lift-btn {
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #e11d48, #be123c);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(225,29,72,0.3);
+    transition: all 0.1s ease;
+}
+
+#lift-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+#lift-btn:disabled {
+    background: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* 报告卡片展示样式 */
+.fatigue-report-card {
+    margin-top: 25px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.fatigue-report-card.show {
+    padding: 20px;
+    max-height: 220px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.fatigue-report-card h4 {
+    margin: 0 0 8px 0;
+    color: #1d4ed8;
+    font-size: 1.1rem;
+}
+
+.fatigue-report-card p {
+    margin: 0;
+    color: #1e3a8a;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .fatigue-section {
+        padding: 60px 6%;
+    }
+    .fatigue-actions {
+        flex-direction: column;
+    }
+}
+
