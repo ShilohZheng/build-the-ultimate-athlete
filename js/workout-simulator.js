@@ -504,15 +504,7 @@ function generateAdaptation() {
             </div>
 
             <div class="adapt-card">
-                <h4>Athlete Type</h4>
-                <p>${athleteType}</p>
-            </div>
-
-        </div>
-    `;
-}
-
-let atp = 100;
+                <h4>Athlelet atp = 100;
 let oxygen = 100;
 let lactate = 0;
 
@@ -533,13 +525,15 @@ function updateScienceFatigue(){
     if(lactate < 30){
 
         report.innerHTML = `
-        <h4>Fresh Muscle</h4>
+        <h4>Normal Muscle Function</h4>
 
         ATP is readily available.
 
-        Oxygen supply meets demand.
+        Oxygen supply meets energy demand.
 
-        Aerobic respiration is the primary source of energy.
+        Cross-bridge cycling occurs efficiently.
+
+        Aerobic respiration provides most ATP.
         `;
 
     }
@@ -547,13 +541,15 @@ function updateScienceFatigue(){
     else if(lactate < 60){
 
         report.innerHTML = `
-        <h4>Working Muscle</h4>
+        <h4>Increasing Intensity</h4>
 
         ATP is being consumed rapidly.
 
-        Oxygen demand is increasing.
+        Oxygen demand exceeds supply.
 
-        Anaerobic respiration has started.
+        Anaerobic respiration begins.
+
+        Lactate starts accumulating.
         `;
 
     }
@@ -561,13 +557,15 @@ function updateScienceFatigue(){
     else if(lactate < 85){
 
         report.innerHTML = `
-        <h4>Fatigue Developing</h4>
+        <h4>Muscle Fatigue Developing</h4>
 
-        Lactate is accumulating.
+        Significant lactate build-up occurs.
 
-        Oxygen debt is increasing.
+        Oxygen debt increases.
 
-        Cross-bridge cycling is becoming less efficient.
+        ATP production becomes less efficient.
+
+        Cross-bridge formation slows.
         `;
 
     }
@@ -575,17 +573,17 @@ function updateScienceFatigue(){
     else{
 
         report.innerHTML = `
-        <h4>Muscle Fatigue Reached</h4>
+        <h4>Severe Fatigue</h4>
 
-        ATP stores are becoming depleted.
+        Glucose stores are becoming depleted.
 
-        Anaerobic respiration is dominant.
+        ATP availability is reduced.
 
-        Lactate accumulation interferes with muscle contraction.
+        Lactate interferes with contraction.
 
         Force production decreases.
 
-        Stop exercise before muscle cells become damaged.
+        Exercise should stop before muscle cells are damaged.
         `;
 
     }
@@ -597,20 +595,71 @@ document.addEventListener("DOMContentLoaded", function(){
     const btn =
         document.getElementById("science-fatigue-btn");
 
+    const reset =
+        document.getElementById("reset-fatigue-btn");
+
     if(!btn) return;
 
     btn.addEventListener("click", function(){
 
-        atp -= 5;
-        oxygen -= 4;
-        lactate += 6;
+        const activity =
+            document.getElementById("activity-select").value;
 
-        if(atp < 0) atp = 0;
-        if(oxygen < 0) oxygen = 0;
-        if(lactate > 100) lactate = 100;
+        if(activity === "sprint"){
+
+            atp -= 8;
+            oxygen -= 6;
+            lactate += 12;
+
+        }
+
+        else if(activity === "marathon"){
+
+            atp -= 3;
+            oxygen -= 8;
+            lactate += 3;
+
+        }
+
+        else if(activity === "bench"){
+
+            atp -= 6;
+            oxygen -= 4;
+            lactate += 7;
+
+        }
+
+        else if(activity === "plank"){
+
+            atp -= 4;
+            oxygen -= 7;
+            lactate += 5;
+
+        }
+
+        atp = Math.max(atp,0);
+        oxygen = Math.max(oxygen,0);
+        lactate = Math.min(lactate,100);
 
         updateScienceFatigue();
 
     });
 
-});
+    reset.addEventListener("click", function(){
+
+        atp = 100;
+        oxygen = 100;
+        lactate = 0;
+
+        updateScienceFatigue();
+
+    });
+
+});te Type</h4>
+                <p>${athleteType}</p>
+            </div>
+
+        </div>
+    `;
+}
+
