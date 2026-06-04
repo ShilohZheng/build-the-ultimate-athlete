@@ -7,82 +7,208 @@ function showMuscle(muscle) {
 
     switch (muscle) {
         case "chest":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Chest (Pectoralis Major)</h3>
-                    <p>Responsible for pushing movements and bringing the arms toward the body.</p>
-                    <p><strong>Common Exercises:</strong> Bench Press, Push-Up</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/chest.jpg" alt="Chest">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
 
-        case "shoulders":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Shoulders (Deltoids)</h3>
-                    <p>Lift, rotate, and stabilize the arms.</p>
-                    <p><strong>Common Exercises:</strong> Shoulder Press, Lateral Raise</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/shoulders.jpg" alt="Shoulders">
-                </div>
-            `;
-            break;
+            <h3>Chest (Pectoralis Major)</h3>
+
+            <p>
+                The pectoralis major is a large skeletal muscle located on the front of the chest.
+                It attaches to the humerus (upper arm bone) and helps move the arm.
+            </p>
+
+            <p>
+                Its main functions are shoulder flexion, horizontal adduction,
+                and internal rotation. These movements are important during
+                pushing actions such as bench presses and push-ups.
+            </p>
+
+            <p>
+                During contraction, nerve impulses stimulate muscle fibers.
+                Actin and myosin filaments form cross-bridges, allowing the
+                muscle to generate force and move the arm.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Bench Press, Push-Up
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/chest.jpg" alt="Chest">
+        </div>
+    `;
+    break;
+case "shoulders":
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Shoulders (Deltoids)</h3>
+
+            <p>
+                The deltoid is a large muscle covering the shoulder joint.
+                It consists of anterior, lateral, and posterior sections.
+            </p>
+
+            <p>
+                These sections work together to flex, extend, and abduct the arm.
+                The shoulder has a large range of motion but depends heavily on muscles for stability.
+            </p>
+
+            <p>
+                During movement, motor neurons activate muscle fibers,
+                allowing actin and myosin cross-bridges to generate force and move the arm.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Shoulder Press, Lateral Raise
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/shoulders.jpg" alt="Shoulders">
+        </div>
+    `;
+    break;
 
         case "arms":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Arms</h3>
-                    <p>Biceps flex the elbow while triceps extend it.</p>
-                    <p><strong>Common Exercises:</strong> Curls, Dips</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/arms.jpg" alt="Arms">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
 
+            <h3>Arms</h3>
+
+            <p>
+                The biceps brachii is located on the front of the upper arm,
+                while the triceps brachii is located on the back.
+            </p>
+
+            <p>
+                The biceps flex the elbow joint and assist forearm supination,
+                while the triceps extend the elbow.
+            </p>
+
+            <p>
+                These muscles work as an antagonistic pair, meaning one contracts
+                while the other relaxes to produce smooth movement.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Bicep Curls, Dips
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/arms.jpg" alt="Arms">
+        </div>
+    `;
+    break;
+          
         case "core":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Core</h3>
-                    <p>Stabilizes the torso and transfers force between the upper and lower body.</p>
-                    <p><strong>Common Exercises:</strong> Plank, Crunches</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/core.jpg" alt="Core">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Core</h3>
+
+            <p>
+                The core includes the rectus abdominis, transverse abdominis,
+                obliques, and lower back muscles.
+            </p>
+
+            <p>
+                These muscles stabilize the spine and transfer force between
+                the upper and lower body during movement.
+            </p>
+
+            <p>
+                Strong core muscles improve posture, balance, and athletic performance
+                by maintaining proper body alignment.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Plank, Crunches
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/core.jpg" alt="Core">
+        </div>
+    `;
+    break;
 
         case "back":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Back</h3>
-                    <p>Supports posture and controls pulling motions.</p>
-                    <p><strong>Common Exercises:</strong> Pull-Ups, Rows</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/back.jpg" alt="Back">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Back</h3>
+
+            <p>
+                Major back muscles include the latissimus dorsi,
+                trapezius, and erector spinae.
+            </p>
+
+            <p>
+                The latissimus dorsi pulls the arm downward and backward,
+                while the trapezius helps stabilize and move the shoulder girdle.
+            </p>
+
+            <p>
+                The erector spinae supports the vertebral column and helps maintain posture
+                during lifting and athletic activities.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Pull-Ups, Rows
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/back.jpg" alt="Back">
+        </div>
+    `;
+    break;
 
         case "legs":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Legs</h3>
-                    <p>Generate power for running, jumping, and athletic performance.</p>
-                    <p><strong>Common Exercises:</strong> Squats, Lunges</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/legs.jpg" alt="Legs">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Legs</h3>
+
+            <p>
+                Major leg muscles include the quadriceps, hamstrings,
+                gluteus maximus, and gastrocnemius (calf muscles).
+            </p>
+
+            <p>
+                The quadriceps extend the knee, the hamstrings flex the knee,
+                and the gluteus maximus produces powerful hip extension.
+            </p>
+
+            <p>
+                These muscles work together to generate force for running,
+                jumping, sprinting, and changing direction during sports.
+            </p>
+
+            <p>
+                ATP released inside muscle fibers powers actin-myosin cross-bridge cycling,
+                allowing the muscles to contract and produce movement.
+            </p>
+
+            <p>
+                <strong>Common Exercises:</strong> Squats, Lunges
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/legs.jpg" alt="Legs">
+        </div>
+    `;
+    break;
     }
 }
 
@@ -95,82 +221,149 @@ function showExercise(exercise) {
 
     switch (exercise) {
         case "bench":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Bench Press</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Chest (Pectoralis Major), Triceps, Front Deltoids (Shoulders)</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/bench-press.jpg" alt="Bench Press">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Bench Press</h3>
+
+            <p><strong>Primary Muscles:</strong>
+            Pectoralis Major, Triceps Brachii, Anterior Deltoid.</p>
+
+            <p><strong>Movement:</strong>
+            Horizontal shoulder adduction and elbow extension.</p>
+
+            <p><strong>How It Works:</strong>
+            The pectoralis major pulls the arms toward the midline of the body while the triceps extend the elbows. During the upward phase, muscle fibers shorten through concentric contractions powered by ATP.</p>
+
+            <p><strong>Fatigue:</strong>
+            Repeated sets can reduce ATP availability and increase lactate accumulation, decreasing force production.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/bench-press.jpg" alt="Bench Press">
+        </div>
+    `;
+    break;
 
         case "squat":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Squat</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Quadriceps, Glutes (Buttocks), Hamstrings, and Core</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/squat.jpg" alt="Squat">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Squat</h3>
 
+            <p><strong>Primary Muscles:</strong>
+            Quadriceps, Gluteus Maximus, Hamstrings, Core.</p>
+
+            <p><strong>Movement:</strong>
+            Hip extension and knee extension.</p>
+
+            <p><strong>How It Works:</strong>
+            The quadriceps straighten the knees while the gluteus maximus extends the hips. Core muscles stabilize the spine and maintain balance throughout the movement.</p>
+
+            <p><strong>Fatigue:</strong>
+            High ATP demand and repeated contractions can lead to oxygen debt and reduced muscular performance.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/squat.jpg" alt="Squat">
+        </div>
+    `;
+    break;
+          
         case "deadlift":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Deadlift</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Hamstrings, Glutes, Lower Back, Erector Spinae, and Trapezius</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/deadlift.jpg" alt="Deadlift">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Deadlift</h3>
+
+            <p><strong>Primary Muscles:</strong>
+            Hamstrings, Gluteus Maximus, Erector Spinae, Trapezius.</p>
+
+            <p><strong>Movement:</strong>
+            Hip extension while maintaining spinal stability.</p>
+
+            <p><strong>How It Works:</strong>
+            The glutes and hamstrings generate force to lift the weight while the erector spinae muscles stabilize the vertebral column and resist spinal flexion.</p>
+
+            <p><strong>Fatigue:</strong>
+            Large muscle groups consume significant ATP, causing fatigue when energy demand exceeds oxygen supply.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/deadlift.jpg" alt="Deadlift">
+        </div>
+    `;
+    break;
 
         case "pullup":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Pull-Up</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Latissimus Dorsi (Lats/Back), Biceps, Upper Back</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/pull-up.jpg" alt="Pull-Up">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Pull-Up</h3>
+
+            <p><strong>Primary Muscles:</strong>
+            Latissimus Dorsi, Biceps Brachii, Rhomboids.</p>
+
+            <p><strong>Movement:</strong>
+            Shoulder adduction and elbow flexion.</p>
+
+            <p><strong>How It Works:</strong>
+            The latissimus dorsi pulls the upper arm downward while the biceps flex the elbow. Together they lift the body against gravity.</p>
+
+            <p><strong>Fatigue:</strong>
+            Repeated contractions increase lactate levels and reduce the efficiency of cross-bridge cycling.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/pull-up.jpg" alt="Pull-Up">
+        </div>
+    `;
+    break;
 
         case "pushup":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Push-Up</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Chest, Triceps, Anterior Deltoids, and Core Stability</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/push-up.jpg" alt="Push-Up">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Push-Up</h3>
+
+            <p><strong>Primary Muscles:</strong>
+            Pectoralis Major, Triceps, Anterior Deltoids, Core.</p>
+
+            <p><strong>Movement:</strong>
+            Shoulder horizontal adduction and elbow extension.</p>
+
+            <p><strong>How It Works:</strong>
+            Similar to a bench press, the chest generates most of the force while the triceps extend the elbows. Core muscles stabilize the body throughout the exercise.</p>
+
+            <p><strong>Fatigue:</strong>
+            As ATP stores decrease, muscle contractions become weaker and endurance declines.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/push-up.jpg" alt="Push-Up">
+        </div>
+    `;
+    break;
 
         case "shoulderpress":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Shoulder Press</h3>
-                    <p><strong>Primary Muscles Involved:</strong></p>
-                    <p>Deltoids (Shoulders), Triceps, Upper Chest</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+            <h3>Shoulder Press</h3>
+
+            <p><strong>Primary Muscles:</strong>
+            Deltoids, Triceps, Upper Pectorals.</p>
+
+            <p><strong>Movement:</strong>
+            Shoulder abduction and elbow extension.</p>
+
+            <p><strong>How It Works:</strong>
+            The deltoids lift the arms overhead while the triceps straighten the elbows. The movement requires coordinated contraction of multiple muscle groups.</p>
+
+            <p><strong>Fatigue:</strong>
+            Fast-twitch fibers are heavily recruited during heavy loads, leading to faster fatigue.</p>
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
+        </div>
+    `;
+    break;
+          
     }
 }
 
