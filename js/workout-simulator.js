@@ -503,8 +503,20 @@ function generateAdaptation() {
                 <p>${sports}</p>
             </div>
 
-            <div class="adapt-card">
-                <h4>Athlelet atp = 100;
+           <div class="adapt-card">
+    <h4>Athlete Type</h4>
+    <p>${athleteType}</p>
+</div>
+
+</div>
+`;
+}
+
+// ===========================
+// MUSCLE FATIGUE SCIENCE LAB
+// ===========================
+
+let atp = 100;
 let oxygen = 100;
 let lactate = 0;
 
