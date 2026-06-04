@@ -1035,18 +1035,37 @@ RESPONSIVE & MOBILE TIMING
    ADAPTATION REPORT UPGRADE
 ========================== */
 
-.adaptation-header{
+.report-title{
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+.report-title h2{
+
+    font-size:2rem;
+    margin-bottom:10px;
+    color:#1e293b;
+
+}
+
+.report-image-container{
+
     display:flex;
-    align-items:center;
-    gap:25px;
-    margin-bottom:30px;
+    justify-content:center;
+    margin-bottom:35px;
+
 }
 
 .adaptation-image{
-    width:220px;
-    height:150px;
+
+    width:100%;
+    max-width:600px;
+    height:280px;
     object-fit:cover;
-    border-radius:12px;
+    border-radius:15px;
+
 }
 
 .adaptation-intro{
@@ -1057,7 +1076,7 @@ RESPONSIVE & MOBILE TIMING
 
 .adaptation-cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
@@ -1083,16 +1102,12 @@ RESPONSIVE & MOBILE TIMING
 }
 
 .anatomy{
-    grid-column:span 2;
+    grid-column:span 1;
     background:#f6f9fc;
 }
 
 @media(max-width:768px){
 
-    .adaptation-header{
-        flex-direction:column;
-        text-align:center;
-    }
 
     .adaptation-image{
         width:100%;
@@ -1102,6 +1117,10 @@ RESPONSIVE & MOBILE TIMING
 
     .anatomy{
         grid-column:span 1;
+    }
+
+   .adaptation-cards{
+        grid-template-columns:1fr;
     }
 
 }
