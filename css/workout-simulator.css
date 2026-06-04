@@ -1342,9 +1342,10 @@ RESPONSIVE & MOBILE TIMING
 }
 
 .fiber-summary {
-    max-width: 900px;
-    width: 100%;             /* 1. 新增：让宽度在 max-width 内自适应 */
-    margin: 40px auto !important; /* 2. 强化：强制上下留白，左右自动居中 */
+    display: block !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 40px auto !important; /* 块级元素在 Grid 外面，这行代码将绝对居中 */
     padding: 35px;
     background: white;
     border-left: 6px solid #2563eb;
@@ -1352,7 +1353,7 @@ RESPONSIVE & MOBILE TIMING
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     line-height: 1.8;
     text-align: center;
-    box-sizing: border-box;  /* 3. 新增：防止 6px 的左边框挤压整体布局 */
+    box-sizing: border-box !important;
 }
 
 .fiber-summary h3{
