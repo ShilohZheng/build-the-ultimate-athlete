@@ -362,8 +362,7 @@ function showExercise(exercise) {
             <img src="../images/shoulder-press.jpg" alt="Shoulder Press">
         </div>
     `;
-    break;
-          
+    break;   
     }
 }
 
@@ -376,116 +375,303 @@ function showSport(sport) {
 
     switch (sport) {
         case "basketball":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Basketball</h3>
-                    <p>Relies heavily on legs, core, shoulders, and arms for jumping, shooting, and sprinting.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/basketball.jpg" alt="Basketball">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Basketball</h3>
+
+            <p>
+                Basketball relies heavily on the quadriceps, gluteus maximus,
+                calf muscles, core, and deltoids.
+            </p>
+
+            <p>
+                The leg muscles generate force for jumping and sprinting,
+                while the core stabilizes the body during rapid changes in direction.
+            </p>
+
+            <p>
+                Fast-twitch (Type II) muscle fibers are frequently recruited
+                because basketball requires explosive power and quick acceleration.
+            </p>
+
+            <p>
+                During repeated sprints, ATP is consumed rapidly and lactate
+                accumulation may contribute to muscle fatigue.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/basketball.jpg" alt="Basketball">
+        </div>
+    `;
+    break;
 
         case "soccer":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Soccer</h3>
-                    <p>Uses quadriceps, hamstrings, calves, and core muscles for explosive kicking, cutting, and running.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/soccer.jpg" alt="Soccer">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Soccer</h3>
+
+            <p>
+                Soccer primarily uses the quadriceps, hamstrings,
+                calves, glutes, and core muscles.
+            </p>
+
+            <p>
+                The quadriceps extend the knee during kicking,
+                while the hamstrings assist sprinting and sudden stops.
+            </p>
+
+            <p>
+                Soccer requires both aerobic and anaerobic energy systems
+                because players alternate between jogging and explosive sprints.
+            </p>
+
+            <p>
+                Efficient oxygen delivery helps delay fatigue during long matches.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/soccer.jpg" alt="Soccer">
+        </div>
+    `;
+    break;
 
         case "swimming":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Swimming</h3>
-                    <p>A full-body sport requiring intense coordination of the shoulders, back, core, and legs.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/swimming.jpg" alt="Swimming">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Swimming</h3>
+
+            <p>
+                Swimming uses the latissimus dorsi, pectoralis major,
+                deltoids, core muscles, and leg muscles.
+            </p>
+
+            <p>
+                The upper body generates propulsion while the core
+                stabilizes body position in the water.
+            </p>
+
+            <p>
+                Because swimming events often last several minutes,
+                athletes depend heavily on aerobic respiration and oxygen delivery.
+            </p>
+
+            <p>
+                Slow-twitch (Type I) fibers help resist fatigue and
+                support sustained muscular contractions.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/swimming.jpg" alt="Swimming">
+        </div>
+    `;
+    break;
 
         case "volleyball":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Volleyball</h3>
-                    <p>Requires explosive leg power for vertical jumps, strong shoulders for spiking, and quick reaction speed.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/volleyball.jpg" alt="Volleyball">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Volleyball</h3>
+
+            <p>
+                Volleyball relies on the quadriceps, gluteus maximus,
+                calves, deltoids, and triceps.
+            </p>
+
+            <p>
+                Powerful leg extension generates vertical jump height,
+                while the shoulder muscles produce force during serving and spiking.
+            </p>
+
+            <p>
+                Fast-twitch fibers are highly active because explosive movements
+                occur repeatedly throughout the game.
+            </p>
+
+            <p>
+                ATP must be produced rapidly to support repeated jumps and powerful hits.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/volleyball.jpg" alt="Volleyball">
+        </div>
+    `;
+    break;
 
         case "track":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Sprinting</h3>
-                    <p>Depends on rapid, powerful contractions of the glutes, hamstrings, quadriceps, and calves.</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/sprinting.jpg" alt="Sprinting">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Sprinting</h3>
+
+            <p>
+                Sprinting depends heavily on the gluteus maximus,
+                hamstrings, quadriceps, and calf muscles.
+            </p>
+
+            <p>
+                These muscles generate large amounts of force to accelerate
+                the body and maintain high running speeds.
+            </p>
+
+            <p>
+                Fast-twitch fibers dominate because they contract rapidly
+                and produce powerful movements.
+            </p>
+
+            <p>
+                Sprinting relies heavily on anaerobic respiration,
+                causing ATP stores to decrease quickly and lactate levels to rise.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/sprinting.jpg" alt="Sprinting">
+        </div>
+    `;
+    break;
 
         case "frisbee":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Ultimate Frisbee</h3>
-                    <p>Requires speed, agility, endurance, and quick changes of direction.</p>
-                    <p><strong>Primary Muscles:</strong> Quadriceps, Hamstrings, Calves</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/frisbee.jpg" alt="Frisbee">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
 
+            <h3>Ultimate Frisbee</h3>
+
+            <p>
+                Ultimate Frisbee requires the quadriceps, hamstrings,
+                calves, deltoids, and core muscles.
+            </p>
+
+            <p>
+                Athletes must sprint, jump, throw, and rapidly change direction.
+            </p>
+
+            <p>
+                Both aerobic and anaerobic energy systems are important
+                because play involves continuous movement and repeated bursts of speed.
+            </p>
+
+            <p>
+                Strong core muscles help transfer force during throwing motions.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/frisbee.jpg" alt="Frisbee">
+        </div>
+    `;
+    break;
+          
         case "hockey":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Hockey</h3>
-                    <p>Relies on explosive leg power, balance, and upper-body strength for skating and shooting.</p>
-                    <p><strong>Primary Muscles:</strong> Quadriceps, Glutes, Core</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/hockey.jpg" alt="Hockey">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Hockey</h3>
+
+            <p>
+                Hockey relies heavily on the quadriceps, glutes,
+                core muscles, and upper-body stabilizers.
+            </p>
+
+            <p>
+                Powerful leg contractions generate skating speed,
+                while the core helps maintain balance on the ice.
+            </p>
+
+            <p>
+                Fast-twitch fibers support explosive acceleration and shooting power.
+            </p>
+
+            <p>
+                Repeated high-intensity efforts increase ATP demand
+                and contribute to muscular fatigue.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/hockey.jpg" alt="Hockey">
+        </div>
+    `;
+    break;
 
         case "badminton":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Badminton</h3>
-                    <p>Requires quick reactions, agility, balance, and explosive movement.</p>
-                    <p><strong>Primary Muscles:</strong> Deltoids, Quadriceps, Calves</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/badminton.jpg" alt="Badminton">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Badminton</h3>
+
+            <p>
+                Badminton uses the deltoids, forearm muscles,
+                quadriceps, calves, and core.
+            </p>
+
+            <p>
+                Quick directional changes require strong lower-body muscles,
+                while shoulder and forearm muscles generate racket speed.
+            </p>
+
+            <p>
+                Fast-twitch fibers are frequently activated due to explosive movements.
+            </p>
+
+            <p>
+                Efficient neuromuscular coordination is essential for reaction time and accuracy.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/badminton.jpg" alt="Badminton">
+        </div>
+    `;
+    break;
 
         case "tabletennis":
-            info.innerHTML = `
-                <div class="info-text-side">
-                    <h3>Table Tennis</h3>
-                    <p>Requires lightning-fast reflexes, hand-eye coordination, precision, and agility.</p>
-                    <p><strong>Primary Muscles:</strong> Forearms, Deltoids, Core</p>
-                </div>
-                <div class="info-image-side">
-                    <img src="../images/table-tennis.jpg" alt="Table Tennis">
-                </div>
-            `;
-            break;
+    info.innerHTML = `
+        <div class="info-text-side">
+
+            <h3>Table Tennis</h3>
+
+            <p>
+                Table tennis relies on the forearm muscles,
+                deltoids, core muscles, and lower-body stabilizers.
+            </p>
+
+            <p>
+                Small but rapid muscle contractions generate racket speed
+                and precise ball control.
+            </p>
+
+            <p>
+                Quick reaction times depend on efficient communication
+                between the nervous system and skeletal muscles.
+            </p>
+
+            <p>
+                Although force requirements are lower than many sports,
+                muscular endurance and coordination are critical.
+            </p>
+
+        </div>
+
+        <div class="info-image-side">
+            <img src="../images/table-tennis.jpg" alt="Table Tennis">
+        </div>
+    `;
+    break;
     }
 }
 
@@ -562,50 +748,103 @@ function generateAdaptation() {
     if (training === "strength") {
         title = "Strength Training Report";
         image = "../images/workout-strength.jpg";
-        adaptation = "Heavy resistance training increases force production through neural adaptation.";
-        fibers = "Primarily Type II fast-twitch fibers.";
-        contraction = "Heavy concentric + eccentric contractions.";
-        recovery = "48–72 hours recovery recommended.";
-        sports = "Football, rugby, powerlifting.";
+        adaptation =
+"Heavy resistance training increases strength through neural adaptation and muscle fiber recruitment. The nervous system becomes more efficient at activating motor units, allowing more muscle fibers to contract at the same time.";
+
+fibers =
+"Primarily Type II fast-twitch fibers. These fibers generate large amounts of force but fatigue quickly because they rely more on anaerobic energy systems.";
+
+contraction =
+"Strength exercises involve both concentric contractions (lifting the weight) and eccentric contractions (lowering the weight). Eccentric contractions create high mechanical tension and contribute to strength gains.";
+
+recovery =
+"Recovery requires 48–72 hours because microscopic damage occurs within muscle fibers. During recovery, protein synthesis repairs the fibers and makes them stronger.";
+
+sports =
+"Important for football, rugby, wrestling, and powerlifting where maximum force production is required.";
         athleteType = "Power Athlete";
     } else if (training === "hypertrophy") {
         title = "Muscle Growth (Hypertrophy) Report";
         image = "../images/workout-strength.jpg";
-        adaptation = "Muscle fibers grow through micro-tears and repair.";
-        fibers = "Type I and Type II fibers both increase in size.";
-        contraction = "Controlled tension-based contractions.";
-        recovery = "Sleep and protein are essential.";
-        sports = "Bodybuilding and aesthetic sports.";
+        adaptation =
+"Repeated resistance training creates microscopic damage within muscle fibers. During recovery, protein synthesis repairs the fibers and increases their cross-sectional area, causing hypertrophy.";
+
+fibers =
+"Both Type I and Type II fibers can increase in size, although Type II fibers generally show greater growth because they produce more force.";
+
+contraction =
+"Moderate loads with controlled repetitions increase time under tension, which stimulates muscle protein synthesis and growth.";
+
+recovery =
+"Adequate sleep, protein intake, and recovery time are essential because muscle growth occurs after training rather than during exercise.";
+
+sports =
+"Useful in bodybuilding, fitness training, and sports where increased muscle size contributes to performance.";
         athleteType = "Muscle Builder";
     } else if (training === "endurance") {
         title = "Muscular Endurance Report";
         image = "../images/workout-endurance.jpg";
-        adaptation = "Improves long-duration muscle performance.";
-        fibers = "Mainly Type I slow-twitch fibers.";
-        contraction = "Low-force repeated contractions.";
-        recovery = "Fast recovery due to low damage.";
-        sports = "Running, cycling, swimming.";
+        adaptation =
+"Endurance training improves the muscle's ability to produce ATP through aerobic respiration. Muscles develop more mitochondria, capillaries, and oxygen-delivering blood vessels.";
+
+fibers =
+"Primarily Type I slow-twitch fibers. These fibers contain many mitochondria and myoglobin, allowing efficient oxygen use and fatigue resistance.";
+
+contraction =
+"Muscles perform repeated low-force contractions for long periods while maintaining a continuous oxygen supply.";
+
+recovery =
+"Recovery is generally faster because endurance exercise causes less structural muscle damage than heavy resistance training.";
+
+sports =
+"Essential for marathon running, cycling, swimming, rowing, and other long-duration activities.";
         athleteType = "Endurance Athlete";
     } else if (training === "power") {
         title = "Explosive Power Report";
         image = "../images/workout-speed.jpg";
-        adaptation = "Increases speed of force production.";
-        fibers = "Strong Type II activation.";
-        contraction = "Explosive concentric movements.";
-        recovery = "High rest demand.";
-        sports = "Basketball, sprinting, volleyball.";
+        adaptation =
+"Power training increases the rate of force development, allowing muscles to generate maximum force in a very short period of time.";
+
+fibers =
+"Strong activation of Type II fast-twitch fibers. These fibers contract rapidly and generate high force but fatigue quickly.";
+
+contraction =
+"Explosive concentric contractions occur during jumping, sprinting, throwing, and rapid acceleration movements.";
+
+recovery =
+"Longer recovery periods are needed because the nervous system and fast-twitch fibers experience significant stress.";
+
+sports =
+"Critical for basketball, volleyball, sprinting, Olympic lifting, and many explosive athletic movements.";
         athleteType = "Explosive Athlete";
     }
 
     const muscleName = muscle.charAt(0).toUpperCase() + muscle.slice(1);
     let muscleFunction = "";
 
-    if (muscle === "chest") muscleFunction = "Chest helps pushing movements.";
-    if (muscle === "back") muscleFunction = "Back supports pulling and posture.";
-    if (muscle === "legs") muscleFunction = "Legs generate movement and power.";
-    if (muscle === "core") muscleFunction = "Core stabilizes body.";
-    if (muscle === "shoulders") muscleFunction = "Shoulders control arm movement.";
-    if (muscle === "arms") muscleFunction = "Arms assist pushing and pulling.";
+    if (muscle === "legs")
+muscleFunction =
+"The quadriceps, hamstrings, gluteal muscles, and calves work together to produce force for walking, running, jumping, and acceleration.";
+
+if (muscle === "chest")
+muscleFunction =
+"The pectoralis major performs horizontal adduction and pushing movements such as pressing, throwing, and pushing.";
+
+if (muscle === "back")
+muscleFunction =
+"The latissimus dorsi, trapezius, and other back muscles stabilize the spine and generate pulling movements.";
+
+if (muscle === "core")
+muscleFunction =
+"The abdominal and lower back muscles stabilize the trunk, maintain posture, and transfer force between the upper and lower body.";
+
+if (muscle === "shoulders")
+muscleFunction =
+"The deltoid muscles move the arm in multiple directions and stabilize the shoulder joint during movement.";
+
+if (muscle === "arms")
+muscleFunction =
+"The biceps brachii and triceps brachii control elbow flexion and extension, assisting in pushing and pulling movements.";
 
     result.innerHTML = `
         <div class="report-title">
