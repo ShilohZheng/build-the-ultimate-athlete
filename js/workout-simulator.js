@@ -391,13 +391,12 @@ function showSport(sport) {
             </p>
 
             <p>
-                Fast-twitch (Type II) muscle fibers are frequently recruited
-                because basketball requires explosive power and quick acceleration.
+                <strong>Fast-twitch (Type II) muscle fibers</strong> are frequently recruited
+                because basketball requires <strong>explosive power</strong> and quick acceleration.
             </p>
-
             <p>
-                During repeated sprints, ATP is consumed rapidly and lactate
-                accumulation may contribute to muscle fatigue.
+                During repeated sprints, <strong>ATP</strong> is consumed rapidly and
+                <strong>lactate accumulation</strong> may contribute to muscle fatigue.
             </p>
 
         </div>
@@ -425,12 +424,12 @@ function showSport(sport) {
             </p>
 
             <p>
-                Soccer requires both aerobic and anaerobic energy systems
+                Soccer requires both <strong>aerobic</strong> and <strong>anaerobic</strong> energy systems
                 because players alternate between jogging and explosive sprints.
             </p>
 
             <p>
-                Efficient oxygen delivery helps delay fatigue during long matches.
+                Efficient <strong>oxygen delivery</strong> helps delay fatigue during long matches.
             </p>
 
         </div>
@@ -463,7 +462,7 @@ function showSport(sport) {
             </p>
 
             <p>
-                Slow-twitch (Type I) fibers help resist fatigue and
+                <strong>Slow-twitch (Type I) fibers</strong> help resist fatigue and
                 support sustained muscular contractions.
             </p>
 
@@ -492,13 +491,13 @@ function showSport(sport) {
             </p>
 
             <p>
-                Fast-twitch fibers are highly active because explosive movements
-                occur repeatedly throughout the game.
-            </p>
+    <strong>Fast-twitch fibers</strong> are highly active because explosive movements
+    occur repeatedly throughout the game.
+</p>
 
-            <p>
-                ATP must be produced rapidly to support repeated jumps and powerful hits.
-            </p>
+<p>
+    <strong>ATP</strong> must be produced rapidly to support repeated jumps and powerful hits.
+</p>
 
         </div>
 
@@ -525,14 +524,14 @@ function showSport(sport) {
             </p>
 
             <p>
-                Fast-twitch fibers dominate because they contract rapidly
-                and produce powerful movements.
-            </p>
+    <strong>Fast-twitch fibers</strong> dominate because they contract rapidly
+    and produce powerful movements.
+</p>
 
-            <p>
-                Sprinting relies heavily on anaerobic respiration,
-                causing ATP stores to decrease quickly and lactate levels to rise.
-            </p>
+<p>
+    Sprinting relies heavily on <strong>anaerobic respiration</strong>,
+    causing ATP stores to decrease quickly and lactate levels to rise.
+</p>
 
         </div>
 
@@ -558,13 +557,13 @@ function showSport(sport) {
             </p>
 
             <p>
-                Both aerobic and anaerobic energy systems are important
-                because play involves continuous movement and repeated bursts of speed.
-            </p>
+    Both <strong>aerobic</strong> and <strong>anaerobic</strong> energy systems are important
+    because play involves continuous movement and repeated bursts of speed.
+</p>
 
-            <p>
-                Strong core muscles help transfer force during throwing motions.
-            </p>
+<p>
+    Strong <strong>core muscles</strong> help transfer force during throwing motions.
+</p>
 
         </div>
 
@@ -591,13 +590,13 @@ function showSport(sport) {
             </p>
 
             <p>
-                Fast-twitch fibers support explosive acceleration and shooting power.
-            </p>
+    <strong>Fast-twitch fibers</strong> support explosive acceleration and shooting power.
+</p>
 
-            <p>
-                Repeated high-intensity efforts increase ATP demand
-                and contribute to muscular fatigue.
-            </p>
+<p>
+    Repeated high-intensity efforts increase <strong>ATP demand</strong>
+    and contribute to muscular fatigue.
+</p>
 
         </div>
 
@@ -624,12 +623,12 @@ function showSport(sport) {
             </p>
 
             <p>
-                Fast-twitch fibers are frequently activated due to explosive movements.
-            </p>
+    <strong>Fast-twitch fibers</strong> are frequently activated due to explosive movements.
+</p>
 
-            <p>
-                Efficient neuromuscular coordination is essential for reaction time and accuracy.
-            </p>
+<p>
+    Efficient <strong>neuromuscular coordination</strong> is essential for reaction time and accuracy.
+</p>
 
         </div>
 
@@ -656,14 +655,14 @@ function showSport(sport) {
             </p>
 
             <p>
-                Quick reaction times depend on efficient communication
-                between the nervous system and skeletal muscles.
-            </p>
+    Quick reaction times depend on efficient communication
+    between the <strong>nervous system</strong> and <strong>skeletal muscles</strong>.
+</p>
 
-            <p>
-                Although force requirements are lower than many sports,
-                muscular endurance and coordination are critical.
-            </p>
+<p>
+    Although force requirements are lower than many sports,
+    <strong>muscular endurance</strong> and <strong>coordination</strong> are critical.
+</p>
 
         </div>
 
