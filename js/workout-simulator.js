@@ -450,15 +450,21 @@ function generateAdaptation() {
 
     // ❗关键修复：你原来这里少了很多 +
     result.innerHTML = `
-        <div class="adaptation-header">
-            <img src="${image}" class="adaptation-image">
-            <div>
-                <h2>${title}</h2>
-                <p class="adaptation-intro">
-                    Scientific analysis of how ${muscleName} muscles respond.
-                </p>
-            </div>
-        </div>
+        <div class="report-title">
+
+    <h2>${title}</h2>
+
+    <p class="adaptation-intro">
+        Scientific analysis of how ${muscleName} muscles respond.
+    </p>
+
+</div>
+
+<div class="report-image-container">
+
+    <img src="${image}" class="adaptation-image">
+
+</div>
 
         <div class="adaptation-cards">
 
