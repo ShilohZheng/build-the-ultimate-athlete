@@ -511,3 +511,106 @@ function generateAdaptation() {
         </div>
     `;
 }
+
+let atp = 100;
+let oxygen = 100;
+let lactate = 0;
+
+function updateScienceFatigue(){
+
+    document.getElementById("atp-fill").style.width =
+        atp + "%";
+
+    document.getElementById("oxygen-fill").style.width =
+        oxygen + "%";
+
+    document.getElementById("lactate-fill").style.width =
+        lactate + "%";
+
+    const report =
+        document.getElementById("fatigue-science-report");
+
+    if(lactate < 30){
+
+        report.innerHTML = `
+        <h4>Fresh Muscle</h4>
+
+        ATP is readily available.
+
+        Oxygen supply meets demand.
+
+        Aerobic respiration is the primary source of energy.
+        `;
+
+    }
+
+    else if(lactate < 60){
+
+        report.innerHTML = `
+        <h4>Working Muscle</h4>
+
+        ATP is being consumed rapidly.
+
+        Oxygen demand is increasing.
+
+        Anaerobic respiration has started.
+        `;
+
+    }
+
+    else if(lactate < 85){
+
+        report.innerHTML = `
+        <h4>Fatigue Developing</h4>
+
+        Lactate is accumulating.
+
+        Oxygen debt is increasing.
+
+        Cross-bridge cycling is becoming less efficient.
+        `;
+
+    }
+
+    else{
+
+        report.innerHTML = `
+        <h4>Muscle Fatigue Reached</h4>
+
+        ATP stores are becoming depleted.
+
+        Anaerobic respiration is dominant.
+
+        Lactate accumulation interferes with muscle contraction.
+
+        Force production decreases.
+
+        Stop exercise before muscle cells become damaged.
+        `;
+
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const btn =
+        document.getElementById("science-fatigue-btn");
+
+    if(!btn) return;
+
+    btn.addEventListener("click", function(){
+
+        atp -= 5;
+        oxygen -= 4;
+        lactate += 6;
+
+        if(atp < 0) atp = 0;
+        if(oxygen < 0) oxygen = 0;
+        if(lactate > 100) lactate = 100;
+
+        updateScienceFatigue();
+
+    });
+
+});
