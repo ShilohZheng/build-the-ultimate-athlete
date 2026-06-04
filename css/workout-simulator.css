@@ -820,12 +820,21 @@ RESPONSIVE & MOBILE TIMING
 }
 
 .fiber-card{
-
     background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    max-width:900px;
+    margin:40px auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
 
+.fiber-card h2{
+    text-align:center;
+}
+
+.fiber-card p{
+    text-align:center;
+    line-height:1.8;
 }
 
 .fiber-card img{
