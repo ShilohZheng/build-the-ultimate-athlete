@@ -1335,16 +1335,22 @@ RESPONSIVE & MOBILE TIMING
 .fiber-summary{
 
     max-width:900px;
-    margin:40px auto;
-    padding:25px;
 
-    background:#f8fafc;
+    margin:40px auto;
+
+    padding:35px;
+
+    background:white;
+
+    border-left:6px solid #2563eb;
 
     border-radius:15px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
     line-height:1.8;
+
+    text-align:center;
 
 }
 
