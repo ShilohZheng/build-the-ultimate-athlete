@@ -1362,3 +1362,36 @@ RESPONSIVE & MOBILE TIMING
 
 }
 
+.summary-card {
+    display: block !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 40px auto !important; /* 块级核心：强制左右自动平分，实现绝对居中 */
+    padding: 35px !important;
+    background: white !important;
+    border-left: 6px solid #2563eb !important; /* 统一的炫酷左深蓝边框 */
+    border-radius: 15px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.summary-card h3 {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    color: #1e293b !important;
+    font-size: 1.4rem !important;
+}
+
+.summary-card p {
+    margin-bottom: 15px !important;
+    color: #4b5563 !important;
+    font-size: 1rem !important;
+    text-align: left !important; /* 段落文字靠左方便阅读 */
+}
+
+.summary-card p:last-child {
+    margin-bottom: 0 !important;
+}
