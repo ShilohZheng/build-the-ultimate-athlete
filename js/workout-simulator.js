@@ -3,11 +3,9 @@
 ================================== */
 
 function showMuscle(muscle) {
-
     const info = document.getElementById("muscle-info");
 
     switch (muscle) {
-
         case "chest":
             info.innerHTML = `
                 <div class="info-text-side">
@@ -85,9 +83,7 @@ function showMuscle(muscle) {
                 </div>
             `;
             break;
-
     }
-
 }
 
 /* ===================================
@@ -95,11 +91,9 @@ function showMuscle(muscle) {
 =================================== */
 
 function showExercise(exercise) {
-
     const info = document.getElementById("exercise-info");
 
     switch (exercise) {
-
         case "bench":
             info.innerHTML = `
                 <div class="info-text-side">
@@ -177,9 +171,7 @@ function showExercise(exercise) {
                 </div>
             `;
             break;
-
     }
-
 }
 
 /* ===================================
@@ -187,11 +179,9 @@ function showExercise(exercise) {
 =================================== */
 
 function showSport(sport) {
-
     const info = document.getElementById("sport-info");
 
     switch (sport) {
-
         case "basketball":
             info.innerHTML = `
                 <div class="info-text-side">
@@ -303,9 +293,7 @@ function showSport(sport) {
                 </div>
             `;
             break;
-
     }
-
 }
 
 /* ===================================
@@ -316,7 +304,6 @@ let reactionStart;
 let reactionReady = false;
 
 function startReactionTest() {
-
     const box = document.getElementById("reaction-box");
     const result = document.getElementById("reaction-result");
 
@@ -333,18 +320,14 @@ function startReactionTest() {
         box.style.background = "#2ecc71";
         box.innerHTML = "CLICK NOW!";
     }, delay);
-
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
     const box = document.getElementById("reaction-box");
+    if (!box) return;
 
     box.addEventListener("click", function() {
-
-        if (!reactionReady) {
-            return;
-        }
+        if (!reactionReady) return;
 
         const time = Date.now() - reactionStart;
         const result = document.getElementById("reaction-result");
@@ -352,11 +335,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (time < 250) {
             rating = "🏆 Elite Athlete Reflexes";
-        }
-        else if (time < 400) {
+        } else if (time < 400) {
             rating = "🔥 Excellent Reaction Time";
-        }
-        else {
+        } else {
             rating = "👍 Average Human Reaction Time";
         }
 
@@ -364,17 +345,14 @@ document.addEventListener("DOMContentLoaded", function() {
         reactionReady = false;
         box.style.background = "#cccccc";
         box.innerHTML = "Start Again";
-
     });
-
 });
 
-// ===========================
-// MUSCLE DEVELOPMENT SIMULATOR
-// ===========================
+/* ===================================
+   MUSCLE DEVELOPMENT SIMULATOR
+=================================== */
 
 function generateAdaptation() {
-
     const training = document.getElementById("training-type").value;
     const muscle = document.getElementById("target-muscle").value;
     const result = document.getElementById("adaptation-result");
@@ -389,46 +367,35 @@ function generateAdaptation() {
     let athleteType = "";
 
     if (training === "strength") {
-
         title = "Strength Training Report";
         image = "../images/workout-strength.jpg";
-
         adaptation = "Heavy resistance training increases force production through neural adaptation.";
         fibers = "Primarily Type II fast-twitch fibers.";
         contraction = "Heavy concentric + eccentric contractions.";
         recovery = "48–72 hours recovery recommended.";
         sports = "Football, rugby, powerlifting.";
         athleteType = "Power Athlete";
-
     } else if (training === "hypertrophy") {
-
         title = "Muscle Growth (Hypertrophy) Report";
         image = "../images/workout-strength.jpg";
-
         adaptation = "Muscle fibers grow through micro-tears and repair.";
         fibers = "Type I and Type II fibers both increase in size.";
         contraction = "Controlled tension-based contractions.";
         recovery = "Sleep and protein are essential.";
         sports = "Bodybuilding and aesthetic sports.";
         athleteType = "Muscle Builder";
-
     } else if (training === "endurance") {
-
         title = "Muscular Endurance Report";
         image = "../images/workout-endurance.jpg";
-
         adaptation = "Improves long-duration muscle performance.";
         fibers = "Mainly Type I slow-twitch fibers.";
         contraction = "Low-force repeated contractions.";
         recovery = "Fast recovery due to low damage.";
         sports = "Running, cycling, swimming.";
         athleteType = "Endurance Athlete";
-
     } else if (training === "power") {
-
         title = "Explosive Power Report";
         image = "../images/workout-speed.jpg";
-
         adaptation = "Increases speed of force production.";
         fibers = "Strong Type II activation.";
         contraction = "Explosive concentric movements.";
@@ -438,7 +405,6 @@ function generateAdaptation() {
     }
 
     const muscleName = muscle.charAt(0).toUpperCase() + muscle.slice(1);
-
     let muscleFunction = "";
 
     if (muscle === "chest") muscleFunction = "Chest helps pushing movements.";
@@ -448,230 +414,150 @@ function generateAdaptation() {
     if (muscle === "shoulders") muscleFunction = "Shoulders control arm movement.";
     if (muscle === "arms") muscleFunction = "Arms assist pushing and pulling.";
 
-    // ❗关键修复：你原来这里少了很多 +
     result.innerHTML = `
         <div class="report-title">
-
-    <h2>${title}</h2>
-
-    <p class="adaptation-intro">
-        Scientific analysis of how ${muscleName} muscles respond.
-    </p>
-
-</div>
-
-<div class="report-image-container">
-
-    <img src="${image}" class="adaptation-image">
-
-</div>
-
+            <h2>${title}</h2>
+            <p class="adaptation-intro">Scientific analysis of how ${muscleName} muscles respond.</p>
+        </div>
+        <div class="report-image-container">
+            <img src="${image}" class="adaptation-image">
+        </div>
         <div class="adaptation-cards">
-
             <div class="adapt-card">
                 <h4>Target Muscle Group</h4>
                 <p>${muscleName}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Muscle Function</h4>
                 <p>${muscleFunction}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Training Adaptation</h4>
                 <p>${adaptation}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Muscle Fiber Response</h4>
                 <p>${fibers}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Contraction Type</h4>
                 <p>${contraction}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Recovery</h4>
                 <p>${recovery}</p>
             </div>
-
             <div class="adapt-card">
                 <h4>Sports Application</h4>
                 <p>${sports}</p>
             </div>
-
-           <div class="adapt-card">
-    <h4>Athlete Type</h4>
-    <p>${athleteType}</p>
-</div>
-
-</div>
-`;
+            <div class="adapt-card">
+                <h4>Athlete Type</h4>
+                <p>${athleteType}</p>
+            </div>
+        </div>
+    `;
 }
 
-// ===========================
-// MUSCLE FATIGUE SCIENCE LAB
-// ===========================
+/* ===================================
+   MUSCLE FATIGUE SCIENCE LAB
+=================================== */
 
 let atp = 100;
 let oxygen = 100;
 let lactate = 0;
 
-function updateScienceFatigue(){
+function updateScienceFatigue() {
+    // 确保这些元素存在后再更新，防止控制台报错
+    const atpFill = document.getElementById("atp-fill");
+    const oxyFill = document.getElementById("oxygen-fill");
+    const lacFill = document.getElementById("lactate-fill");
+    const report = document.getElementById("fatigue-science-report");
 
-    document.getElementById("atp-fill").style.width =
-        atp + "%";
+    if (atpFill) atpFill.style.width = atp + "%";
+    if (oxyFill) oxyFill.style.width = oxygen + "%";
+    if (lacFill) lacFill.style.width = lactate + "%";
+    if (!report) return;
 
-    document.getElementById("oxygen-fill").style.width =
-        oxygen + "%";
-
-    document.getElementById("lactate-fill").style.width =
-        lactate + "%";
-
-    const report =
-        document.getElementById("fatigue-science-report");
-
-    if(lactate < 30){
-
+    if (lactate < 30) {
         report.innerHTML = `
-        <h4>Normal Muscle Function</h4>
-
-        ATP is readily available.
-
-        Oxygen supply meets energy demand.
-
-        Cross-bridge cycling occurs efficiently.
-
-        Aerobic respiration provides most ATP.
+            <h4>Normal Muscle Function</h4>
+            <p>ATP is readily available.</p>
+            <p>Oxygen supply meets energy demand.</p>
+            <p>Cross-bridge cycling occurs efficiently.</p>
+            <p>Aerobic respiration provides most ATP.</p>
         `;
-
-    }
-
-    else if(lactate < 60){
-
+    } else if (lactate < 60) {
         report.innerHTML = `
-        <h4>Increasing Intensity</h4>
-
-        ATP is being consumed rapidly.
-
-        Oxygen demand exceeds supply.
-
-        Anaerobic respiration begins.
-
-        Lactate starts accumulating.
+            <h4>Increasing Intensity</h4>
+            <p>ATP is being consumed rapidly.</p>
+            <p>Oxygen demand exceeds supply.</p>
+            <p>Anaerobic respiration begins.</p>
+            <p>Lactate starts accumulating.</p>
         `;
-
-    }
-
-    else if(lactate < 85){
-
+    } else if (lactate < 85) {
         report.innerHTML = `
-        <h4>Muscle Fatigue Developing</h4>
-
-        Significant lactate build-up occurs.
-
-        Oxygen debt increases.
-
-        ATP production becomes less efficient.
-
-        Cross-bridge formation slows.
+            <h4>Muscle Fatigue Developing</h4>
+            <p>Significant lactate build-up occurs.</p>
+            <p>Oxygen debt increases.</p>
+            <p>ATP production becomes less efficient.</p>
+            <p>Cross-bridge formation slows.</p>
         `;
-
-    }
-
-    else{
-
+    } else {
         report.innerHTML = `
-        <h4>Severe Fatigue</h4>
-
-        Glucose stores are becoming depleted.
-
-        ATP availability is reduced.
-
-        Lactate interferes with contraction.
-
-        Force production decreases.
-
-        Exercise should stop before muscle cells are damaged.
+            <h4>Severe Fatigue</h4>
+            <p>Glucose stores are becoming depleted.</p>
+            <p>ATP availability is reduced.</p>
+            <p>Lactate interferes with contraction.</p>
+            <p>Force production decreases.</p>
+            <p>Exercise should stop before muscle cells are damaged.</p>
         `;
-
     }
-
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("science-fatigue-btn");
+    const reset = document.getElementById("reset-fatigue-btn");
 
-    const btn =
-        document.getElementById("science-fatigue-btn");
+    // 页面初次加载时初始化一次条形图数据状态
+    updateScienceFatigue();
 
-    const reset =
-        document.getElementById("reset-fatigue-btn");
+    if (btn) {
+        btn.addEventListener("click", function() {
+            const activity = document.getElementById("activity-select").value;
 
-    if(!btn) return;
+            if (activity === "sprint") {
+                atp -= 8;
+                oxygen -= 6;
+                lactate += 12;
+            } else if (activity === "marathon") {
+                atp -= 3;
+                oxygen -= 8;
+                lactate += 3;
+            } else if (activity === "bench") {
+                atp -= 6;
+                oxygen -= 4;
+                lactate += 7;
+            } else if (activity === "plank") {
+                atp -= 4;
+                oxygen -= 7;
+                lactate += 5;
+            }
 
-    btn.addEventListener("click", function(){
+            atp = Math.max(atp, 0);
+            oxygen = Math.max(oxygen, 0);
+            lactate = Math.min(lactate, 100);
 
-        const activity =
-            document.getElementById("activity-select").value;
+            updateScienceFatigue();
+        });
+    }
 
-        if(activity === "sprint"){
-
-            atp -= 8;
-            oxygen -= 6;
-            lactate += 12;
-
-        }
-
-        else if(activity === "marathon"){
-
-            atp -= 3;
-            oxygen -= 8;
-            lactate += 3;
-
-        }
-
-        else if(activity === "bench"){
-
-            atp -= 6;
-            oxygen -= 4;
-            lactate += 7;
-
-        }
-
-        else if(activity === "plank"){
-
-            atp -= 4;
-            oxygen -= 7;
-            lactate += 5;
-
-        }
-
-        atp = Math.max(atp,0);
-        oxygen = Math.max(oxygen,0);
-        lactate = Math.min(lactate,100);
-
-        updateScienceFatigue();
-
-    });
-
-    reset.addEventListener("click", function(){
-
-        atp = 100;
-        oxygen = 100;
-        lactate = 0;
-
-        updateScienceFatigue();
-
-    });
-
-});te Type</h4>
-                <p>${athleteType}</p>
-            </div>
-
-        </div>
-    `;
-}
-
+    if (reset) {
+        reset.addEventListener("click", function() {
+            atp = 100;
+            oxygen = 100;
+            lactate = 0;
+            updateScienceFatigue();
+        });
+    }
+});
