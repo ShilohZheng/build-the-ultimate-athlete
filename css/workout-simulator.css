@@ -1,3 +1,27 @@
+/* FORCE VERTICAL LAYOUT */
+
+#adaptation-result{
+    display:block !important;
+}
+
+.report-title{
+    display:block !important;
+    text-align:center !important;
+}
+
+.report-image-container{
+    display:flex !important;
+    justify-content:center !important;
+    width:100%;
+}
+
+.adaptation-cards{
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:20px;
+    margin-top:30px;
+}
+
 /* ========================
    HERO
 ======================== */
