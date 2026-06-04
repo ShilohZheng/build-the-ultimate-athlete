@@ -754,7 +754,7 @@ fibers =
 "Primarily Type II fast-twitch fibers. These fibers generate large amounts of force but fatigue quickly because they rely more on anaerobic energy systems.";
 
 contraction =
-"Strength exercises involve both concentric contractions (lifting the weight) and eccentric contractions (lowering the weight). Eccentric contractions create high mechanical tension and contribute to strength gains.";
+"Strength training involves both concentric and eccentric contractions. During a concentric contraction, the muscle shortens while producing force, such as lifting a weight. During an eccentric contraction, the muscle lengthens while still generating tension, such as lowering a weight under control. Eccentric contractions produce high mechanical tension and contribute significantly to strength development and muscle adaptation.";
 
 recovery =
 "Recovery requires 48–72 hours because microscopic damage occurs within muscle fibers. During recovery, protein synthesis repairs the fibers and makes them stronger.";
@@ -772,7 +772,7 @@ fibers =
 "Both Type I and Type II fibers can increase in size, although Type II fibers generally show greater growth because they produce more force.";
 
 contraction =
-"Moderate loads with controlled repetitions increase time under tension, which stimulates muscle protein synthesis and growth.";
+"Hypertrophy training uses concentric, eccentric, and occasional isometric contractions to increase time under tension. Longer periods of muscle tension stimulate protein synthesis, promote muscle fiber repair, and increase muscle cross-sectional area.";
 
 recovery =
 "Adequate sleep, protein intake, and recovery time are essential because muscle growth occurs after training rather than during exercise.";
@@ -790,7 +790,7 @@ fibers =
 "Primarily Type I slow-twitch fibers. These fibers contain many mitochondria and myoglobin, allowing efficient oxygen use and fatigue resistance.";
 
 contraction =
-"Muscles perform repeated low-force contractions for long periods while maintaining a continuous oxygen supply.";
+"Endurance activities involve repeated concentric contractions with occasional isometric stabilization. Type I slow-twitch fibers repeatedly contract while relying on aerobic respiration to continuously generate ATP and resist fatigue.";
 
 recovery =
 "Recovery is generally faster because endurance exercise causes less structural muscle damage than heavy resistance training.";
@@ -808,7 +808,7 @@ fibers =
 "Strong activation of Type II fast-twitch fibers. These fibers contract rapidly and generate high force but fatigue quickly.";
 
 contraction =
-"Explosive concentric contractions occur during jumping, sprinting, throwing, and rapid acceleration movements.";
+"Power training emphasizes rapid concentric contractions that generate maximum force in the shortest possible time. Fast-twitch (Type II) muscle fibers are recruited extensively to produce explosive movements such as sprinting, jumping, and throwing.";
 
 recovery =
 "Longer recovery periods are needed because the nervous system and fast-twitch fibers experience significant stress.";
@@ -871,7 +871,7 @@ muscleFunction =
                 <p>${fibers}</p>
             </div>
             <div class="adapt-card">
-                <h4>Contraction Type</h4>
+                <h4>Muscle Contraction Analysis</h4>
                 <p>${contraction}</p>
             </div>
             <div class="adapt-card">
