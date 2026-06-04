@@ -1157,3 +1157,94 @@ RESPONSIVE & MOBILE TIMING
     }
 
 }
+
+/* ==========================
+   FATIGUE SCIENCE SIMULATOR
+========================== */
+
+.fatigue-science-section{
+
+    padding:80px 10%;
+    background:white;
+    text-align:center;
+
+}
+
+.science-bars{
+
+    max-width:700px;
+    margin:30px auto;
+
+}
+
+.science-item{
+
+    margin-bottom:20px;
+
+}
+
+.science-item label{
+
+    display:block;
+    text-align:left;
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+.science-bar{
+
+    height:22px;
+    background:#e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+
+}
+
+#atp-fill,
+#oxygen-fill,
+#lactate-fill{
+
+    height:100%;
+    transition:0.3s;
+
+}
+
+#atp-fill{
+
+    width:100%;
+    background:#10b981;
+
+}
+
+#oxygen-fill{
+
+    width:100%;
+    background:#3b82f6;
+
+}
+
+#lactate-fill{
+
+    width:0%;
+    background:#ef4444;
+
+}
+
+#fatigue-science-report{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:left;
+
+    line-height:1.8;
+
+}
