@@ -1360,3 +1360,25 @@ RESPONSIVE & MOBILE TIMING
     margin-bottom:15px;
 
 }
+
+/* 终极暴强居中方案 - 直接粘贴到 CSS 文件最底部 */
+
+.fiber-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* 强制所有子元素水平居中 */
+    justify-content: center !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.fiber-summary {
+    display: block !important;
+    width: 100% !important;
+    max-width: 900px !important; /* 限制最大宽度 */
+    margin-left: auto !important;  /* 强行左边距自适应 */
+    margin-right: auto !important; /* 强行右边距自适应 */
+    box-sizing: border-box !important;
+    float: none !important;        /* 清除可能存在的浮动 */
+}
+
